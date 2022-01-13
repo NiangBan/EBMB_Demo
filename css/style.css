@@ -404,7 +404,7 @@ nav.login {
 .app-header__logo .logo-src {
     height: 55px;
     width: 280px;
-    background: url(../assets/images/AceLogoWhite.png);
+    /*background: url(../assets/images/AceLogoWhite.png);*/
     display: block;
     background-repeat: no-repeat;
     background-position: left;
