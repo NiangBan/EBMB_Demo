@@ -370,75 +370,183 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">account_balance_wallet</i>
+                                <div class="page-title-icon">
+                                    <i class="material-icons">account_balance_wallet</i>
                                 </div>
                                 <div>Account Information</div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label> Account Number</label>
-                                <p>0001129334488245</p>
-                            </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label> Account Number</label>
+                            <p>0001129334488245</p>
                         </div>
+                    </div>
+                    <h2></h2>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Account Name</label>
-                                <p>Kyaw Kyaw</p>
+                    <form action="/Admin/Register" autocomplete="off" class="form-horizontal" method="post" role="form">
+                        <input name="__RequestVerificationToken" type="hidden" value="V4NlFC5vbZwYcC-SEQmzVNVILZ4cUIsR5AQJOTWuIKlWrlO9bjVupHzoGKcwujcNK9vpFeYw-wnzlv1SHdLzbyVO0MaLnxNzb4cGePIHUp24zB3SeUX_WswWg_fivtbFaugTnB4vU3Um5NQGrgd4-g2" />    <h4>Create a new account.</h4>
+                        <hr />
+                        <div class="">
+                            <div class="form-group row">
+                                <label class="col-md-2 text-right col-form-label" for="UserName">User Name</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" data-val="true" data-val-required="The UserName field is required." id="UserName" name="UserName" type="text" value="" />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Currency</label>
-                                <p>MMK</p>
+                            <div class="form-group row">
+                                <label class="col-md-2 text-right col-form-label" for="FullName">Full Name</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" data-val="true" data-val-length="The field FullName must be a string with a maximum length of 50." data-val-length-max="50" data-val-required="The FullName field is required." id="FullName" name="FullName" type="text" value="" />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="FullName" data-valmsg-replace="true"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Account Status</label>
-                                <p>Active</p>
+                            <div class="form-group row">
+                                <label class="col-md-2 text-right col-form-label" for="BranchID">Branch</label>
+                                <div class="col-md-10">
+                                    <select class="form-control" data-val="true" data-val-number="The field Branch must be a number." data-val-required="The Branch field is required." id="BranchID" name="BranchID">
+                                        <option value="">Select Branch</option>
+                                        <option value="1">HEAD OFFICE</option>
+                                        <option value="2">NGATHAINGCHAUNG BRANCH</option>
+                                        <option value="2058">BOAUNGKYAW BRANCH</option>
+                                        <option value="2059">SHWEGONEDAING BRANCH</option>
+                                        <option value="2060">SHWETAUNGTAN BRANCH</option>
+                                        <option value="2061">PYAPON BRANCH</option>
+                                        <option value="2062">IBD OFFICE</option>
+                                        <option value="2063">POST OFFICE - ALONE</option>
+                                        <option value="2064">PATHEIN BRANCH</option>
+                                        <option value="2065">HINTHADA BRANCH</option>
+                                        <option value="2066">SHANLANZAY BRANCH</option>
+                                        <option value="2067">MANDALAY(1)</option>
+                                        <option value="2069">NAY PYI TAW</option>
+                                        <option value="2070">POST OFFICE - SANCHAUNG</option>
+                                        <option value="2071">POST OFFICE - PHYU</option>
+                                        <option value="2072">POST OFFICE - MYAUNGMYA</option>
+                                        <option value="2073">MUSE BRANCH</option>
+                                        <option value="2074">THINGANGYUN</option>
+                                        <option value="2075">BAYINTNAUNG BRANCH</option>
+                                        <option value="2076">MYAWADDY</option>
+                                        <option value="2077">HTU GYI BRANCH</option>
+                                        <option value="2078">WARTAN BRANCH</option>
+                                        <option value="2088">NATMAUK STREET BRANCH</option>
+                                        <option value="2090">Loikaw  Branch</option>
+                                    </select>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="BranchID" data-valmsg-replace="true"></span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Open Date</label>
-                                <p>20/02/2020</p>
+                            <div class="form-group row">
+                                <label class="col-md-2 text-right col-form-label" for="Role">Role</label>
+                                <div class="col-md-10">
+                                    <select class="form-control" id="Role" name="Role">
+                                        <option value="">Select Role</option>
+                                        <option value="1">Creator</option>
+                                        <option value="2">Approver</option>
+                                        <option value="3">Administrator</option>
+                                        <option value="4">THE ICONIC Lead</option>
+                                        <option value="5">THE ICONIC Team</option>
+                                        <option value="6">RM Teamlead</option>
+                                        <option value="7">RM</option>
+                                        <option value="8">Reception</option>
+                                    </select>
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Role" data-valmsg-replace="true"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Branch</label>
-                                <p>Branch I</p>
+                            <div class="form-group row">
+                                <label class="col-md-2 text-right col-form-label" for="StaffID">StaffID</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" data-val="true" data-val-length="The field StaffID must be a string with a maximum length of 50." data-val-length-max="50" id="StaffID" name="StaffID" type="text" value="" />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="StaffID" data-valmsg-replace="true"></span>
+                                </div>
                             </div>
-                        </div>
+                            <div class="form-group row">
+                                <label class="col-md-2 text-right col-form-label" for="Phone">Phone</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" data-val="true" data-val-length="The field Phone must be a string with a maximum length of 50." data-val-length-max="50" id="Phone" name="Phone" type="text" value="" />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-2 text-right col-form-label" for="Email">Email</label>
+                                <div class="col-md-10">
+                                    <input class="form-control" data-val="true" data-val-email="The Email field is not a valid e-mail address." id="Email" name="Email" type="text" value="" />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
 
-                    </div>
-                    <h5>Balance Information</h5>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Available Balance</label>
-                                <p>700,000.00 MMK</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Ledger Balance</label>
-                                <p>700,000.00 MMK</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="text-left">
-                        <button class="btn btn-primary" onclick="location.replace('AccountInformation.html');"><i class="fas fa-arrow-left icon-spacing"></i>  Back</button>
-                    </div>
+                            <div class="form-group row">
+                                <div class="col-md-offset-2 col-md-5 text-right">
+                                    <input type="submit" class="btn btn-success" value="Register" />
+                                    <a class="btn btn-default" href="/Admin">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!--<div class="row filter">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label> Account Number</label>
+                <p>0001129334488245</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Account Name</label>
+                <p>Kyaw Kyaw</p>
+            </div>
+        </div>
+    </div>
+    <div class="row filter">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Currency</label>
+                <p>MMK</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Account Status</label>
+                <p>Active</p>
+            </div>
+        </div>
+    </div>
+    <div class="row filter">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Open Date</label>
+                <p>20/02/2020</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Branch</label>
+                <p>Branch I</p>
+            </div>
+        </div>
+
+    </div>
+    <h5>Balance Information</h5>
+    <div class="row filter">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Available Balance</label>
+                <p>700,000.00 MMK</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Ledger Balance</label>
+                <p>700,000.00 MMK</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-left">
+        <button class="btn btn-primary" onclick="location.replace('AccountInformation.html');"><i class="fas fa-arrow-left icon-spacing"></i>  Back</button>
+    </div>-->
                 </div>
             </div>
         </div>
