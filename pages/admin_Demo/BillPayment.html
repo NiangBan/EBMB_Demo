@@ -163,7 +163,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="mm-active">
                                     <i class="material-icons">people_alt</i></i> Manage Beneficiary
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -175,7 +175,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OtherBankBeneficiary.html">
+                                        <a href="OtherBankBeneficiary.html" class="mm-active">
                                             <i class="metismenu-icon">
                                                 </i>Other Bank
                                         </a>
@@ -183,7 +183,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#" class="mm-active">
+                                <a href="#">
                                     <i class="material-icons">transform</i></i> Transaction
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -207,7 +207,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="BillPayment.html" class="mm-active">
+                                        <a href="BillPayment.html">
                                             <i class="metismenu-icon">
                                                 </i>Bill Payment
                                         </a>
@@ -366,194 +366,150 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">transform</i>
+                                <div class="page-title-icon"><i class="material-icons">people_alt</i>
                                 </div>
-                                <div>Bill Payment</div>
+                                <div>Beneficiary (Other Bank)</div>
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid">
-                        Select Bill Services
-                        <span class="required">*</span>
-                    </div>
-                    <div class="row">
-                        <!-- <div class="col-md-3" onclick="transfer('itune')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data selected">
-                                        <img src="../../assets/images/bill-payment/itunes.png" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>iTunes</label></p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row col-md-12">
+                        <div class="col-md-4 form-check">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios1" value="option1" onClick="window.location = 'OtherBankBeneficiaryAcc.html';">
+                            <label class="form-check-label" for="Radios1">
+                              Account
+                            </label>
                         </div>
-                        <div class="col-md-3" onclick="transfer('googlePlay')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data">
-                                        <img src="../../assets/images/bill-payment/google-play.jpg" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>Google Play</label></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-4 form-check">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios2" value="option2" onClick="window.location = 'OtherBankBeneficiaryNRC.html';" checked>
+                            <label class="form-check-label" for="Radios2">
+                              NRC
+                            </label>
                         </div>
-                        <div class="col-md-3" onclick="transfer('steamWallet')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data">
-                                        <img src="../../assets/images/bill-payment/steam.png" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>Steam Wallet</label></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="col-md-3" onclick="transfer('ananda')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data">
-                                        <img src="../../assets/images/bill-payment/ananda.png" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>Ananda</label></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" onclick="transfer('hiwifi')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data">
-                                        <img src="../../assets/images/bill-payment/hiwifi.png" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>Hi Wifi</label></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" onclick="transfer('myanmarNetAwaThone')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data">
-                                        <img src="../../assets/images/bill-payment/myanmar-net.png" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>MyanmarNetAWaThone</label></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" onclick="transfer('myanmarNetData')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data">
-                                        <img src="../../assets/images/bill-payment/myanmar-net.png" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>MyanmarNetData</label></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-4 form-check">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios3" value="option3" onClick="window.location = 'OtherBankBeneficiaryPassport.html';">
+                            <label class="form-check-label" for="Radios3">
+                              Passport
+                            </label>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        
-                        <div class="col-md-3" onclick="transfer('myanmarNetPrePaid')">
-                            <div class="card topup">
-                                <div class="card-body billservices-card">
-                                    <div class="billservices-card-data">
-                                        <img src="../../assets/images/bill-payment/myanmar-net.png" alt="" width="55px" height="55px" class="bill-img">
-                                        <br/>
-                                        <p><label>MyanmarNetPrePaid</label></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <hr/>
-                    <div class="row container" id="mptTopup">
-                        <div>
-                            <img src="../../assets/images/bill-payment/ananda.png" style="width: 40px;height: 40px;">
-                        </div>
-                        <div class="ml-2 pt-2">Ananda Bill Payment</div>
-                    </div>
-                    <div class="row container" id="allTopup">
-                        <div id="img">a</div>
-                        <div class="ml-2 pt-2" id="title">b</div>
-                    </div><br>
                     <div class="row filter">
                         <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">From Account
-                                    <span class="required">*</span></div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right col-form-label">Other Bank
+                                    <span class="required">*</span></label>
                                 <div class="col-sm-8">
-                                    <select class="form-control" id="fromAccount">
-                                    <option>Select One</option>
-                                    <option selected>0001010200034173</option>
-                                </select>
-                                    <label for="available" id="available">Available Balance - 2,000,000.00 MMK</label>
-                                    <label for="available" id="available">Account Type - Saving</label>
+                                    <select class="form-control" id="beneficiary">
+                                            <option selected>Select One</option>
+                                            <option>AYA Bank</option>
+                                            <option>CB Bank</option>
+                                            <option>KBZ Bank</option>
+                                        </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-2">
                             <div class="form-group row">
-                                <label for="description" class="col-sm-4 text-right col-form-label">Description</label>
+                                <label class="col-sm-4 text-right col-form-label">Other Branch
+                                    <span class="required">*</span></label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" id="beneficiary">
+                                            <option selected>Select One</option>
+                                            <option>Sule Branch</option>
+                                            <option>Pansoedan Branch</option>
+                                            <option>Kyautada Branch</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row filter">
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group row">
+                                <label for="account" class="col-sm-4 text-right col-form-label">NRC 
+                                    <span class="required">*</span></label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="account">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group row">
+                                <label for="mobileNo" class="col-sm-4 text-right col-form-label">Beneficiary Name 
+                                    <span class="required">*</span></label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="mobileNo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row filter">
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group row">
+                                <label for="mobileNo" class="col-sm-4 text-right col-form-label">Mobile No 
+                                    <span class="required">*</span></label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">+959 -</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="username">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="col-md-6 mb-2">
+                            <div class="form-group row">
+                                <label for="amount" class="col-sm-4 text-right col-form-label">Contact No 
+                                    <span class="required">*</span></label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="amount">
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-4 text-right col-form-label">Email</label>
+                                <div class="col-sm-8">
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row filter">
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group row">
+                                <label for="description" class="col-sm-4 text-right col-form-label">Contact Address</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="description">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row filter" id="amountmmk">
                         <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Amount
-                                    <span class="required">*</span></div>
+                            <div class="form-group row">
+                                <label for="amount" class="col-sm-4 text-right col-form-label">Description</label>
                                 <div class="col-sm-8">
-                                    <select class="form-control" id="amount">
-                                    <option>Select One</option>
-                                    <option>1000 - MMK</option>
-                                    <option selected>3000 - MMK</option>
-                                    <option>5000 - MMK</option>
-                                </select>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter" id="amountusd">
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Amount
-                                    <span class="required">*</span></div>
-                                <div class="col-sm-8" id="amountusd">
-                                    <select class="form-control">
-                                    <option>Select One</option>
-                                    <option>100 - USD </option>
-                                    <option selected>300 - USD </option>
-                                    <option>500 - USD </option>
-                                </select>
+                                    <input type="text" class="form-control" id="transactionPassword" multiple>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="text-left ml-11">
-                        <a href="BillPayment.html" class="btn btn-secondary">Cancel</a>
-                        <a href="BillPaymentConfirm.html" class="btn btn-primary">Next</a>
+                        <a href="OtherBankBeneficiaryNRC.html" class="btn btn-secondary">Cancel</a>
+                        <a href="OtherBankBeneficiaryNRCConfirm.html" class="btn btn-primary">Add</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background: #56a3f0;">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
                 </div>
                 <div class="modal-body">
                     <div class="col-md-12 mb-2">
@@ -574,83 +530,6 @@
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#allTopup").hide();
-            $("#mptTopup").show();
-            $("#amountmmk").show();
-            $("#amountusd").hide();
-
-        });
-
-        function transfer(service) {
-            if (service == "itune") {
-                $("#allTopup").show();
-                $("#amountusd").show();
-                $("#amountmmk").hide();
-                $("#mptTopup").hide();
-                document.getElementById("title").innerHTML = "iTunes Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/itunes.png\" width=\"40px\" height=\"40px\">";
-            } else if (service == "googlePlay") {
-                $("#allTopup").show();
-                $("#mptTopup").hide();
-                $("#amountusd").show();
-                $("#amountmmk").hide();
-                document.getElementById("title").innerHTML = "Google Play Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/google-play.jpg\" width=\"40px\" height=\"40px\">";
-            } else if (service == "steamWallet") {
-                $("#allTopup").show();
-                $("#mptTopup").hide();
-                $("#amountusd").show();
-                $("#amountmmk").hide();
-                document.getElementById("title").innerHTML = "Steam Wallet Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/steam.png\" width=\"40px\" height=\"40px\">";
-            } else if (service == "ananda") {
-                $("#allTopup").show();
-                $("#mptTopup").hide();
-                $("#amountusd").hide();
-                $("#amountmmk").show();
-                document.getElementById("title").innerHTML = "Ananda Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/ananda.png\" width=\"40px\" height=\"40px\">";
-            } else if (service == "hiwifi") {
-                $("#allTopup").show();
-                $("#mptTopup").hide();
-                $("#amountusd").hide();
-                $("#amountmmk").show();
-                document.getElementById("title").innerHTML = "Hi Wifi Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/hiwifi.png\" width=\"40px\" height=\"40px\">";
-            } else if (service == "myanmarNetAwaThone") {
-                $("#allTopup").show();
-                $("#mptTopup").hide();
-                $("#amountusd").hide();
-                $("#amountmmk").show();
-                document.getElementById("title").innerHTML = "Myanmar Net AwaThone Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/myanmar-net.png\" width=\"40px\" height=\"40px\">";
-            } else if (service == "myanmarNetData") {
-                $("#allTopup").show();
-                $("#mptTopup").hide();
-                $("#amountusd").hide();
-                $("#amountmmk").show();
-                document.getElementById("title").innerHTML = "Myanmar Net Data Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/myanmar-net.png\" width=\"40px\" height=\"40px\">";
-            } else if (service == "myanmarNetPrePaid") {
-                $("#allTopup").show();
-                $("#mptTopup").hide();
-                $("#amountusd").hide();
-                $("#amountmmk").show();
-                document.getElementById("title").innerHTML = "Myanmar Net Pre Paid Bill Payment";
-                var el = document.getElementById("img");
-                el.innerHTML = "<img src=\"../../assets/images/bill-payment/myanmar-net.png\" width=\"40px\" height=\"40px\">";
-            } else {}
-        }
-    </script>
 </body>
 
 </html>
