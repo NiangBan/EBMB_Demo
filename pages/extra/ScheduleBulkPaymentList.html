@@ -163,7 +163,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="mm-active">
+                                <a href="#">
                                     <i class="material-icons">people_alt</i></i> Manage Beneficiary
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -175,7 +175,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OtherBankBeneficiary.html" class="mm-active">
+                                        <a href="OtherBankBeneficiary.html">
                                             <i class="metismenu-icon">
                                                 </i>Other Bank
                                         </a>
@@ -231,7 +231,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="mm-active">
                                     <i class="material-icons">description</i></i> Transaction Status
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -267,7 +267,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="BulkPaymentList.html">
+                                        <a href="BulkPaymentList.html" class="mm-active">
                                             <i class="metismenu-icon">
                                             </i>Bulk Payment
                                         </a>
@@ -366,70 +366,112 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">people_alt</i>
+                                <div class="page-title-icon"><i class="material-icons">description</i>
                                 </div>
-                                <div>Other Bank Beneficiary Details</div>
+                                <div>Schedule Bulk Payment List</div>
                             </div>
                         </div>
                     </div>
                     <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Beneficiary Name</label>
-                                <p>Mya Mya</p>
+                        <div class="col-md-6 mb-2">
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">From Account</div>
+                                <div class="col-sm-8">
+                                    <select class="form-control" id="fromAccount">
+                                    <option>Select One</option>
+                                    <option>0001010200034030</option>
+                                    <option selected>0001010200034173</option>
+                                    <option>0001010200034356</option>
+                                </select>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Bank</label>
-                                <p>CB BANK</p>
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">Approve Status</div>
+                                <div class="col-sm-8">
+                                    <select class="form-control" id="approveStatus">
+                                    <option>Select One</option>
+                                    <option>Approve</option>
+                                    <option selected>Rejected</option>
+                                    <option>Pending</option>
+                                </select>
+                                </div>
                             </div>
-                        </div>
+                        <!--<div class="col-md-6 mb-2 ">
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">Date Range</div>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend w-100">
+                                            <input type="text" name="dateRange" id="dateRange" class="form-control">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
                     </div>
                     <div class="row filter">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Branch</label>
-                                <p>SANCHAUNG BRANCH</p>
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">From Date</div>
+                                <div class="col-sm-8">
+                                    <input type="date" name="transactionFromDate" id="transactionFromDate" class="form-control" value="20/3/2020">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Account No</label>
-                                <p>0010978765432123</p>
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">To Date</div>
+                                <div class="col-sm-8">
+                                    <input type="date" name="transactionToDate" id="transactionToDate" class="form-control" value="20/3/2020">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Contact Phone</label>
-                                <p>+959-256666677</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Contact Address</label>
-                                <p>Yangon</p>
-                            </div>
-                        </div>
+                    <div class="text-right mr-5">
+                        <input type="button" class="btn btn-primary" value="Search" />
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Created Date</label>
-                                <p>2-7-2020</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Updated Date</label>
-                                <p>15-7-2020</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left">
-                        <button class="btn btn-primary" onclick="location.replace('OtherBankBeneficiary.html');"><i class="fas fa-arrow-left icon-spacing"></i> Back</button>
+                    <hr/>
+                    <div class="mt-5">
+                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap" id="transferTable">
+                            <thead>
+                                <tr class="text-white">
+                                    <th width="6%" class="text-center">No</th>
+                                    <th class="text-center">Account Name</th>
+                                    <th class="text-center">Deposit Account No.</th>
+                                    <th class="text-center">Position</th>
+                                    <th class="text-center">Total Amount</th>
+                                    <th class="text-center">Date</th>
+                                    <th class="text-center">Transaction Date & Time</th>
+                                    <th class="text-center">File Name</th>
+                                    <th width="7%" class="text-center">Approve Status</th>
+                                    <th width="7%" class="text-center">View Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-right">1</td>
+                                    <td class="text-left">Kyaw Kyaw</td>
+                                    <td class="text-right">0009387922535253</td>
+                                    <td class="text-center">Manager</td>
+                                    <td class="text-center">500000</td>
+                                    <td class="text-center">27/06/2020</td>
+                                    <td class="text-center">30/06/2020 00:10:30 PM</td>
+                                    <td class="text-left">bulkpayment_saledeparment.xlsm</td>
+                                    <td class="text-center primary-color">
+                                        <i class="far fa-check-circle fa-lg success" style="color: green;"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="ScheduleBulkPaymentListDetails.html">
+                                            <i class="far fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                 </div>
@@ -443,8 +485,8 @@
                 <div class="modal-header" style="background: #56a3f0;">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
                 </div>
                 <div class="modal-body">
                     <div class="col-md-12 mb-2">

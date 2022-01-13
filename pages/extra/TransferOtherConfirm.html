@@ -27,6 +27,11 @@
     <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/materialicons.css">
     <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../../datepicker/gijgo.min.css">
+    <link rel="stylesheet" type="text/css" href="../../daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 </head>
 
 <body>
@@ -104,7 +109,7 @@
                             </ul> -->
                         </li>
                         <li class="nav-item">
-                            <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
+                            <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal">
                                 <i class="nav-link-icon material-icons">exit_to_app</i>
                             </a>
                         </li>
@@ -163,7 +168,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="mm-active">
+                                <a href="#">
                                     <i class="material-icons">people_alt</i></i> Manage Beneficiary
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -175,7 +180,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OtherBankBeneficiary.html" class="mm-active">
+                                        <a href="OtherBankBeneficiary.html">
                                             <i class="metismenu-icon">
                                                 </i>Other Bank
                                         </a>
@@ -183,13 +188,13 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="mm-active">
                                     <i class="material-icons">transform</i></i> Transaction
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="TransferOwn.html">
+                                        <a href="TransferOwn.html" class="mm-active">
                                             <i class="metismenu-icon">
                                                 </i>Transfer
                                         </a>
@@ -352,7 +357,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal">
+                                <a href="../../Retail_Login.html" data-toggle="modal" data-target="#logout">
                                     <i class="material-icons">exit_to_app</i>Logout
                                 </a>
                             </li>
@@ -366,9 +371,23 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">people_alt</i>
+                                <div class="page-title-icon"><i class="material-icons">transform</i>
                                 </div>
-                                <div>Other Bank Beneficiary Details</div>
+                                <div>Transfer (Other)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row filter">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>From Account Name</label>
+                                <p>Kyaw Kyaw</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>From Account Number</label>
+                                <p>0001010200034173</p>
                             </div>
                         </div>
                     </div>
@@ -376,75 +395,130 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Beneficiary Name</label>
-                                <p>Mya Mya</p>
+                                <p>Ko Ko</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Bank</label>
-                                <p>CB BANK</p>
+                                <label>To Branch</label>
+                                <p>Sule Branch</p>
                             </div>
                         </div>
                     </div>
                     <div class="row filter">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Branch</label>
-                                <p>SANCHAUNG BRANCH</p>
+                                <label>To Account Number</label>
+                                <p>0001010200034030</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Account No</label>
-                                <p>0010978765432123</p>
+                                <label>Mobile Number</label>
+                                <p>+959-66005421</p>
                             </div>
                         </div>
                     </div>
                     <div class="row filter">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Contact Phone</label>
-                                <p>+959-256666677</p>
+                                <label>Email</label>
+                                <p>MFTB1@gmail.com</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Contact Address</label>
-                                <p>Yangon</p>
+                                <label>Transaction Date</label>
+                                <p>30-6-2020</p>
                             </div>
                         </div>
                     </div>
                     <div class="row filter">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Created Date</label>
-                                <p>2-7-2020</p>
+                                <label>Amount</label>
+                                <p>30,000.00 MMK</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Updated Date</label>
-                                <p>15-7-2020</p>
+                                <label>Transaction Fees</label>
+                                <p>200.00</p>
                             </div>
                         </div>
                     </div>
-                    <div class="text-left">
-                        <button class="btn btn-primary" onclick="location.replace('OtherBankBeneficiary.html');"><i class="fas fa-arrow-left icon-spacing"></i> Back</button>
+                    <div class="row filter">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <p>Other Transfer</p>
+                            </div>
+                        </div>
                     </div>
 
+                    <div class="text-left">
+                        <a href="TransferOther.html" class="btn btn-secondary">Cancel</a>
+                        <input type="button" value="Confirm" class="btn btn-primary" data-toggle="modal" data-target="#transactionPasswordModal">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
+    <!--     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: limegreen;">
+                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: white;font-weight: 500;">Own Transfer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    Success transfer.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Modal -->
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: #56a3f0;">
+                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;">Password Confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12 mb-2">
+                        <div class="form-group row">
+                            <label for="interestRate" class="col-sm-5 text-left col-form-label">Transaction Password</label>
+                            <div class="col-sm-7">
+                                <input type="password" class="form-control" id="interestRate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <a href="TransferOtherSuccess.html" class="btn btn-primary">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background: #56a3f0;">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
                 </div>
                 <div class="modal-body">
                     <div class="col-md-12 mb-2">

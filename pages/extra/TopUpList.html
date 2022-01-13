@@ -163,7 +163,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="mm-active">
+                                <a href="#">
                                     <i class="material-icons">people_alt</i></i> Manage Beneficiary
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -175,7 +175,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OtherBankBeneficiary.html" class="mm-active">
+                                        <a href="OtherBankBeneficiary.html">
                                             <i class="metismenu-icon">
                                                 </i>Other Bank
                                         </a>
@@ -231,7 +231,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="mm-active">
                                     <i class="material-icons">description</i></i> Transaction Status
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -261,7 +261,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="TopUpList.html">
+                                        <a href="TopUpList.html" class="mm-active">
                                             <i class="metismenu-icon">
                                                 </i>Topup
                                         </a>
@@ -366,143 +366,118 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">people_alt</i>
+                                <div class="page-title-icon"><i class="material-icons">description</i>
                                 </div>
-                                <div>Beneficiary (Other Bank)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-md-12">
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios1" value="option1" onClick="window.location = 'OtherBankBeneficiaryAcc.html';">
-                            <label class="form-check-label" for="Radios1">
-                              Account
-                            </label>
-                        </div>
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios2" value="option2" onClick="window.location = 'OtherBankBeneficiaryNRC.html';" checked>
-                            <label class="form-check-label" for="Radios2">
-                              NRC
-                            </label>
-                        </div>
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios3" value="option3" onClick="window.location = 'OtherBankBeneficiaryPassport.html';">
-                            <label class="form-check-label" for="Radios3">
-                              Passport
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label class="col-sm-4 text-right col-form-label">Other Bank
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="beneficiary">
-                                            <option selected>Select One</option>
-                                            <option>AYA Bank</option>
-                                            <option>CB Bank</option>
-                                            <option>KBZ Bank</option>
-                                        </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label class="col-sm-4 text-right col-form-label">Other Branch
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="beneficiary">
-                                            <option selected>Select One</option>
-                                            <option>Sule Branch</option>
-                                            <option>Pansoedan Branch</option>
-                                            <option>Kyautada Branch</option>
-                                        </select>
-                                </div>
+                                <div>Topup List</div>
                             </div>
                         </div>
                     </div>
                     <div class="row filter">
                         <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="account" class="col-sm-4 text-right col-form-label">NRC 
-                                    <span class="required">*</span></label>
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">From Account</div>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="account">
+                                    <select class="form-control" id="fromAccount">
+                                        <option>Select One</option>
+                                        <option>0001010200034030</option>
+                                        <option selected>0009387922535253</option>
+                                        <option>0001010200034356</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="mobileNo" class="col-sm-4 text-right col-form-label">Beneficiary Name 
-                                    <span class="required">*</span></label>
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">Operator Type</div>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="mobileNo">
+                                    <select class="form-control" id="operator">
+                                        <option>Select One</option>
+                                        <option>MPT</option>
+                                        <option selected>Telenor</option>
+                                        <option>Ooredoo</option>
+                                        <option>MecTel</option>
+                                        <option>Mytel</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="mobileNo" class="col-sm-4 text-right col-form-label">Mobile No 
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">+959 -</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="username">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="amount" class="col-sm-4 text-right col-form-label">Contact No 
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="number" class="form-control" id="amount">
-                                </div>
-                            </div>
-                        </div>-->
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="email" class="col-sm-4 text-right col-form-label">Email</label>
-                                <div class="col-sm-8">
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="text-right mr-5">
+                        <input type="button" class="btn btn-primary" value="Search" />
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="description" class="col-sm-4 text-right col-form-label">Contact Address</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="description">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="amount" class="col-sm-4 text-right col-form-label">Description</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="transactionPassword" multiple>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left ml-11">
-                        <a href="OtherBankBeneficiaryNRC.html" class="btn btn-secondary">Cancel</a>
-                        <a href="OtherBankBeneficiaryNRCConfirm.html" class="btn btn-primary">Add</a>
+                    <hr/>
+                    <div class="mt-5">
+                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap" id="transferTable">
+                            <thead>
+                                <tr class="text-white">
+                                    <th width="6%" class="text-center">No</th>
+                                    <th class="text-center">From Account No.</th>
+                                    <th class="text-center">Phone No.</th>
+                                    <th class="text-center">Service Type</th>
+                                    <th class="text-center">Amount</th>
+                                    <th class="text-center">Transaction Date & Time</th>
+                                    <th width="7%" class="text-center">Approve Status</th>
+                                    <th width="7%" class="text-center">View Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-right">1</td>
+                                    <td class="text-center">0009387922535253</td>
+                                    <td class="text-right">09258488834</td>
+                                    <td class="text-left">MPT</td>
+                                    <td class="text-right">5000.00</td>
+                                    <td class="text-center">22/6/2020 01:10:30 AM</td>
+                                    <td class="text-center primary-color">
+                                        <i class="far fa-check-circle fa-lg success" style="color: green;"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="TopUpListDetails.html">
+                                            <i class="far fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right">2</td>
+                                    <td class="text-center">0009387922535253</td>
+                                    <td class="text-right">09787686546</td>
+                                    <td class="text-left">Telenor</td>
+                                    <td class="text-right">5000.00</td>
+                                    <td class="text-center">22/6/2020 02:10:30 AM</td>
+                                    <td class="text-center primary-color">
+                                        <i class="far fa-times-circle fa-lg fail" style="color: red;"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="TopUpListDetails.html">
+                                            <i class="far fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right">3</td>
+                                    <td class="text-center">0009387922535253</td>
+                                    <td class="text-right">09969987687</td>
+                                    <td class="text-left">Ooredoo</td>
+                                    <td class="text-right">5000.00</td>
+                                    <td class="text-center">22/6/2020 06:10:30 AM</td>
+                                    <td class="text-center primary-color">
+                                        <i class="fas fa-spinner fa-lg doing" style="color: #b9bf0a;"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="TopUpListDetails.html">
+                                            <i class="far fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background: #56a3f0;">

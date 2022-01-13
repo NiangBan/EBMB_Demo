@@ -183,7 +183,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="mm-active">
                                     <i class="material-icons">transform</i></i> Transaction
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
@@ -224,7 +224,7 @@
                                         </i> Bulk Payment</a>
                                     </li>
                                     <li>
-                                        <a href="ScheduleBulkPayment.html">
+                                        <a href="ScheduleBulkPayment.html" class="mm-active">
                                             <i class="metismenu-icon">
                                         </i>Schedule Bulk Payment</a>
                                     </li>
@@ -366,71 +366,88 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">people_alt</i>
+                                <div class="page-title-icon"><i class="material-icons">transform</i>
                                 </div>
-                                <div>Other Bank Beneficiary Details</div>
+                                <div>Schedule Bulk Payment</div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Beneficiary Name</label>
-                                <p>Mya Mya</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <div class="row">
+                                <div class="col-sm-4 text-right col-form-label">From Account</div>
+                                <div class="col-sm-8">
+                                    <select class="form-control" id="fromAccount">
+                                    <option>Select One</option>
+                                    <option>0001010200034030</option>
+                                    <option selected>0001010200034173</option>
+                                    <option>0001010200034356</option>
+                                </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Bank</label>
-                                <p>CB BANK</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Branch</label>
-                                <p>SANCHAUNG BRANCH</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Passport</label>
-                                <p>264930236</p>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group row">
+                                <label for="amount1" class="col-sm-4 text-right col-form-label">Effective Date</label>
+                                <div class="col-sm-8">
+                                    <input type="text" id="date" placeholder="03/12/2020" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Contact Phone</label>
-                                <p>+959-783225924</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Contact Address</label>
-                                <p>Yangon</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Created Date</label>
-                                <p>2-7-2020</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Updated Date</label>
-                                <p>15-7-2020</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <div class="row">
+
+                                <div class="col-sm-4 text-right col-form-label">File Upload</div>
+                                <div class="col-sm-8">
+                                    <form class="md-form col-md-6 mb-2 pl-0">
+                                        <div class="file-field">
+                                            <a class="btn-floating purple-gradient mt-0 float-left">
+                                                <input class="fileupload" type="file">
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="text-left">
-                        <button class="btn btn-primary" onclick="location.replace('OtherBankBeneficiary.html');"><i class="fas fa-arrow-left icon-spacing"></i> Back</button>
+                    <div class="text-right mr-5">
+                        <a href="ScheduleBulkPayment1.html"> <input type="button" class="btn btn-beneficiary" value="Upload File" /></a>
                     </div>
+                    <hr/>
+                    <!--<div class="mt-5">
+                        <table class="table table-bordered table-striped w-100" id="transferTable">
+                            <thead>
+                                <tr class="text-white">
+                                    <th width="6%" class="text-center">No</th>
+                                    <th class="text-center">Pay Row No.</th>
+                                    <th class="text-center">Account No.</th>
+                                    <th class="text-center">Account Name</th>
+                                    <th class="text-center">Transaction Date & Time</th>
+                                    <th class="text-center">Error Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-right">1</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0009387922535253</td>
+                                    <td class="text-left">Ko Ko</td>
+                                    <td class="text-left">27/06/2020 10:08:00 PM</td>
+                                    <td class="text-center">Currency is Incorrect.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right">1</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0009387922535253</td>
+                                    <td class="text-left">Ko Ko</td>
+                                    <td class="text-left">28/06/2020 11:08:00 PM</td>
+                                    <td class="text-center">Account name and account number does not match.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>-->
 
                 </div>
             </div>
@@ -443,8 +460,8 @@
                 <div class="modal-header" style="background: #56a3f0;">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
                 </div>
                 <div class="modal-body">
                     <div class="col-md-12 mb-2">
