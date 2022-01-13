@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CreateAdminUser</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!--    <link rel="stylesheet" href="../../css/util.css">-->
+    <link rel="stylesheet" href="../../select2/select2.min.css">
+    <link rel="stylesheet" href="../../select2/select2-bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../../datepicker/gijgo.min.css">
+    <link rel="stylesheet" type="text/css" href="../../daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../css/dataTables.bootstrap4.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="../../css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../../css/demo.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4 pt-5">
+                <a href="../../pages/maker/Dashboard.html"><img src="../../images/ACE LOGO WHITE.png" class="logo_image" /></a>
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="Dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="#UserSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">User</a>
+                        <ul class="collapse list-unstyled" id="UserSubMenu">
+                            <li>
+                                <a href="#">Register Retail User</a>
+                            </li>
+                            <li>
+                                <a href="#">User List</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#AdminSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
+                        <ul class="collapse list-unstyled" id="AdminSubMenu">
+                            <li>
+                                <a href="#">Create Admin User</a>
+                            </li>
+                            <li>
+                                <a href="#">Admin List</a>
+                            </li>
+                            <li>
+                                <a href="#">Permission</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#GeneralSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">General Setup</a>
+                        <ul class="collapse list-unstyled" id="GeneralSubMenu">
+                            <li>
+                                <a href="#">Currency</a>
+                            </li>
+                            <li>
+                                <a href="#">Branch</a>
+                            </li>
+                            <li>
+                                <a href="#">City</a>
+                            </li>
+                            <li>
+                                <a href="#">Township</a>
+                            </li>
+                            <li>
+                                <a href="#">Version</a>
+                            </li>
+                            <li>
+                                <a href="#">Rule</a>
+                            </li>
+                            <li>
+                                <a href="#">ADS Photo</a>
+                            </li>
+                            <li>
+                                <a href="#">Office Account</a>
+                            </li>
+                            <li>
+                                <a href="#">Utility</a>
+                            </li>
+                            <li>
+                                <a href="#">Utility Detail</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Other Bank</a>
+                            </li>
+                            <li>
+                                <a href="#">Other Branch</a>
+                            </li>
+                            <li>
+                                <a href="#">Schedule Setup</a>
+                            </li>
+                            <li>
+                                <a href="#">Holiday</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#ProductServiceSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products and Services</a>
+                        <ul class="collapse list-unstyled" id="ProductServiceSubMenu">
+                            <li>
+                                <a href="#">Account Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Account Service Desc</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#RequestSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Request</a>
+                        <ul class="collapse list-unstyled" id="RequestSubMenu">
+                            <li>
+                                <a href="#">New Retail User</a>
+                            </li>
+                            <li>
+                                <a href="#">Requested User</a>
+                            </li>
+                            <li>
+                                <a href="#">User List</a>
+                            </li>
+                            <li>
+                                <a href="#">Requested Changes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#ApproveSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Approve</a>
+                        <ul class="collapse list-unstyled" id="ApproveSubMenu">
+                            <li>
+                                <a href="#">Requested User</a>
+                            </li>
+                            <li>
+                                <a href="#">Requested Changes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#InformationSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Information</a>
+                        <ul class="collapse list-unstyled" id="InformationSubMenu">
+                            <li>
+                                <a href="#">Feedback</a>
+                            </li>
+                            <li>
+                                <a href="#">Notification</a>
+                            </li>
+                            <li>
+                                <a href="#">SMS Allow</a>
+                            </li>
+                            <li>
+                                <a href="#">SMS Body</a>
+                            </li>
+                            <li>
+                                <a href="#">Email Template</a>
+                            </li>
+                            <li>
+                                <a href="#">How To Use</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#ReportSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+                        <ul class="collapse list-unstyled" id="ReportSubMenu">
+                            <li>
+                                <a href="#">User</a>
+                            </li>
+                            <li>
+                                <a href="#">Transfer Detail</a>
+                            </li>
+                            <li>
+                                <a href="#">Remittance</a>
+                            </li>
+                            <li>
+                                <a href="#">TopUp</a>
+                            </li>
+                            <li>
+                                <a href="#">Bill Payment</a>
+                            </li>
+                            <li>
+                                <a href="#">Feedback Data</a>
+                            </li>
+                            <li>
+                                <a href="#">Transaction Summary</a>
+                            </li>
+                            <li>
+                                <a href="#">Utility Summary</a>
+                            </li>
+                            <li>
+                                <a href="#">Admin Log</a>
+                            </li>
+                            <li>
+                                <a href="#">User Activity Log</a>
+                            </li>
+                            <li>
+                                <a href="#">Schedule Transfer Status</a>
+                            </li>
+                            <li>
+                                <a href="#">Schedule Transfer Log</a>
+                            </li>
+                            <li>
+                                <a href="#">Cron Log</a>
+                            </li>
+                            <li>
+                                <a href="#">Domestic Interbank Transfer</a>
+                            </li>
+                            <li>
+                                <a href="#">Schedule Payment</a>
+                            </li>
+                            <li>
+                                <a href="#">Corporate</a>
+                            </li>
+                            <li>
+                                <a href="#">Corporate User</a>
+                            </li>
+                            <li>
+                                <a href="#">Bulk Payment</a>
+                            </li>
+                            <li>
+                                <a href="#">Bulk Payment Detail</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#OtherBankSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Other Bank</a>
+                        <ul class="collapse list-unstyled" id="OtherBankSubmenu">
+                            <li>
+                                <a href="#">Own Bank Transaction(CCT)export</a>
+                            </li>
+                            <li>
+                                <a href="#">CCT Pending List</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="active">
+                        <a href="#CorRequestSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Corporate Request</a>
+                        <ul class="collapse list-unstyled" id="CorRequestSubMenu">
+                            <li>
+                                <a href="#">Request Corporate</a>
+                            </li>
+                            <li>
+                                <a href="#">Request List</a>
+                            </li>
+                            <li>
+                                <a href="#">Corporate List</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#CorRequestUserSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Corporate User Request</a>
+                        <ul class="collapse list-unstyled" id="CorRequestUserSubMenu">
+                            <li>
+                                <a href="#">Request Corporate User</a>
+                            </li>
+                            <li>
+                                <a href="#">Request User List</a>
+                            </li>
+                            <li>
+                                <a href="#">Request Changes List</a>
+                            </li>
+                            <li>
+                                <a href="#">Corporate User List</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#CorApproveSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Corporate Approve</a>
+                        <ul class="collapse list-unstyled" id="CorApproveSubMenu">
+                            <li>
+                                <a href="#">Pending Corporates</a>
+                            </li>
+                            <li>
+                                <a href="#">Pending Users</a>
+                            </li>
+                            <li>
+                                <a href="#">Pending User Changes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#CorGeneralMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Corporate General Setup</a>
+                        <ul class="collapse list-unstyled" id="CorGeneralMenu">
+                            <li>
+                                <a href="#">Country</a>
+                            </li>
+                            <li>
+                                <a href="#">State</a>
+                            </li>
+                            <li>
+                                <a href="#">Bulk File</a>
+                            </li>
+                            <li>
+                                <a href="#">Position</a>
+                            </li>
+                            <li>
+                                <a href="#">Department</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#RegisterApproveRuleSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Corporate Approve RuleList</a>
+                        <ul class="collapse list-unstyled" id="RegisterApproveRuleSubMenu">
+                            <li>
+                                <a href="#">Register Approve Rule</a>
+                            </li>
+                            <li>
+                                <a href="#">Requested Approve Rule List</a>
+                            </li>
+                            <li>
+                                <a href="#">Pending Approve Rule</a>
+                            </li>
+                            <li>
+                                <a href="#">Approve Rule List</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!--<div class="footer">
+        <p>&lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+            &lt;!&ndash; Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. &ndash;&gt;</p>
+        </div>-->
+
+            </div>
+        </nav>
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <div class="container-fluid mt-2">
+                <div class="text-right mr-5" style="color: white;background: white; margin-bottom: -70px;" onclick="location.replace('../../RetailLogin.html');">
+                    <i class="fa fa-sign-out" id="logout_icon"></i>
+                </div>
+                <div class="row title-card card-stats">
+                    <div class="row" style="margin: 10px;">
+                        <h3 style="color: #fff;font-weight: 700;margin-left: 10px;padding-top: 0px;">
+                            ACE Data Systems
+                        </h3>
+                    </div>
+                </div>
+                <h2>Register.</h2>
+
+                <form action="/Admin/Register" autocomplete="off" class="form-horizontal" method="post" role="form">
+                    <input name="__RequestVerificationToken" type="hidden" value="V4NlFC5vbZwYcC-SEQmzVNVILZ4cUIsR5AQJOTWuIKlWrlO9bjVupHzoGKcwujcNK9vpFeYw-wnzlv1SHdLzbyVO0MaLnxNzb4cGePIHUp24zB3SeUX_WswWg_fivtbFaugTnB4vU3Um5NQGrgd4-g2" />    <h4>Create a new account.</h4>
+                    <hr />
+                    <div class="">
+                        <div class="form-group row">
+                            <label class="col-md-2 text-right col-form-label" for="UserName">User Name</label>
+                            <div class="col-md-10">
+                                <input class="form-control" data-val="true" data-val-required="The UserName field is required." id="UserName" name="UserName" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 text-right col-form-label" for="FullName">Full Name</label>
+                            <div class="col-md-10">
+                                <input class="form-control" data-val="true" data-val-length="The field FullName must be a string with a maximum length of 50." data-val-length-max="50" data-val-required="The FullName field is required." id="FullName" name="FullName" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="FullName" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 text-right col-form-label" for="BranchID">Branch</label>
+                            <div class="col-md-10">
+                                <select class="form-control" data-val="true" data-val-number="The field Branch must be a number." data-val-required="The Branch field is required." id="BranchID" name="BranchID">
+                                    <option value="">Select Branch</option>
+                                    <option value="1">HEAD OFFICE</option>
+                                    <option value="2">NGATHAINGCHAUNG BRANCH</option>
+                                    <option value="2058">BOAUNGKYAW BRANCH</option>
+                                    <option value="2059">SHWEGONEDAING BRANCH</option>
+                                    <option value="2060">SHWETAUNGTAN BRANCH</option>
+                                    <option value="2061">PYAPON BRANCH</option>
+                                    <option value="2062">IBD OFFICE</option>
+                                    <option value="2063">POST OFFICE - ALONE</option>
+                                    <option value="2064">PATHEIN BRANCH</option>
+                                    <option value="2065">HINTHADA BRANCH</option>
+                                    <option value="2066">SHANLANZAY BRANCH</option>
+                                    <option value="2067">MANDALAY(1)</option>
+                                    <option value="2069">NAY PYI TAW</option>
+                                    <option value="2070">POST OFFICE - SANCHAUNG</option>
+                                    <option value="2071">POST OFFICE - PHYU</option>
+                                    <option value="2072">POST OFFICE - MYAUNGMYA</option>
+                                    <option value="2073">MUSE BRANCH</option>
+                                    <option value="2074">THINGANGYUN</option>
+                                    <option value="2075">BAYINTNAUNG BRANCH</option>
+                                    <option value="2076">MYAWADDY</option>
+                                    <option value="2077">HTU GYI BRANCH</option>
+                                    <option value="2078">WARTAN BRANCH</option>
+                                    <option value="2088">NATMAUK STREET BRANCH</option>
+                                    <option value="2090">Loikaw  Branch</option>
+                                </select>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="BranchID" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 text-right col-form-label" for="Role">Role</label>
+                            <div class="col-md-10">
+                                <select class="form-control" id="Role" name="Role">
+                                    <option value="">Select Role</option>
+                                    <option value="1">Creator</option>
+                                    <option value="2">Approver</option>
+                                    <option value="3">Administrator</option>
+                                    <option value="4">THE ICONIC Lead</option>
+                                    <option value="5">THE ICONIC Team</option>
+                                    <option value="6">RM Teamlead</option>
+                                    <option value="7">RM</option>
+                                    <option value="8">Reception</option>
+                                </select>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Role" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 text-right col-form-label" for="StaffID">StaffID</label>
+                            <div class="col-md-10">
+                                <input class="form-control" data-val="true" data-val-length="The field StaffID must be a string with a maximum length of 50." data-val-length-max="50" id="StaffID" name="StaffID" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="StaffID" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 text-right col-form-label" for="Phone">Phone</label>
+                            <div class="col-md-10">
+                                <input class="form-control" data-val="true" data-val-length="The field Phone must be a string with a maximum length of 50." data-val-length-max="50" id="Phone" name="Phone" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 text-right col-form-label" for="Email">Email</label>
+                            <div class="col-md-10">
+                                <input class="form-control" data-val="true" data-val-email="The Email field is not a valid e-mail address." id="Email" name="Email" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-offset-2 col-md-5 text-right">
+                                <input type="submit" class="btn btn-success" value="Register" />
+                                <a class="btn btn-default" href="/Admin">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/popper.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/main.js"></script>
+
+    <script type="text/javascript" src="../../js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../js/moment.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../../js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="../../datepicker/gijgo.min.js"></script>
+    <script type="text/javascript" src="../../select2/select2.full.min.js"></script>
+    <script type="text/javascript" src="../../select2/select2.min.js"></script>
+    <script type="text/javascript" src="../../daterangepicker/daterangepicker.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dateRange').daterangepicker();
+        });
+        //$('#BranchID').select2({
+        //    theme: 'bootstrap4'
+        //});
+        //$('#Role').select2({
+        //    theme: 'bootstrap4'
+        //});
+        $('#transactionType').select2({
+            theme: 'bootstrap4'
+        });
+        $('#approveStatus').select2({
+            theme: 'bootstrap4'
+        });
+
+        function goListPage() {
+            location.replace("Transfer.html");
+        }
+    </script>
+</body>
+
+</html>
