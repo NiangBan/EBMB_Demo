@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Currency List</title>
+    <title>Create City</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -27,12 +27,6 @@
     <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/materialicons.css">
     <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/dataTables.bootstrap4.min.css">
-    <style>
-        a{
-            text-decoration:none;
-        }
-    </style>
 </head>
 
 <body>
@@ -88,7 +82,7 @@
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell" style="color:black;"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black"></i><span class="num">2</span>
                             </a>
                             <!-- <ul class="dropdown-menu">
                                 <li class="header">Inbox</li>
@@ -224,7 +218,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="City.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>City
                                         </a>
@@ -728,81 +722,29 @@
                                 <div class="page-title-icon">
                                     <i class="material-icons">people_alt</i>
                                 </div>
-                                <div>Currency List</div>
+                                <div>Create</div>
                             </div>
                         </div>
+                        <div style="margin-left:11%;">Currency</div>
                     </div>
-                    <div class="text-left mr-5">
-                        <input type="button" class="btn btn-beneficiary" value="+  Creat New" onclick="makeRemittance()" />
-                    </div>
-                    <hr />
-                    <div class="mt-5">
-                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
-                            <thead>
-                                <tr class="text-white">
-                                    <th class="text-center">Code</th>
-                                    <th class="text-center">Description</th>
-                                    <th class="text-center">Retail ChargesCode</th>
-                                    <th class="text-center">Corporate CharrgesCode</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-left">EUR</td>
-                                    <td class="text-left">EUR</td>
-                                    <td class="text-left">EBCCYEUR</td>
-                                    <td class="text-center">COCCYEUR</td>
-                                    <td class="text-center">
-                                        <a href="#" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">MMK</td>
-                                    <td class="text-left">MMK</td>
-                                    <td class="text-left">CCYMMK</td>
-                                    <td class="text-center">COCCYMMK</td>
-                                    <td class="text-center">
-                                        <a href="#" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">USD</td>
-                                    <td class="text-left">USD</td>
-                                    <td class="text-left">USDCCY</td>
-                                    <td class="text-center">COCCYUSD</td>
-                                    <td class="text-center">
-                                        <a href="#" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br />
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: #56a3f0;">
-                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12 mb-2">
-                        <div class="form-group row">
-                            <label for="interestRate" class="col-sm-12 text-center col-form-label">Are you sure you want to logout?</label>
-
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-sm-4 text-right col-form-label">Code:</label>
                         </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="../../Retail_Login.html" class="btn btn-primary">OK</a>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="code"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-sm-4 text-right col-form-label">Description:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="desc"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-12 offset-sm-2">
+                            <button type="button" class="btn btn-success" onclick="window.location.href='City.html'">Create</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='City.html'">Cancel</button>
+                        </div>
+                    </div><br />
                 </div>
             </div>
         </div>
@@ -811,34 +753,6 @@
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
-    <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#transferTable').DataTable({
-                "columnDefs": [{
-                    "targets": [4, 5],
-                    "orderable": false
-                }]
-            });
-        });
-        $('#fromAccount').select2({
-            theme: 'bootstrap4'
-        });
-        $('#transactionType').select2({
-            theme: 'bootstrap4'
-        });
-        $('#bank').select2({
-            theme: 'bootstrap4'
-        });
-        $('#approveStatus').select2({
-            theme: 'bootstrap4'
-        });
-
-        function makeRemittance() {
-            location.replace("CreateCurrency.html");
-        }
-    </script>
 </body>
 
 </html>
