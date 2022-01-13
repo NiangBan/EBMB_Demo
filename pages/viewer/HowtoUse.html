@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Myanma Foreign Trade Bank</title>
+    <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/materialicons.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <div class="logo-src">
+                    <a href="Dashboard.html" class="logo-src"></a>
+                </div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                </button>
+                </span>
+            </div>
+            <div class="app-header__content">
+                <div class="app-header-right">
+                    <!-- <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div> -->
+                    <ul class="header-menu nav">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                             Welcome viewer!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                            </a>
+                        </li>
+                        <li class="btn-group nav-item">
+                            <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
+                                <i class="nav-link-icon fa fa-bell"></i><span class="num">2</span>
+                            </a>
+                            <!-- <ul class="dropdown-menu">
+                                <li class="header">Inbox</li>
+                                <li>
+                                   
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="inbox-transaction.html">
+                                                <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="inbox-information.html">
+                                                <i class="fa fa-info text-green"></i> You have 2 notifications in information.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="inbox-transaction.html">View all</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
+                                <i class="nav-link-icon material-icons">exit_to_app</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                <span class="btn-icon-wrapper">
+                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                </span>
+                    </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <li>
+                                <a href="Dashboard.html">
+                                    <i class="material-icons">dashboard</i> Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Profile.html">
+                                    <i class="material-icons">account_box</i> Profile
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="material-icons">description</i></i> Transaction List
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="TransferList.html">
+                                            <i class="metismenu-icon">
+                                                </i>Transfer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ScheduleTransferList.html">
+                                            <i class="metismenu-icon">
+                                                </i>Schedule Transfer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="RemittanceList.html">
+                                            <i class="metismenu-icon">
+                                                </i>Remittance
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BillPaymentList.html">
+                                            <i class="metismenu-icon">
+                                                </i>Bill Payment
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="TopUpList.html">
+                                            <i class="metismenu-icon">
+                                                </i>Topup
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BulkPaymentList.html">
+                                            <i class="metismenu-icon">
+                                            </i>Bulk Payment
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ScheduleBulkPaymentList.html">
+                                            <i class="metismenu-icon">
+                                            </i>Schedule Bulk Payment
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="OtherBankInfo.html">
+                                    <i class="material-icons">info</i>Other Bank Info
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Feedback.html">
+                                    <i class="material-icons">feedback</i>Feedback
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Calculator.html">
+                                    <i class="material-icons">calculate</i>Calculator
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ExchangeRate.html">
+                                    <i class="material-icons">monetization_on</i>Exchange Rate
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Branch.html">
+                                    <i class="material-icons">account_tree</i>Branch
+                                </a>
+                            </li>
+                            <li>
+                                <a href="HowToUse.html" class="mm-active">
+                                    <i class="material-icons">help</i>How To Use
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../../Corporate_Login.html">
+                                    <i class="material-icons">exit_to_app</i>Logout
+                                </a>
+                            </li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="app-page-title">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-heading">
+                                <div class="page-title-icon"><i class="material-icons">help</i>
+                                </div>
+                                <div>How To Use</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="accordion" id="accordionExample">
+                            <div class="cardhtu">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <li> <u> Manage Beneficiary </u> </li>
+                          </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Manage Beneficiary is to create a list of people that you used to transfer money. <br> Add Beneficiary for own bank account <br> Beneficiary Account Number: Type the account number of A bank. <br> Beneficiary Name:
+                                        Type Customer’s desired Name <br> Contact Phone: Type phone <br> Email: Type Email <br> Description: Type Description <br> Click to “Add Beneficiary ” button
+                                    </div>
+                                    <a href="../../pdf/Manage Beneficinary.pdf">
+                                        <p>Manage Beneficiary.pdf</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cardhtu">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <li> <u> Transfer </u> </li>
+                          </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Transfer is to transfer money by using bank account. <br> From Account: Choose one of your own account. <br> To Account: Choose Geneficiary name that you want to transfer which you save in manage beneficiary. <br>                                        Amount: Type amount how much you want to transfer. <br> Description: Type Description (It's optional) <br> Click to "Next" button to continue the process.
+                                    </div>
+                                    <a href="../../pdf/Transfer Guide.pdf">
+                                        <p>Transfer.pdf</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cardhtu">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <li> <u> Schedule Transfer </u> </li> 
+                          </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+
+                                        Transfer is to transfer money by using bank account. <br> From Account: Choose one of your own account. <br> To Account: Choose Geneficiary name that you want to transfer which you save in manage beneficiary. <br>                                        Amount: Type amount how much you want to transfer. <br> Description: Type Description (It's optional) <br> Transaction Date: Choose the date when you want to transfer and create schedule. <br> Click to "Next" button
+                                        to continue the process.
+                                    </div>
+                                    <a href="../../pdf/Schedule Transfer.pdf">
+                                        <p>Schedule Transfer.pdf</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../assets/scripts/main.js"></script>
+    <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
+    <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
