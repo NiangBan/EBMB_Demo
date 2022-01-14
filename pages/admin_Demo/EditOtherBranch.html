@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Create City</title>
+    <title>Edit Other Branch</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -192,7 +192,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Permission.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Permission
                                         </a>
@@ -218,13 +218,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="City.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>City
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Township.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Township
                                         </a>
@@ -236,51 +236,64 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Rule.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Rule
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="ADSPhoto.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>ADS Photo
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OfficeAccount.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Office Account
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Utility.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Utility
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="UtilityDetail.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Utility Detail
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OtherBank.html">
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Contact Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Other Bank
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OtherBranch.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Other Branch
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="ScheduleSetup.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Schedule Setup
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Holiday
                                         </a>
                                     </li>
                                 </ul>
@@ -706,27 +719,101 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div>Create</div>
+                                <div>Edit</div>
                             </div>
                         </div>
-                        <div style="margin-left:1.5%;">Currency</div>
+                        <div style="margin-left:1.5%;">OtherBranch</div>
                     </div>
                     <div class="row">
                         <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">Code:</label>
+                            <label for="amount" class="col-form-label">Bank Name:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="code"></div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option>Select Bank</option>
+                                <option selected>CO-OPERATIVE BANK LIMITED</option>
+                                <option>ASIA GREEN DEVELOPMENT BANK LIMITED</option>
+                                <option>KANBAWZA BANK</option>
+                                <option>GLOBAL TREASURE BANK</option>
+                            </select>
+                        </div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">Description:</label>
+                            <label for="amount" class="col-form-label">Branch Name:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="desc"></div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option>Select Branch</option>
+                                <option selected>Branch 01</option>
+                                <option>Branch 02</option>
+                                <option>Branch 03</option>
+                                <option>Branch 04</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Branch Code:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="bcode" value="M29"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Branch Short Name:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="bcode" value="MLKW"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">FI Code:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="bcode" value="MMABMMMYYGN"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">CR BR Code:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="bcode" value="029"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">BR City Code:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="bcode" value="LKW"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">BR State Code:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="bcode" value="002"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Charges Code:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option >Select Charges Code</option>
+                                <option selected>C001</option>
+                                <option>C002</option>
+                                <option>C003</option>
+                                <option>C004</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Adress:</label>
+                        </div>
+                        <div class="col-md-8"> 
+                        <textarea cols="20" rows="2" class="form-control" id="UName">Yangon</textarea>
+                        </div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-12 offset-sm-2">
-                            <button type="button" class="btn btn-success" onclick="window.location.href='City.html'">Create</button>
-                            <button type="button" class="btn btn-secondary" onclick="window.location.href='City.html'">Cancel</button>
+                            <button type="button" class="btn btn-success" onclick="window.location.href='OtherBranch.html'">Save</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='OtherBranch.html'">Cancel</button>
                         </div>
                     </div><br />
                 </div>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Create City</title>
+    <title>Create Admin User</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -706,27 +706,132 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div>Create</div>
+                                <div>Edit</div>
                             </div>
                         </div>
-                        <div style="margin-left:1.5%;">Currency</div>
+                        <div style="margin-left:1.5%;">Branch</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">Code:</label>
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Code:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="code"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="code" value="001"></div>
                     </div><br />
                     <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">Description:</label>
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Name:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="desc"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="name" value="PATHEIN BRANCH"></div>
                     </div><br />
                     <div class="row">
-                        <div class="col-md-12 offset-sm-2">
-                            <button type="button" class="btn btn-success" onclick="window.location.href='City.html'">Create</button>
-                            <button type="button" class="btn btn-secondary" onclick="window.location.href='City.html'">Cancel</button>
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Address:</label>
+                        </div>
+                        <div class="col-md-8"> <textarea id="addr" cols="20" rows="2" class="form-control">No.22, Pathein</textarea></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Phone No:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="name" value="09876543233"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Transfer Rate:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select Rate Code</option>
+                                <option>1.0</option>
+                                <option>2.0</option>
+                                <option>3.0</option>
+                                <option>4.0</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Remittance Rate:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select Remittance Rate Code</option>
+                                <option>1.0</option>
+                                <option>2.0</option>
+                                <option>3.0</option>
+                                <option>4.0</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Rate Description:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select Rate Description</option>
+                                <option>Normal</option>
+                                <option>Special</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Role:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select Role</option>
+                                <option>Creator</option>
+                                <option>Approver</option>
+                                <option>Administrator</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">City:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select City</option>
+                                <option>Yangon</option>
+                                <option>Mandalay</option>
+                                <option>NayPyiTaw</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">Township:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select Township</option>
+                                <option>Insein</option>
+                                <option>Mayangone</option>
+                                <option>Lanmadaw</option>
+                                <option>AungMyayTharZan</option>
+                                <option>MaharAungMyay</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">LATITUDE:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="UName" value="21.88754"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <label for="amount">LONGITUDE:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="UName" value="97.32456"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-12 offset-sm-3">
+                            <button type="button" class="btn btn-success" onclick="window.location.href='Branch.html'">Save</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='Branch.html'">Cancel</button>
                         </div>
                     </div><br />
                 </div>
