@@ -78,7 +78,7 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                Welcome retail maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
@@ -293,13 +293,13 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="AccountService.html">
                                             <i class="metismenu-icon">
                                             </i>Account Service
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="AccountServiceDesc.html">
                                             <i class="metismenu-icon">
                                             </i>Account Service Desc
                                         </a>
@@ -313,25 +313,25 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="RegisterRetailUser.html">
                                             <i class="metismenu-icon">
                                             </i>New Retail User
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedUsers.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Users
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="UserList.html">
                                             <i class="metismenu-icon">
                                             </i>User List
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedChanges.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Changes
                                         </a>
@@ -345,13 +345,13 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedUsersForApprove.html">
                                             <i class="metismenu-icon">
                                             </i>Requested User
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedChangesForApprove.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Changes
                                         </a>
@@ -557,13 +557,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="CorporateRequestList.html">
                                             <i class="metismenu-icon">
                                             </i>Request List
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="CorporateList.html">
                                             <i class="metismenu-icon">
                                             </i>Corporate List
                                         </a>
@@ -716,20 +716,15 @@
                     </div>
                     </p>
                     <hr />
-
                     <div class="row">
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">UserName</div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="UName">
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Branch</div>
-                                <div class="col-sm-8">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">UserName</label>
+                                    <input type="text" id="inputcontainer inputName" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Branch</label>
                                     <select class="form-control" id="transactionType">
                                         <option selected>Select Branch</option>
                                         <option>HEAD OFFICE</option>
@@ -740,12 +735,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-2">
+                        <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Role</div>
-                                <div class="col-sm-8">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Role</label>
                                     <select class="form-control" id="transactionType">
                                         <option selected>Select Role</option>
                                         <option>Creator</option>
@@ -753,12 +746,8 @@
                                         <option>Administrator</option>
                                     </select>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">USERTYPE</div>
-                                <div class="col-sm-8">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">USERTYPE</label>
                                     <select class="form-control" id="transactionType">
                                         <option selected>Select User Type</option>
                                         <option>Retail User</option>
@@ -826,11 +815,11 @@
                     </div><br />
                     <div class="form-group">
                         <button class="btn btn-success" id="btnEdit" onclick="window.location.href='EditAdmin.html'">Edit</button>
-                        <button class="btn btn-danger" id="btnDelete" onclick="Delete()">Delete</button>
+                        <button class="btn btn-danger" id="btnDelete" onclick="deleteConfirm()">Delete</button>
 
                         <button class="btn btn-info" onclick="resetpwd()">Reset Password</button>
-                        <button class="btn btn-warning" onclick="signlock_unlock()">Lock</button>
-                        <button class="btn btn-secondary" onclick="tranlock_unlock()">Unlock</button>
+                        <button class="btn btn-warning" onclick="lock()">Lock</button>
+                        <button class="btn btn-secondary" onclick="unlock()">Unlock</button>
                     </div>
                 </div>
             </div>
@@ -840,7 +829,7 @@
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="background: #56a3f0;">
+                <div class="modal-header" style="background: rgb(45 69 157); ">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -856,7 +845,106 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="../../Retail_Login.html" class="btn btn-primary">OK</a>
+                    <a href="Login.html" class="btn btn-primary">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to delete?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalResetConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Reset Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to reset?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNoReset" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNoReset" type="button" class="btn btn-secondary">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalLockConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Lock Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to Lock?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNoLock" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNoLock" type="button" class="btn btn-secondary">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalUnLockConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">UnLock Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to UnLock?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNoUnLock" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNoUnLock" type="button" class="btn btn-secondary">
+                        No
+                    </button>
                 </div>
             </div>
         </div>
@@ -875,6 +963,33 @@
                     "orderable": false
                 }]
             });
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+
+            $("#btnYesConfirmYesNoReset").click(function () {
+                $('#modalResetConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNoReset").click(function () {
+                $('#modalResetConfirmYesNo').modal('hide');
+            });
+
+            $("#btnYesConfirmYesNoLock").click(function () {
+                $('#modalLockConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNoLock").click(function () {
+                $('#modalLockConfirmYesNo').modal('hide');
+            });
+
+            $("#btnYesConfirmYesNoUnLock").click(function () {
+                $('#modalUnLockConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNoUnLock").click(function () {
+                $('#modalUnLockConfirmYesNo').modal('hide');
+            });
         });
         $('#fromAccount').select2({
             theme: 'bootstrap4'
@@ -891,6 +1006,21 @@
 
         function makeRemittance() {
             location.replace("CreateAdminUser.html");
+        }
+
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
+        }
+
+        function resetpwd() {
+            $('#modalResetConfirmYesNo').modal('show');
+        }
+
+        function lock() {
+            $('#modalLockConfirmYesNo').modal('show');
+        }
+        function unlock() {
+            $('#modalUnLockConfirmYesNo').modal('show');
         }
     </script>
 </body>

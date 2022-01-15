@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> RequestedUser</title>
+    <title> Requested User</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -78,7 +78,7 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                Welcome retail maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
@@ -293,13 +293,13 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="AccountService.html">
                                             <i class="metismenu-icon">
                                             </i>Account Service
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="AccountServiceDesc.html">
                                             <i class="metismenu-icon">
                                             </i>Account Service Desc
                                         </a>
@@ -313,25 +313,25 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="RegisterRetailUser.html">
                                             <i class="metismenu-icon">
                                             </i>New Retail User
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedUsers.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Users
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="UserList.html">
                                             <i class="metismenu-icon">
                                             </i>User List
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedChanges.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Changes
                                         </a>
@@ -345,13 +345,13 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedUsersForApprove.html">
                                             <i class="metismenu-icon">
                                             </i>Requested User
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedChangesForApprove.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Changes
                                         </a>
@@ -557,13 +557,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="CorporateRequestList.html">
                                             <i class="metismenu-icon">
                                             </i>Request List
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="CorporateList.html">
                                             <i class="metismenu-icon">
                                             </i>Corporate List
                                         </a>
@@ -707,9 +707,6 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon">
-                                    <i class="material-icons">people_alt</i>
-                                </div>
                                 <div>Requested Users</div>
                             </div>
                         </div>
@@ -721,36 +718,27 @@
                     <hr />
 
                     <div class="row">
-                        <div class="col-md-6 mb-2">
+                        <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">CIFID</div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="CIFID">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">CIFID</label>
+                                    <input type="text" id="inputcontainer inputName" class="form-control">
                                 </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">User Name</label>
+                                    <input type="text" id="inputcontainer inputName" class="form-control">
+                                </div>
+
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">UserName</div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="CIFID">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Phone No</label>
+                                    <input type="text" id="inputcontainer inputName" class="form-control">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">PHONENO</div>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="CIFID">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">TYPE</div>
-                                <div class="col-sm-8">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">TYPE</label>
                                     <select class="form-control" id="transactionType">
                                         <option selected>Select Type</option>
                                         <option>Register</option>
@@ -761,43 +749,34 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 mb-2">
+                        <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">FromDate</div>
-                                <div class="col-sm-8">
-                                    <input type="date" class="form-control" id="FDate">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">From Date</label>
+                                    <input type="date" class="form-control" id="date">
                                 </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">To Date</label>
+                                    <input type="date" class="form-control" id="date">
+                                </div>
+
                             </div>
                         </div>
-                        <div class="col-md-6 mb-2">
+                        <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">ToDate</div>
-                                <div class="col-sm-8">
-                                    <input type="date" class="form-control" id="TDate" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Status</div>
-                                <div class="col-sm-8">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Status</label>
                                     <select class="form-control" id="transactionType">
                                         <option selected>Requested</option>
-                                        <option>Rejected</option>
+                                        <option>Reject</option>
                                         <option>All</option>
                                     </select>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">User TYPE</div>
-                                <div class="col-sm-8">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">User Type</label>
                                     <select class="form-control" id="transactionType">
                                         <option selected>Select User Type</option>
-                                        <option>Retail User </option>
+                                        <option>Retail User</option>
                                         <option>Corporate User</option>
                                     </select>
                                 </div>
@@ -865,19 +844,43 @@
                         </table>
                     </div><br />
                     <div class="form-group">
-                        <button class="btn btn-success" id="btnEdit" onclick="window.location.href='EditUser.html'">Edit</button>
-                        <button class="btn btn-danger" id="btnDelete" onclick="Delete()">Delete</button>
-                        <button class="btn btn-secondary" id="btnDetails" onclick="detail()">Details</button>
+                        <button class="btn btn-success" id="btnEdit" onclick="window.location.href='EditRequestedUsers.html'">Edit</button>
+                        <button class="btn btn-danger" id="btnDelete" onclick="deleteConfirm()">Delete</button>
+                        <button class="btn btn-secondary" id="btnDetails" onclick="window.location.href='RequestedUsersDetail.html'">Details</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to delete?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="background: #56a3f0;">
+                <div class="modal-header" style="background: rgb(45 69 157); ">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -893,7 +896,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="../../Retail_Login.html" class="btn btn-primary">OK</a>
+                    <a href="Login.html" class="btn btn-primary">OK</a>
                 </div>
             </div>
         </div>
@@ -912,6 +915,12 @@
                     "orderable": false
                 }]
             });
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
         });
         $('#fromAccount').select2({
             theme: 'bootstrap4'
@@ -928,6 +937,9 @@
 
         function makeRemittance() {
             location.replace("RegisterRetailUser.html");
+        }
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
         }
     </script>
 </body>

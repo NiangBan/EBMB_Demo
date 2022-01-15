@@ -83,7 +83,7 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                Welcome retail maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
@@ -298,13 +298,13 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="AccountService.html">
                                             <i class="metismenu-icon">
                                             </i>Account Service
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="AccountServiceDesc.html">
                                             <i class="metismenu-icon">
                                             </i>Account Service Desc
                                         </a>
@@ -324,7 +324,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedUsers.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Users
                                         </a>
@@ -336,7 +336,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedChanges.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Changes
                                         </a>
@@ -350,13 +350,13 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedUsersForApprove.html">
                                             <i class="metismenu-icon">
                                             </i>Requested User
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedChangesForApprove.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Changes
                                         </a>
@@ -562,13 +562,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="CorporateRequestList.html">
                                             <i class="metismenu-icon">
                                             </i>Request List
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="CorporateList.html">
                                             <i class="metismenu-icon">
                                             </i>Corporate List
                                         </a>
@@ -736,7 +736,7 @@
                                     <td class="text-left">CURRENT ACCOUNT</td>
                                     <td class="text-left">ENG</td>
                                     <td class="text-center">
-                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -744,7 +744,7 @@
                                     <td class="text-left">CURRENT ACCOUNT</td>
                                     <td class="text-left">ENG</td>
                                     <td class="text-center">
-                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -752,7 +752,7 @@
                                     <td class="text-left">CURRENT ACCOUNT</td>
                                     <td class="text-left">ENG</td>
                                     <td class="text-center">
-                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -760,7 +760,7 @@
                                     <td class="text-left">CURRENT ACCOUNT</td>
                                     <td class="text-left">ENG</td>
                                     <td class="text-center">
-                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -768,7 +768,7 @@
                                     <td class="text-left">CURRENT ACCOUNT</td>
                                     <td class="text-left">ENG</td>
                                     <td class="text-center">
-                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec">Delete</a>
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -782,7 +782,7 @@
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="background: #56a3f0;">
+                <div class="modal-header" style="background: rgb(45 69 157); ">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -798,7 +798,31 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="../../Retail_Login.html" class="btn btn-primary">OK</a>
+                    <a href="Login.html" class="btn btn-primary">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to delete?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
+                        No
+                    </button>
                 </div>
             </div>
         </div>
@@ -817,6 +841,12 @@
                     "orderable": false
                 }]
             });
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
         });
         $('#fromAccount').select2({
             theme: 'bootstrap4'
@@ -833,6 +863,9 @@
 
         function makeRemittance() {
             location.replace("CreateAccountService.html");
+        }
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
         }
     </script>
 </body>
