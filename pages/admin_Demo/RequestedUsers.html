@@ -710,12 +710,12 @@
                                 <div class="page-title-icon">
                                     <i class="material-icons">people_alt</i>
                                 </div>
-                                <div>User List</div>
+                                <div>Requested Users</div>
                             </div>
                         </div>
                     </div>
                     <div class="text-left mr-5">
-                        <input type="button" class="btn btn-beneficiary" value="+  Register New Retail User" onclick="makeRemittance()" />
+                        <input type="button" class="btn btn-beneficiary" value="+  Request New Retail User" onclick="makeRemittance()" />
                     </div>
                     </p>
                     <hr />
@@ -793,7 +793,7 @@
                         </div>
                         <div class="col-md-6 mb-2">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">TYPE</div>
+                                <div class="col-sm-4 text-right col-form-label">User TYPE</div>
                                 <div class="col-sm-8">
                                     <select class="form-control" id="transactionType">
                                         <option selected>Select User Type</option>
@@ -865,7 +865,7 @@
                         </table>
                     </div><br />
                     <div class="form-group">
-                        <button class="btn btn-success" id="btnEdit" onclick="edit()">Edit</button>
+                        <button class="btn btn-success" id="btnEdit" onclick="window.location.href='EditUser.html'">Edit</button>
                         <button class="btn btn-danger" id="btnDelete" onclick="Delete()">Delete</button>
                         <button class="btn btn-secondary" id="btnDetails" onclick="detail()">Details</button>
                     </div>
