@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> Myanma Foreign Trade Bank</title>
+    <title>Register Approve Rule</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -31,9 +31,10 @@
 
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow">
+        <div class="app-header header-shadow" style="background-color: #2d459d">
             <div class="app-header__logo">
                 <div class="logo-src">
+                    <img src="AceLogoWhite.png" style="width:250px;height:50px;object-fit:contain" />
                     <a href="Dashboard.html" class="logo-src"></a>
                 </div>
                 <div class="header__pane ml-auto">
@@ -61,7 +62,7 @@
                         <span class="btn-icon-wrapper">
                             <i class="fa fa-ellipsis-v fa-w-6"></i>
                         </span>
-                </button>
+                    </button>
                 </span>
             </div>
             <div class="app-header__content">
@@ -76,32 +77,13 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                             Welcome maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black"></i><span class="num">2</span>
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li class="header">Inbox</li>
-                                <li>
-                                   
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="inbox-transaction.html">
-                                                <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="inbox-information.html">
-                                                <i class="fa fa-info text-green"></i> You have 2 notifications in information.
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="inbox-transaction.html">View all</a></li>
-                            </ul> -->
                         </li>
                         <li class="nav-item">
                             <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
@@ -119,29 +101,29 @@
                     <div class="header__pane ml-auto">
                         <div>
                             <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                                    <span class="hamburger-box">
-                                        <span class="hamburger-inner"></span>
-                                    </span>
-                                </button>
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="app-header__mobile-menu">
                     <div>
                         <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
                     </div>
                 </div>
                 <div class="app-header__menu">
                     <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                    </button>
+                        <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
                     </span>
                 </div>
                 <div class="scrollbar-sidebar">
@@ -705,71 +687,95 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">description</i>
-                                </div>
-                                <div>Remittance Details</div>
+                                <div>Create Approve Rule</div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>From Account</label>
-                                <p>0001010200034173</p>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Company Name:</label>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>From Account Name</label>
-                                <p>Kyaw Kyaw</p>
-                            </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-4 offset-md-2">
+                            <input type="radio" id="rdo1" name="rd"/>    Normal Transaction
                         </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Beneficiary Name</label>
-                                <p>Moe Moe</p>
-                            </div>
+                        <div class="col-md-4">
+                            <input type="radio" id="rdo2" name="rd"/>    Bulk Transaction
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>NRC Number</label>
-                                <p>12/TAGAKA(N)271934</p>
-                            </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">From Amount:</label>
                         </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <p>4000.00</p>
-                            </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="FAmount"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">To Amount:</label>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Transaction Fees</label>
-                                <p>200.00</p>
-                            </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="TAmount"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Currency:</label>
                         </div>
-                    </div>
-
-                    <div class="text-left">
-                        <button class="btn btn-primary" onclick="location.replace('RemittanceList.html');"><i class="fas fa-arrow-left icon-spacing"></i> Back</button>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select Currency</option>
+                                <option>MMK</option>
+                                <option>USD</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">No Of Approvers:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>Select No Of Approver</option>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Approvers:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="approver"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Positions:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="position"></div>
+                    </div><br />
+                    <div class="form-group col-md-12 offset-sm-1">
+                        <div style="padding-left:60px;">
+                            <input type="button" id="btnSubmit" value="Register" class="btn btn-success" onclick="window.location.href ='RequestedApproveRuleList.html'">
+                            <a class="btn btn-secondary" href="RequestedApproveRuleList.html">Cancel</a>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal -->
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background: rgb(45 69 157); ">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="col-md-12 mb-2">
