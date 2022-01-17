@@ -74,12 +74,12 @@
             <div class="app-header__content">
                 <div class="app-header-right">
                     <!-- <div class="search-wrapper">
-                    <div class="input-holder">
-                        <input type="text" class="search-input" placeholder="Type to search">
-                        <button class="search-icon"><span></span></button>
-                    </div>
-                    <button class="close"></button>
-                </div> -->
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div> -->
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
@@ -91,24 +91,24 @@
                                 <i class="nav-link-icon fa fa-bell" style="color:black;"></i><span class="num">2</span>
                             </a>
                             <!-- <ul class="dropdown-menu">
-                            <li class="header">Inbox</li>
-                            <li>
+                                <li class="header">Inbox</li>
+                                <li>
 
-                                <ul class="menu">
-                                    <li>
-                                        <a href="inbox-transaction.html">
-                                            <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="inbox-information.html">
-                                            <i class="fa fa-info text-green"></i> You have 2 notifications in information.
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="inbox-transaction.html">View all</a></li>
-                        </ul> -->
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="inbox-transaction.html">
+                                                <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="inbox-information.html">
+                                                <i class="fa fa-info text-green"></i> You have 2 notifications in information.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="inbox-transaction.html">View all</a></li>
+                            </ul> -->
                         </li>
                         <li class="nav-item">
                             <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
@@ -712,63 +712,69 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div>Permission</div>
+                                <div>Account Service List</div>
                             </div>
                         </div>
+                    </div>
+                    <div class="text-left mr-5">
+                        <input type="button" class="btn btn-beneficiary" value="+  Creat New" onclick="makeRemittance()" />
                     </div>
                     <hr />
-                    <div class="hierarchy-checkboxes" rel="example">
-                        <input class="hierarchy-root-checkbox" type="checkbox" checked="checked">
-                        <label class="hierarchy-root-label">Root</label>
-                        <div class="hierarchy-root-child hierarchy-node">
-                            <div class="hierarchy-node">
-                                <input class="hierarchy-checkbox" type="checkbox">
-                                <label class="hierarchy-label">Node</label>
-                                <div class="hierarchy-node leaf">
-                                    <input class="hierarchy-checkbox" type="checkbox">
-                                    <label class="hierarchy-label">Node (Leaf)</label>
-                                </div>
-                                <div class="hierarchy-node leaf">
-                                    <input class="hierarchy-checkbox" type="checkbox">
-                                    <label class="hierarchy-label">Node (Leaf)</label>
-                                </div>
-                                <div class="hierarchy-node">
-                                    <input class="hierarchy-checkbox" type="checkbox">
-                                    <label class="hierarchy-label">Node</label>
-                                    <div class="hierarchy-node leaf">
-                                        <input class="hierarchy-checkbox" type="checkbox">
-                                        <label class="hierarchy-label">Node (Leaf)</label>
-                                    </div>
-                                    <div class="hierarchy-node leaf">
-                                        <input class="hierarchy-checkbox" type="checkbox">
-                                        <label class="hierarchy-label">Node (Leaf)</label>
-                                    </div>
-                                    <div class="hierarchy-node leaf">
-                                        <input class="hierarchy-checkbox" type="checkbox">
-                                        <label class="hierarchy-label">Node (Leaf)</label>
-                                    </div>
-                                </div>
-                                <div class="hierarchy-node leaf">
-                                    <input class="hierarchy-checkbox" type="checkbox">
-                                    <label class="hierarchy-label">Node (Leaf)</label>
-                                </div>
-                            </div>
-                            <div class="hierarchy-node leaf">
-                                <input class="hierarchy-checkbox" type="checkbox">
-                                <label class="hierarchy-label">Node (Leaf)</label>
-                            </div>
-                            <div class="hierarchy-node leaf">
-                                <input class="hierarchy-checkbox" type="checkbox">
-                                <label class="hierarchy-label">Node (Leaf)</label>
-                            </div>
-                            <div class="hierarchy-node leaf">
-                                <input class="hierarchy-checkbox" type="checkbox">
-                                <label class="hierarchy-label">Node (Leaf)</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="row">
-                        <ul class="treeview">
+                    <!--<div class="mt-5">
+                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
+                            <thead>
+                                <tr class="text-white">
+                                    <th class="text-center">Account Type</th>
+                                    <th class="text-center">Account Description</th>
+                                    <th class="text-center">Language</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left">CAA</td>
+                                    <td class="text-left">CURRENT ACCOUNT</td>
+                                    <td class="text-left">ENG</td>
+                                    <td class="text-center">
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CAA</td>
+                                    <td class="text-left">CURRENT ACCOUNT</td>
+                                    <td class="text-left">ENG</td>
+                                    <td class="text-center">
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CAA</td>
+                                    <td class="text-left">CURRENT ACCOUNT</td>
+                                    <td class="text-left">ENG</td>
+                                    <td class="text-center">
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CAA</td>
+                                    <td class="text-left">CURRENT ACCOUNT</td>
+                                    <td class="text-left">ENG</td>
+                                    <td class="text-center">
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CAA</td>
+                                    <td class="text-left">CURRENT ACCOUNT</td>
+                                    <td class="text-left">ENG</td>
+                                    <td class="text-center">
+                                        <a href="EditAccountService.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br />-->
+                    <ul class="treeview">
                             <li>
                                 <input type="checkbox" name="tall" id="tall">
                                 <label for="tall" class="custom-unchecked">User</label>
@@ -1294,100 +1300,92 @@
                                 </ul>
                             </li>
                         </ul>
-                    </div>-->
-                    
                 </div>
             </div>
         </div>
-        <!-- Modal -->
-        <div id="modalConfirmYesNo" class="modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">x</span>
-                        </button>
+    </div>
+    <!-- Modal -->
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
 
-                    </div>
-                    <div class="modal-body">
-                        <pre id="iMessage">Are you sure you want to delete?</pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
-                            Yes
-                        </button>
-                        <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
-                            No
-                        </button>
-                    </div>
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to delete?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
+                        No
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header" style="background: rgb(45 69 157); ">
-                        <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="col-md-12 mb-2">
-                            <div class="form-group row">
-                                <label for="interestRate" class="col-sm-12 text-center col-form-label">Are you sure you want to logout?</label>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <a href="Login.html" class="btn btn-primary">OK</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript" src="../../assets/scripts/main.js"></script>
-        <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
-        <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
-        <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
-        <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
-        <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script src="../../assets/scripts/hierarchical-checkboxes.js"></script>
-        <link rel="stylesheet" href="../../assets/scripts/hierarchical-checkboxes.css" />
-        <script>
-            $(document).ready(function () {
-                $("#btnYesConfirmYesNo").click(function () {
-                    $('#modalConfirmYesNo').modal('hide');
-                });
-                $("#btnNoConfirmYesNo").click(function () {
-                    $('#modalConfirmYesNo').modal('hide');
-                });
+    </div>
+    <script type="text/javascript" src="../../assets/scripts/main.js"></script>
+    <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
+    <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
+    <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
             });
-            jQuery('.hierarchy-checkboxes[rel=example]').on('checkboxesUpdate', function (e, data) {
-                console.log("Changed!", data);
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
             });
+        });
 
-            function makeRemittance() {
-                location.replace("CreateAccountService.html");
-            }
-            function deleteConfirm() {
-                $('#modalConfirmYesNo').modal('show');
+        function makeRemittance() {
+            location.replace("CreateAccountService.html");
+        }
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
+        }
+
+        $(function () {
+
+            $('input[type="checkbox"]').change(checkboxChanged);
+
+            function checkboxChanged() {
+                var $this = $(this),
+                    checked = $this.prop("checked"),
+                    container = $this.parent(),
+                    siblings = container.siblings();
+
+                container.find('input[type="checkbox"]')
+                    .prop({
+                        indeterminate: false,
+                        checked: checked
+                    })
+                    .siblings('label')
+                    .removeClass('custom-checked custom-unchecked custom-indeterminate')
+                    .addClass(checked ? 'custom-checked' : 'custom-unchecked');
+
+                checkSiblings(container, checked);
             }
 
-            $(function () {
+            function checkSiblings($el, checked) {
+                var parent = $el.parent().parent(),
+                    all = true,
+                    indeterminate = false;
 
-                $('input[type="checkbox"]').change(checkboxChanged);
+                $el.siblings().each(function () {
+                    return all = ($(this).children('input[type="checkbox"]').prop("checked") === checked);
+                });
 
-                function checkboxChanged() {
-                    var $this = $(this),
-                        checked = $this.prop("checked"),
-                        container = $this.parent(),
-                        siblings = container.siblings();
-
-                    container.find('input[type="checkbox"]')
+                if (all && checked) {
+                    parent.children('input[type="checkbox"]')
                         .prop({
                             indeterminate: false,
                             checked: checked
@@ -1396,135 +1394,113 @@
                         .removeClass('custom-checked custom-unchecked custom-indeterminate')
                         .addClass(checked ? 'custom-checked' : 'custom-unchecked');
 
-                    checkSiblings(container, checked);
+                    checkSiblings(parent, checked);
                 }
+                else if (all && !checked) {
+                    indeterminate = parent.find('input[type="checkbox"]:checked').length > 0;
 
-                function checkSiblings($el, checked) {
-                    var parent = $el.parent().parent(),
-                        all = true,
-                        indeterminate = false;
+                    parent.children('input[type="checkbox"]')
+                        .prop("checked", checked)
+                        .prop("indeterminate", indeterminate)
+                        .siblings('label')
+                        .removeClass('custom-checked custom-unchecked custom-indeterminate')
+                        .addClass(indeterminate ? 'custom-indeterminate' : (checked ? 'custom-checked' : 'custom-unchecked'));
 
-                    $el.siblings().each(function () {
-                        return all = ($(this).children('input[type="checkbox"]').prop("checked") === checked);
-                    });
-
-                    if (all && checked) {
-                        parent.children('input[type="checkbox"]')
-                            .prop({
-                                indeterminate: false,
-                                checked: checked
-                            })
-                            .siblings('label')
-                            .removeClass('custom-checked custom-unchecked custom-indeterminate')
-                            .addClass(checked ? 'custom-checked' : 'custom-unchecked');
-
-                        checkSiblings(parent, checked);
-                    }
-                    else if (all && !checked) {
-                        indeterminate = parent.find('input[type="checkbox"]:checked').length > 0;
-
-                        parent.children('input[type="checkbox"]')
-                            .prop("checked", checked)
-                            .prop("indeterminate", indeterminate)
-                            .siblings('label')
-                            .removeClass('custom-checked custom-unchecked custom-indeterminate')
-                            .addClass(indeterminate ? 'custom-indeterminate' : (checked ? 'custom-checked' : 'custom-unchecked'));
-
-                        checkSiblings(parent, checked);
-                    }
-                    else {
-                        $el.parents("li").children('input[type="checkbox"]')
-                            .prop({
-                                indeterminate: true,
-                                checked: false
-                            })
-                            .siblings('label')
-                            .removeClass('custom-checked custom-unchecked custom-indeterminate')
-                            .addClass('custom-indeterminate');
-                    }
+                    checkSiblings(parent, checked);
                 }
-            });
-        </script>
-        <style>
-
-            * {
-                margin: 0;
-                padding: 0;
-            }
-
-            #page-wrap {
-                margin: auto 0;
-            }
-
-            .treeview {
-                margin: 10px 0 0 20px;
-            }
-
-            ul {
-                list-style: none;
-            }
-
-            .treeview li {
-                background: url(http://jquery.bassistance.de/treeview/images/treeview-default-line.gif) 0 0 no-repeat;
-                padding: 2px 0 2px 16px;
-            }
-
-            .treeview > li:first-child > label {
-                /* style for the root element - IE8 supports :first-child
-            but not :last-child ..... */
-            }
-
-            .treeview li.last {
-                background-position: 0 -1766px;
-            }
-
-            .treeview li > input {
-                height: 16px;
-                width: 16px;
-                /* hide the inputs but keep them in the layout with events (use opacity) */
-                opacity: 0;
-                filter: alpha(opacity=0); /* internet explorer */
-                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
-            }
-
-            .treeview li > label {
-                background: url(https://www.thecssninja.com/demo/css_custom-forms/gr_custom-inputs.png) 0 -1px no-repeat;
-                /* move left to cover the original checkbox area */
-                margin-left: -20px;
-                /* pad the text to make room for image */
-                padding-left: 20px;
-            }
-
-            /* Unchecked styles */
-
-            .treeview .custom-unchecked {
-                background-position: 1px 3px;
-            }
-
-                .treeview .custom-unchecked:hover {
-                    background-position: 0 -15px;
+                else {
+                    $el.parents("li").children('input[type="checkbox"]')
+                        .prop({
+                            indeterminate: true,
+                            checked: false
+                        })
+                        .siblings('label')
+                        .removeClass('custom-checked custom-unchecked custom-indeterminate')
+                        .addClass('custom-indeterminate');
                 }
+            }
+        });
+    </script>
+    <style>
 
-            /* Checked styles */
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-            .treeview .custom-checked {
-                background-position: 0 -97px;
+        #page-wrap {
+            margin: auto 0;
+        }
+
+        .treeview {
+            margin: 10px 0 0 20px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .treeview li {
+            background: url(http://jquery.bassistance.de/treeview/images/treeview-default-line.gif) 0 0 no-repeat;
+            padding: 2px 0 2px 16px;
+        }
+
+        .treeview > li:first-child > label {
+            /* style for the root element - IE8 supports :first-child
+  but not :last-child ..... */
+        }
+
+        .treeview li.last {
+            background-position: 0 -1766px;
+        }
+
+        .treeview li > input {
+            height: 16px;
+            width: 16px;
+            /* hide the inputs but keep them in the layout with events (use opacity) */
+            opacity: 0;
+            filter: alpha(opacity=0); /* internet explorer */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+        }
+
+        .treeview li > label {
+            background: url(https://www.thecssninja.com/demo/css_custom-forms/gr_custom-inputs.png) 0 -1px no-repeat;
+            /* move left to cover the original checkbox area */
+            margin-left: -20px;
+            /* pad the text to make room for image */
+            padding-left: 20px;
+        }
+
+        /* Unchecked styles */
+
+        .treeview .custom-unchecked {
+            background-position: 1px 3px;
+        }
+
+            .treeview .custom-unchecked:hover {
+                background-position: 0 -15px;
             }
 
-                .treeview .custom-checked:hover {
-                    background-position: 0 -99px;
-                }
+        /* Checked styles */
 
-            /* Indeterminate styles */
+        .treeview .custom-checked {
+            background-position: 0 -97px;
+        }
 
-            .treeview .custom-indeterminate {
-                background-position: 0 -137px;
+            .treeview .custom-checked:hover {
+                background-position: 0 -99px;
             }
 
-                .treeview .custom-indeterminate:hover {
-                    background-position: 0 -91px;
-                }
-        </style>
+        /* Indeterminate styles */
+
+        .treeview .custom-indeterminate {
+            background-position: 0 -137px;
+        }
+
+            .treeview .custom-indeterminate:hover {
+                background-position: 0 -91px;
+            }
+    </style>
 </body>
 
 </html>
