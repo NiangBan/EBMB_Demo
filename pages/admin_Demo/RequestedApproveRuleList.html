@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> Myanma Foreign Trade Bank</title>
+    <title>Requested Approve List</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -27,13 +27,15 @@
     <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/materialicons.css">
     <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/dataTables.bootstrap4.min.css">
 </head>
 
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow">
+        <div class="app-header header-shadow" style="background-color: #2d459d">
             <div class="app-header__logo">
                 <div class="logo-src">
+                    <img src="AceLogoWhite.png" style="width:250px;height:50px;object-fit:contain" />
                     <a href="Dashboard.html" class="logo-src"></a>
                 </div>
                 <div class="header__pane ml-auto">
@@ -76,12 +78,12 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                Welcome maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black;"></i><span class="num">2</span>
                             </a>
                             <!-- <ul class="dropdown-menu">
                                 <li class="header">Inbox</li>
@@ -633,31 +635,19 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
-                                            <i class="metismenu-icon">
-                                            </i>Country
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="metismenu-icon">
-                                            </i>State
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
+                                        <a href="BulkFile.html">
                                             <i class="metismenu-icon">
                                             </i>Bulk File
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="Position.html">
                                             <i class="metismenu-icon">
                                             </i>Position
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="Department.html">
                                             <i class="metismenu-icon">
                                             </i>Department
                                         </a>
@@ -671,25 +661,25 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="RegisterApproveRule.html">
                                             <i class="metismenu-icon">
                                             </i>Register Approve Rule
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestedApproveRuleList.html">
                                             <i class="metismenu-icon">
                                             </i>Requested Approve Rule List
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="PendingApproveRule.html">
                                             <i class="metismenu-icon">
                                             </i>Pending Approve Rule
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="ApproveRuleList.html">
                                             <i class="metismenu-icon">
                                             </i>Approve Rule List
                                         </a>
@@ -705,176 +695,175 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon">
-                                    <i class="material-icons">transform</i>
-                                </div>
-                                <div>Remittance (Other)</div>
+                                <div>Requested Approve Rule List</div>
                             </div>
                         </div>
                     </div>
-                    <div class="row col-md-12">
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios1" value="option1" onClick="window.location = 'RemittanceOwn.html';">
-                            <label class="form-check-label" for="Radios1">
-                                Own Bank
-                            </label>
-                        </div>
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios2" value="option2" onClick="window.location = 'RemittanceOther.html';" checked>
-                            <label class="form-check-label" for="Radios2">
-                                Other Bank
-                            </label>
-                        </div>
+                    <div class="text-left mr-5">
+                        <input type="button" class="btn btn-beneficiary" value="+  Register Approve Rule" onclick="makeRemittance()" />
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">
-                                    From Account
-                                    <span class="required">*</span>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Company Name</label>
+                                    <input type="text" id="inputcontainer inputName" class="form-control">
                                 </div>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="fromAccount">
-                                        <option>Select One</option>
-                                        <option selected>0001010200034173</option>
-                                    </select>
-                                    <label for="available" id="available">Available Balance - 2,000,000.00 MMK</label>
-                                    <label for="available" id="available">Account Type - Saving</label>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Approver Name</label>
+                                    <input type="text" id="inputcontainer inputName" class="form-control">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-2">
+                        <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">
-                                    Beneficiary Name
-                                    <span class="required">*</span>
-                                </div>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="beneficiary">
-                                        <option>Select One</option>
-                                        <option>Moe Moe</option>
-                                        <option>Other</option>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Type</label>
+                                    <select class="form-control" id="transactionType">
+                                        <option selected>Select Type</option>
+                                        <option>Register</option>
+                                        <option>Update</option>
+                                        <option>Delete</option>
                                     </select>
-                                    <input type="button" class="btn btn-beneficiary" value="+  New Beneficiary" onclick="makeRemittance()" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Transaction Type</label>
+                                    <select class="form-control" id="transactionType">
+                                        <option selected>Select TranType</option>
+                                        <option>Normal</option>
+                                        <option>Bulk</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="account" class="col-sm-4 text-right col-form-label">
-                                    NRC/Passport
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="account_fix" value="326779" readonly>
-                                    <input type="text" class="form-control" id="account">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">From Date</label>
+                                    <input type="date" class="form-control" id="date">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">To Date</label>
+                                    <input type="date" class="form-control" id="date">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="bank" class="col-sm-4 text-right col-form-label">
-                                    Other Bank
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="bank_fix" value="KBZ Bank" readonly>
-                                    <input type="text" class="form-control" id="bank">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Status</label>
+                                    <select class="form-control" id="transactionType">
+                                        <option selected>Select Status</option>
+                                        <option>Approved</option>
+                                        <option>Rejected</option>
+                                        <option>All</option>
+                                    </select>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="branch" class="col-sm-4 text-right col-form-label">
-                                    Other Branch
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="branch_fix" value="Hlaing Branch" readonly>
-                                    <input type="text" class="form-control" id="branch">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="email" class="col-sm-4 text-right col-form-label">Email</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="email_fix" value="MFTB2@gmail.com">
-                                    <input type="text" class="form-control" id="email">
+                                <div class="form-group col-md-6 text-right">
+                                    <input type="button" class="btn btn-primary" style="margin-top: 17%;" value="Search" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="mobileNo" class="col-sm-4 text-right col-form-label">Mobile No.</label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">+959 -</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="mobile_fix" value="966005421">
-                                        <input type="text" class="form-control" id="mobile">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="amount" class="col-sm-4 text-right col-form-label">
-                                    Amount
-                                    <span class="required">*</span>
-                                </label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="amount">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="description" class="col-sm-4 text-right col-form-label">Description</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="description">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left ml-11">
-                        <a href="RemittanceOther.html" class="btn btn-secondary">Cancel</a>
-                        <a href="RemittanceOtherConfirm.html" class="btn btn-primary">Next</a>
+
+                    <hr />
+                    <div class="mt-5">
+                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
+                            <thead>
+                                <tr class="text-white">
+                                    <th class="text-center"></th>
+                                    <th class="text-center">Company Name</th>
+                                    <th class="text-center">From Amount</th>
+                                    <th class="text-center">To Amount</th>
+                                    <th class="text-center">Currency</th>
+                                    <th class="text-center">No Of Approvers</th>
+                                    <th class="text-center">Approvers</th>
+                                    <th class="text-center">Transaction Type</th>
+                                    <th class="text-center">Positions</th>
+                                    <th class="text-center">Requested Date</th>
+                                    <th class="text-center">Type</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center"><input type="radio" name="rdo" id="rdo1" /></td>
+                                    <td class="text-center">ACE Datasystems</td>
+                                    <td class="text-center">100000.00</td>
+                                    <td class="text-center">500000.00</td>
+                                    <td class="text-center">MMK</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">TestApprover1</td>
+                                    <td class="text-center">Normal</td>
+                                    <td class="text-center">Manager</td>
+                                    <td class="text-center">2022/01/01</td>
+                                    <td class="text-center">Register</td>
+                                    <td class="text-center">All</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><input type="radio" name="rdo" id="rdo1" /></td>
+                                    <td class="text-center">ACE Datasystems</td>
+                                    <td class="text-center">100000.00</td>
+                                    <td class="text-center">500000.00</td>
+                                    <td class="text-center">MMK</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">TestApprover1</td>
+                                    <td class="text-center">Normal</td>
+                                    <td class="text-center">Manager</td>
+                                    <td class="text-center">2022/01/01</td>
+                                    <td class="text-center">Register</td>
+                                    <td class="text-center">All</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><input type="radio" name="rdo" id="rdo1" /></td>
+                                    <td class="text-center">ACE Datasystems</td>
+                                    <td class="text-center">100000.00</td>
+                                    <td class="text-center">500000.00</td>
+                                    <td class="text-center">MMK</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">TestApprover1</td>
+                                    <td class="text-center">Normal</td>
+                                    <td class="text-center">Manager</td>
+                                    <td class="text-center">2022/01/01</td>
+                                    <td class="text-center">Register</td>
+                                    <td class="text-center">All</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br />
+                    <div class="form-group">
+                        <button class="btn btn-success" id="btnEdit" onclick="window.location.href='EditRegisterApproveRule.html'">Edit</button>
+                        <button class="btn btn-danger" id="btnDelete" onclick="deleteConfirm()">Delete</button>
+                        <button class="btn btn-secondary" onclick="window.location.href='RequestedApproveRuleDetails.html'">Details</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background: rgb(45 69 157); ">
-                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">x</span>
                     </button>
+
                 </div>
                 <div class="modal-body">
-                    <div class="col-md-12 mb-2">
-                        <div class="form-group row">
-                            <label for="interestRate" class="col-sm-12 text-center col-form-label">Are you sure you want to logout?</label>
-
-                        </div>
-                    </div>
+                    <pre id="iMessage">Are you sure you want to delete?</pre>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="Login.html" class="btn btn-primary">OK</a>
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
+                        No
+                    </button>
                 </div>
             </div>
         </div>
@@ -907,42 +896,41 @@
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
+    <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#account_fix').hide();
-            $('#branch_fix').hide();
-            $('#bank_fix').hide();
-            $('#mobile_fix').hide();
-            $('#email_fix').hide();
-            $('#beneficiary').change(function () {
-                if ($('#beneficiary').val() != 'Moe Moe') {
-                    $('#account').show();
-                    $('#account_fix').hide();
-                    $('#branch').show();
-                    $('#branch_fix').hide();
-                    $('#bank').show();
-                    $('#bank_fix').hide();
-                    $('#mobile').show();
-                    $('#mobile_fix').hide();
-                    $('#email').show();
-                    $('#email_fix').hide();
-                } else {
-                    $('#account').hide();
-                    $('#account_fix').show();
-                    $('#branch').hide();
-                    $('#branch_fix').show();
-                    $('#bank').hide();
-                    $('#bank_fix').show();
-                    $('#mobile').hide();
-                    $('#mobile_fix').show();
-                    $('#email').hide();
-                    $('#email_fix').show();
-                }
+            $('#transferTable').DataTable({
+                "columnDefs": [{
+                    "targets": [4, 5],
+                    "orderable": false
+                }]
             });
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+        });
+        $('#fromAccount').select2({
+            theme: 'bootstrap4'
+        });
+        $('#transactionType').select2({
+            theme: 'bootstrap4'
+        });
+        $('#bank').select2({
+            theme: 'bootstrap4'
+        });
+        $('#approveStatus').select2({
+            theme: 'bootstrap4'
         });
 
         function makeRemittance() {
-            location.replace("OwnBankBeneficiary.html");
+            location.replace("RegisterApproveRule.html");
+        }
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
         }
     </script>
 </body>
