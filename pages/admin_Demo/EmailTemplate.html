@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> Myanma Foreign Trade Bank</title>
+    <title>Email Template</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -27,13 +27,20 @@
     <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/materialicons.css">
     <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/dataTables.bootstrap4.min.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow">
+        <div class="app-header header-shadow" style="background-color: #2d459d">
             <div class="app-header__logo">
                 <div class="logo-src">
+                    <img src="AceLogoWhite.png" style="width:250px;height:50px;object-fit:contain" />
                     <a href="Dashboard.html" class="logo-src"></a>
                 </div>
                 <div class="header__pane ml-auto">
@@ -76,32 +83,13 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                Welcome maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black;"></i><span class="num">2</span>
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li class="header">Inbox</li>
-                                <li>
-
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="inbox-transaction.html">
-                                                <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="inbox-information.html">
-                                                <i class="fa fa-info text-green"></i> You have 2 notifications in information.
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="inbox-transaction.html">View all</a></li>
-                            </ul> -->
                         </li>
                         <li class="nav-item">
                             <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
@@ -705,157 +693,70 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon">
-                                    <i class="material-icons">transform</i>
-                                </div>
-                                <div>Schedule Transfer (Own)</div>
+                                <div>Email Template List</div>
                             </div>
                         </div>
                     </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>From Account Name</label>
-                                <p>Kyaw Kyaw</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>From Account Number</label>
-                                <p>0001010200034173</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>From Account Type</label>
-                                <p>Saving Account</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>To Account Number</label>
-                                <p>0009387922535253</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Transaction Date</label>
-                                <p>12-08-2020</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <p>30,000.00 MMK</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Effective Date</label>
-                                <p>20-08-2020</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Transaction Fees</label>
-                                <p>200.00 MMK</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Description</label>
-                                <p>Own Schedule Transfer</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-left">
-                        <a href="ScheduleTransferOwn.html" class="btn btn-secondary">Cancel</a>
-                        <input type="button" value="Confirm" class="btn btn-primary" data-toggle="modal" data-target="#transactionPasswordModal">
-                    </div>
+                    <hr />
+                    <div class="mt-5">
+                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
+                            <thead>
+                                <tr class="text-white">
+                                    <th class="text-center">Type</th>
+                                    <th class="text-center">Subject</th>
+                                    <th class="text-center">Body</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left">CCT Remittance</td>
+                                    <td class="text-left">Receiving Remittance</td>
+                                    <td class="text-left">Dear Customer, You have received 500000 MMK from  Account No 03000011111.</td>
+                                    <td class="text-center">
+                                        <a href="EditEmailTemplate.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="window.location.href='EmailTemplateDetail.html'">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CCT Remittance</td>
+                                    <td class="text-left">Receiving Remittance</td>
+                                    <td class="text-left">Dear Customer, You have received 500000 MMK from  Account No 03000011111.</td>
+                                    <td class="text-center">
+                                        <a href="EditEmailTemplate.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="window.location.href='EmailTemplateDetail.html'">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CCT Remittance</td>
+                                    <td class="text-left">Receiving Remittance</td>
+                                    <td class="text-left">Dear Customer, You have received 500000 MMK from  Account No 03000011111.</td>
+                                    <td class="text-center">
+                                        <a href="EditEmailTemplate.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="window.location.href='EmailTemplateDetail.html'">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CCT Remittance</td>
+                                    <td class="text-left">Receiving Remittance</td>
+                                    <td class="text-left">Dear Customer, You have received 500000 MMK from  Account No 03000011111.</td>
+                                    <td class="text-center">
+                                        <a href="EditEmailTemplate.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="window.location.href='EmailTemplateDetail.html'">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">CCT Remittance</td>
+                                    <td class="text-left">Receiving Remittance</td>
+                                    <td class="text-left">Dear Customer, You have received 500000 MMK from  Account No 03000011111.</td>
+                                    <td class="text-center">
+                                        <a href="EditEmailTemplate.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="window.location.href='EmailTemplateDetail.html'">Details</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br />
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
-    <!--     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: limegreen;">
-                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: white;font-weight: 500;">Own Transfer</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                </div>
-                <div class="modal-body">
-                    Success transfer.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Modal -->
-    <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: rgb(45 69 157); ">
-                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;">Password Confirmation</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12 mb-2">
-                        <div class="form-group row">
-                            <label for="interestRate" class="col-sm-5 text-left col-form-label">Transaction Password</label>
-                            <div class="col-sm-7">
-                                <input type="password" class="form-control" id="interestRate">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="ScheduleTransferOwnSuccess.html" class="btn btn-primary">OK</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: rgb(45 69 157); ">
-                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12 mb-2">
-                        <div class="form-group row">
-                            <label for="interestRate" class="col-sm-12 text-center col-form-label">Are you sure you want to logout?</label>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="Login.html" class="btn btn-primary">OK</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -876,6 +777,30 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <a href="Login.html" class="btn btn-primary">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to delete?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
+                        No
+                    </button>
                 </div>
             </div>
         </div>
@@ -884,5 +809,43 @@
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
+    <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#transferTable').DataTable({
+                "columnDefs": [{
+                    "targets": [4, 5],
+                    "orderable": false
+                }]
+            });
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+        });
+        $('#fromAccount').select2({
+            theme: 'bootstrap4'
+        });
+        $('#transactionType').select2({
+            theme: 'bootstrap4'
+        });
+        $('#bank').select2({
+            theme: 'bootstrap4'
+        });
+        $('#approveStatus').select2({
+            theme: 'bootstrap4'
+        });
+
+        function makeRemittance() {
+            location.replace("CreateBranch.html");
+        }
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
+        }
+    </script>
+</body>
 
 </html>

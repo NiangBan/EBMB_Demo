@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Department List</title>
+    <title>Create Notification</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -27,12 +27,6 @@
     <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/materialicons.css">
     <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/dataTables.bootstrap4.min.css">
-    <style>
-        a {
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -73,13 +67,6 @@
             </div>
             <div class="app-header__content">
                 <div class="app-header-right">
-                    <!-- <div class="search-wrapper">
-                        <div class="input-holder">
-                            <input type="text" class="search-input" placeholder="Type to search">
-                            <button class="search-icon"><span></span></button>
-                        </div>
-                        <button class="close"></button>
-                    </div> -->
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
@@ -88,27 +75,8 @@
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell" style="color:black;"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black"></i><span class="num">2</span>
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li class="header">Inbox</li>
-                                <li>
-
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="inbox-transaction.html">
-                                                <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="inbox-information.html">
-                                                <i class="fa fa-info text-green"></i> You have 2 notifications in information.
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="inbox-transaction.html">View all</a></li>
-                            </ul> -->
                         </li>
                         <li class="nav-item">
                             <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
@@ -640,7 +608,7 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="Country.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Country
                                         </a>
@@ -712,55 +680,76 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div>Department List</div>
+                                <div>Create Notification</div>
                             </div>
                         </div>
                     </div>
-                    <div class="text-left mr-5">
-                        <input type="button" class="btn btn-beneficiary" value="+  Creat New" onclick="makeRemittance()" />
-                    </div>
-                    <hr />
-                    <div class="mt-5">
-                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
-                            <thead>
-                                <tr class="text-white">
-                                    <th class="text-center" style="width:650px;">Department Name</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-left">Accounting</td>
-                                    <td class="text-center">
-                                        <a href="EditDepartment.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">Finance</td>
-                                    <td class="text-center">
-                                        <a href="EditDepartment.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">HR</td>
-                                    <td class="text-center">
-                                        <a href="EditDepartment.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-left">IT</td>
-                                    <td class="text-center">
-                                        <a href="EditDepartment.html" class="textdec">Edit</a> | <a href="#" class="textdec" onclick="deleteConfirm()">Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Title:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="title"></div>
                     </div><br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-form-label">Content:</label>
+                        </div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="content"></div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-2 offset-md-2">
+                            <input type="radio" id="rdoAll" name="rd" checked />   ALL
+                        </div>
+                        <div class="col-md-2">
+                            <input type="radio" id="rdoByName" name="rd" />    By Name
+                        </div>
+                        <div class="col-md-2">
+                            <input type="radio" id="rdoMultiple" name="rd" />    Multiple
+                        </div>
+                    </div><br />
+                    <div id="ByNameUser">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="amount" class="col-form-label">User Name:</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="content"></div>
+                        </div><br />
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="amount" class="col-form-label">Full Name:</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="FName"></div>
+                        </div><br />
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="amount" class="col-form-label">NRC:</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="content"></div>
+                        </div><br />
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="amount" class="col-form-label">Phone No:</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="phone"></div>
+                        </div><br />
+                    </div>
+                    <div id="MultipleUser">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-2"> <input type="file" class="form-control" id="content"></div>
+                            <button type="button" class="btn btn-success">Upload</button>
+                        </div>
+                    </div><br />
+                    <div class="form-group col-md-12 offset-sm-1">
+                        <div style="padding-left:60px;">
+                            <input type="button" id="btnSubmit" value="Create" class="btn btn-success" onclick="window.location.href ='Notification.html'">
+                            <a class="btn btn-secondary" href="Notification.html">Cancel</a>
+                            <br>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal -->
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -785,71 +774,27 @@
             </div>
         </div>
     </div>
-    <div id="modalConfirmYesNo" class="modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">x</span>
-                    </button>
-
-                </div>
-                <div class="modal-body">
-                    <pre id="iMessage">Are you sure you want to delete?</pre>
-                </div>
-                <div class="modal-footer">
-                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
-                        Yes
-                    </button>
-                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
-                        No
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script type="text/javascript" src="../../assets/scripts/main.js"></script>
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
-    <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#transferTable').DataTable({
-                "columnDefs": [{
-                    "targets": [4, 5],
-                    "orderable": false
-                }]
-            });
-            $("#btnYesConfirmYesNo").click(function () {
-                $('#modalConfirmYesNo').modal('hide');
-            });
-            $("#btnNoConfirmYesNo").click(function () {
-                $('#modalConfirmYesNo').modal('hide');
-            });
-        });
-        $('#fromAccount').select2({
-            theme: 'bootstrap4'
-        });
-        $('#transactionType').select2({
-            theme: 'bootstrap4'
-        });
-        $('#bank').select2({
-            theme: 'bootstrap4'
-        });
-        $('#approveStatus').select2({
-            theme: 'bootstrap4'
-        });
-
-        function makeRemittance() {
-            location.replace("CreateDepartment.html");
-        }
-        function deleteConfirm() {
-            $('#modalConfirmYesNo').modal('show');
-        }
-    </script>
 </body>
-
 </html>
+<script>
+    $('document').ready(function () {
+        $('#ByNameUser').hide();
+        $('#MultipleUser').hide();
+    });
+    $('#rdoAll').change(function () {
+        $('#ByNameUser').hide();
+        $('#MultipleUser').hide();
+    });
+    $('#rdoByName').change(function () {
+        $('#ByNameUser').show();
+        $('#MultipleUser').hide();
+    });
+    $('#rdoMultiple').change(function () {
+        $('#ByNameUser').hide();
+        $('#MultipleUser').show();
+    });
+</script>
