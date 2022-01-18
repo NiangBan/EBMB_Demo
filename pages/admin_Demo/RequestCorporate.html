@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> Myanma Foreign Trade Bank</title>
+    <title>Retail User Registration</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -31,9 +31,10 @@
 
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow">
+        <div class="app-header header-shadow" style="background-color: #2d459d">
             <div class="app-header__logo">
                 <div class="logo-src">
+                    <img src="AceLogoWhite.png" style="width:250px;height:50px;object-fit:contain" />
                     <a href="Dashboard.html" class="logo-src"></a>
                 </div>
                 <div class="header__pane ml-auto">
@@ -61,7 +62,7 @@
                         <span class="btn-icon-wrapper">
                             <i class="fa fa-ellipsis-v fa-w-6"></i>
                         </span>
-                </button>
+                    </button>
                 </span>
             </div>
             <div class="app-header__content">
@@ -76,32 +77,13 @@
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                             Welcome maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black"></i><span class="num">2</span>
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li class="header">Inbox</li>
-                                <li>
-                                   
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="inbox-transaction.html">
-                                                <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="inbox-information.html">
-                                                <i class="fa fa-info text-green"></i> You have 2 notifications in information.
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="inbox-transaction.html">View all</a></li>
-                            </ul> -->
                         </li>
                         <li class="nav-item">
                             <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
@@ -119,29 +101,29 @@
                     <div class="header__pane ml-auto">
                         <div>
                             <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                                    <span class="hamburger-box">
-                                        <span class="hamburger-inner"></span>
-                                    </span>
-                                </button>
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="app-header__mobile-menu">
                     <div>
                         <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
                     </div>
                 </div>
                 <div class="app-header__menu">
                     <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                    </button>
+                        <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
                     </span>
                 </div>
                 <div class="scrollbar-sidebar">
@@ -549,7 +531,7 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="RequestCorporate.html">
                                             <i class="metismenu-icon">
                                             </i>Request Corporate
                                         </a>
@@ -700,146 +682,241 @@
                     </div>
                 </div>
             </div>
+            <style>
+                fieldset.scheduler-border {
+                    border: 1px groove #ddd !important;
+                    padding: 0 1.4em 1.4em 1.4em !important;
+                    margin: 0 0 1.5em 0 !important;
+                    -webkit-box-shadow: 0px 0px 0px 0px #000;
+                    box-shadow: 0px 0px 0px 0px #000;
+                }
+
+                legend.scheduler-border {
+                    font-size: 1.2em !important;
+                    font-weight: bold !important;
+                    text-align: left !important;
+                    width: auto;
+                    padding: 0 10px;
+                    border-bottom: none;
+                }
+            </style>
             <div class="app-main__outer">
                 <div class="app-main__inner">
-                    <div class="app-page-title">
-                        <div class="page-title-wrapper">
-                            <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">people_alt</i>
-                                </div>
-                                <div>Beneficiary (Own Bank)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row col-md-12">
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios1" value="option1" onClick="window.location = 'OwnBankBeneficiaryAcc.html';" checked>
-                            <label class="form-check-label" for="Radios1">
-                              Account
-                            </label>
-                        </div>
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios2" value="option2" onClick="window.location = 'OwnBankBeneficiaryNRC.html';">
-                            <label class="form-check-label" for="Radios2">
-                              NRC
-                            </label>
-                        </div>
-                        <div class="col-md-4 form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="Radios3" value="option3" onClick="window.location = 'OwnBankBeneficiaryPassport.html';">
-                            <label class="form-check-label" for="Radios3">
-                              Passport
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="account" class="col-sm-4 text-right col-form-label">Beneficiary Account No
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="account">
+                    <div class="form-horizontal">
+                        <div class="app-page-title">
+                            <div class="page-title-wrapper">
+                                <div class="page-title-heading">
+                                    <div style="color:black;">Create</div>
                                 </div>
                             </div>
+                            <div style="margin-left:1.5%;">Request Corporate</div>
                         </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="mobileNo" class="col-sm-4 text-right col-form-label">Beneficiary Name 
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="mobileNo">
-                                </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">CIFID</label>
                             </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="CIFID"></div>
                         </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="mobileNo" class="col-sm-4 text-right col-form-label">Mobile No 
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">+959 -</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="username">
-                                    </div>
-                                </div>
+                        <br />
+                        <div class="row">
+                            <div style="margin-left: 26.333333%;"><button type="button" class="btn btn-primary" data-dismiss="modal">Fetch</button></div>
+                        </div><br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY NAME</label>
                             </div>
-                        </div>
-                        <!--<div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="amount" class="col-sm-4 text-right col-form-label">Contact No 
-                                    <span class="required">*</span></label>
-                                <div class="col-sm-8">
-                                    <input type="number" class="form-control" id="amount">
-                                </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="UName" readonly></div>
+                        </div><br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY EMAIL</label>
                             </div>
-                        </div>-->
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="email" class="col-sm-4 text-right col-form-label">Email</label>
-                                <div class="col-sm-8">
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row filter">
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="description" class="col-sm-4 text-right col-form-label">Contact Address</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="description">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-2">
-                            <div class="form-group row">
-                                <label for="amount" class="col-sm-4 text-right col-form-label">Description</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="transactionPassword" multiple>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left ml-11">
-                        <a href="OwnBankBeneficiaryAcc.html" class="btn btn-secondary">Cancel</a>
-                        <a href="OwnBankBeneficiaryAccConfirm.html" class="btn btn-primary">Add</a>
-                    </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        </div><br />
 
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY PHONE</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY ADDRESS</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">BRANCH</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option selected>---Select Branch---</option>
+                                    <option>HEAD OFFICE</option>
+                                    <option>NAY PYI TAW</option>
+                                    <option>IBD OFFICE</option>
+                                    <option>MANDALAY</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COUNTRY</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option selected>---Select Country---</option>
+                                    <option>Myanmar</option>
+                                    <option>Thailand</option>
+                                    <option>Japan</option>
+                                    <option>United State</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">STATE</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option selected>---Select State---</option>
+                                    <option>State01</option>
+                                    <option>State02</option>
+                                    <option>State03</option>
+                                    <option>State04</option>
+                                    <option>State05</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">VIP</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="col-md-2"> <input type="checkbox" class="form-control" id="ISVIP" style="width:20px;" /></div>
+                            </div>
+                        </div>
+
+                        <div class="row OnlyVIP">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">TRANSFER CHARGES CODE</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option selected>---Select TRANSFER CHARGES CODE---</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row OnlyVIP">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">REMITTANCE CHARGES CODE</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option selected>---Select REMITTANCE CHARGES CODE---</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">TRAN LIMIT</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        </div><br />
+
+                        <div class="col-md-1 form-group"></div>
+
+                        <fieldset class="scheduler-border form-group">
+                            <legend class="scheduler-border"> Bulk Payment Charges</legend>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="amount" class="text-right col-form-label">Own Bank</label>
+                                </div>
+                                <div class="col-md-9"> <input type="text" class="form-control" id="UName"></div><br />
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label><input style="margin: 5px;" type="radio" name="rdoPercent" id="rdo1" value="Percentage">Percentage</label>
+                                    <label><input style="margin: 5px;" type="radio" name="rdoPercent" id="rdo2" value="Fixed Amount">Fixed Amount</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="amount" class="text-right col-form-label">Other Bank</label>
+                                </div>
+                                <div class="col-md-9"> <input type="text" class="form-control" id="UName"></div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label><input style="margin: 5px;" type="radio" name="rdoPercent" id="rdo3" value="Percentage">Percentage</label>
+                                    <label><input style="margin: 5px;" type="radio" name="rdoPercent" id="rdo4" value="Fixed Amount">Fixed Amount</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="button" id="btnSubmit" value="Register" class="btn btn-success" />
+                                <a class="btn btn-secondary" href="UserList.html">Cancel</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="modal modal-danger" id="divError">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 class="modal-title">Register Corporate</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p id="pMessage"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
             </div>
-        </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: rgb(45 69 157); ">
-                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12 mb-2">
-                        <div class="form-group row">
-                            <label for="interestRate" class="col-sm-12 text-center col-form-label">Are you sure you want to logout?</label>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="Login.html" class="btn btn-primary">OK</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <script type="text/javascript" src="../../assets/scripts/main.js"></script>
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>
+
+<script>
+    $(document).ready(function () {
+        //show or hide at initially and after validation error
+        if ($("#ISVIP")[0].checked) {
+            $(".OnlyVIP").show();
+        } else {
+            $(".OnlyVIP").hide();
+        }
+        $("#ISVIP").change(function () {
+            if ($("#ISVIP")[0].checked) {
+                $(".OnlyVIP").show();
+            } else {
+                $(".OnlyVIP").hide();
+                
+            }
+        });
+    });
+   
+</script>

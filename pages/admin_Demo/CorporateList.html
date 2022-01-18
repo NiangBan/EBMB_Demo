@@ -788,15 +788,39 @@
                         </table>
                     </div><br />
                     <div class="form-group">
-                        <button class="btn btn-success" id="btnEdit" onclick="edit()">Approve</button>
-                        <button class="btn btn-danger" id="btnDelete" onclick="Delete()">Reject</button>
-                        <button class="btn btn-secondary" onclick="tranlock_unlock()">Details</button>
+                        <button class="btn btn-success" id="btnEdit" onclick="window.location.href='CorporatetListEdit.html'">Approve</button>
+                        <button class="btn btn-danger" id="btnDelete" onclick="deleteConfirm()">Reject</button>
+                        <button class="btn btn-secondary" onclick="window.location.href='CorporateListDetail.html'">Details</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to delete?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        Yes
+                    </button>
+                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -835,6 +859,12 @@
                     "orderable": false
                 }]
             });
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
         });
         $('#fromAccount').select2({
             theme: 'bootstrap4'
@@ -851,6 +881,9 @@
 
         function makeRemittance() {
             location.replace("CreateAdminUser.html");
+        }
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
         }
     </script>
 </body>

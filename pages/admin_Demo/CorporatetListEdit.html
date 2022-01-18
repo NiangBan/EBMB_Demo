@@ -682,166 +682,239 @@
                     </div>
                 </div>
             </div>
+            <style>
+                fieldset.scheduler-border {
+                    border: 1px groove #ddd !important;
+                    padding: 0 1.4em 1.4em 1.4em !important;
+                    margin: 0 0 1.5em 0 !important;
+                    -webkit-box-shadow: 0px 0px 0px 0px #000;
+                    box-shadow: 0px 0px 0px 0px #000;
+                }
+
+                legend.scheduler-border {
+                    font-size: 1.2em !important;
+                    font-weight: bold !important;
+                    text-align: left !important;
+                    width: auto;
+                    padding: 0 10px;
+                    border-bottom: none;
+                }
+            </style>
             <div class="app-main__outer">
                 <div class="app-main__inner">
-                    <div class="app-page-title">
-                        <div class="page-title-wrapper">
-                            <div class="page-title-heading">
-                                <div>Retail User Registration</div>
+                    <div class="form-horizontal">
+                        <div class="app-page-title">
+                            <div class="page-title-wrapper">
+                                <div class="page-title-heading">
+                                    <div style="color:black;">Edit</div>
+                                </div>
+                            </div>
+                            <div style="margin-left:1.5%;">Request Corporate</div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">CIFID</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" value="C000000894" class="form-control" id="CIFID"></div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div style="margin-left: 26.333333%;"><button type="button" class="btn btn-primary" data-dismiss="modal">Fetch</button></div>
+                        </div><br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY NAME</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="UName" readonly></div>
+                        </div><br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY EMAIL</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" value="chanon.k@kbtg.tech" class="form-control" id="UName"></div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY PHONE</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" value="097876576" class="form-control" id="UName"></div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COMPANY ADDRESS</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" value="Yangon" class="form-control" id="UName"></div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">BRANCH</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option>---Select Branch---</option>
+                                    <option selected>HEAD OFFICE</option>
+                                    <option>NAY PYI TAW</option>
+                                    <option>IBD OFFICE</option>
+                                    <option>MANDALAY</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">COUNTRY</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option>---Select Country---</option>
+                                    <option selected>Myanmar</option>
+                                    <option>Thailand</option>
+                                    <option>Japan</option>
+                                    <option>United State</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">STATE</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option>---Select State---</option>
+                                    <option selected>State01</option>
+                                    <option>State02</option>
+                                    <option>State03</option>
+                                    <option>State04</option>
+                                    <option>State05</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">VIP</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="col-md-2"> <input type="checkbox" class="form-control" id="ISVIP" style="width:20px;" /></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">CIFID:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="CIFID"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="offset-sm-2 col-md-4"><button type="button" class="btn btn-primary" data-dismiss="modal">Fetch</button></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">USERNAME:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">MOBILENO:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">EMAIL:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">ADDRESS:</label>
-                        </div>
-                        <div class="col-md-8"> <textarea class="form-control" id="Addr" cols="20" rows="2"></textarea></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">FULLNAME:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">NRC:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">MINOR:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">GENDER:</label>
-                        </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
-                    </div><br />
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">ISVIP:</label>
-                        </div>
-                        <div class="col-md-2"> <input type="checkbox" class="form-control" id="chkVIP" style="width:20px;"></div>
-                    </div><br />
-                    <h5>Accounts</h5>
-                    <div class="mt-5">
-                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap" id="transferTable">
-                            <thead>
-                                <tr class="text-white">
-                                    <th width="6%" class="text-center">No</th>
-                                    <th class="text-center">Account No</th>
-                                    <th class="text-center">Account Type</th>
-                                    <th class="text-center">Scheme Code</th>
-                                    <th class="text-center">Branch</th>
-                                    <th class="text-center">Currency</th>
-                                    <th class="text-center">Allowed Account</th>
-                                    <th class="text-center">QR Allow</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-right">1</td>
-                                    <td class="text-left">0003010200010010</td>
-                                    <td class="text-left">Current Account</td>
-                                    <td class="text-left">S-001</td>
-                                    <td class="text-right">Yangon</td>
-                                    <td class="text-right">MMK</td>
-                                    <td class="text-center">0003010200010010</td>
-                                    <td class="text-center"><input type="checkbox" class="form-control" id="chkVIP" style="width:20px;"></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right">2</td>
-                                    <td class="text-left">0003010200010010</td>
-                                    <td class="text-left">Current Account</td>
-                                    <td class="text-left">S-001</td>
-                                    <td class="text-right">Mandalay</td>
-                                    <td class="text-right">MMK</td>
-                                    <td class="text-center">0003010200010010</td>
-                                    <td class="text-center"><input type="checkbox" class="form-control" id="chkVIP" style="width:20px;" checked></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right">3</td>
-                                    <td class="text-left">0003010200010010</td>
-                                    <td class="text-left">Current Account</td>
-                                    <td class="text-left">S-001</td>
-                                    <td class="text-right">NayPyiTaw</td>
-                                    <td class="text-right">MMK</td>
-                                    <td class="text-center">0003010200010010</td>
-                                    <td class="text-center"><input type="checkbox" class="form-control" id="chkVIP" style="width:20px;"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br />
-                    <div class="form-group col-md-12">
-                        <div style="padding-left:35px;">
-                            <input type="button" id="btnSubmit" value="Register" class="btn btn-success" onclick="window.location.href ='UserList.html'">
-                            <a class="btn btn-secondary" href="UserList.html">Cancel</a>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: rgb(45 69 157); ">
-                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12 mb-2">
-                        <div class="form-group row">
-                            <label for="interestRate" class="col-sm-12 text-center col-form-label">Are you sure you want to logout?</label>
 
+                        <div class="row OnlyVIP">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">TRANSFER CHARGES CODE</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option selected>---Select TRANSFER CHARGES CODE---</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row OnlyVIP">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">REMITTANCE CHARGES CODE</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" id="transactionType">
+                                    <option selected>---Select REMITTANCE CHARGES CODE---</option>
+                                </select>
+                            </div>
+                        </div><br />
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="amount" class="text-right col-form-label">TRAN LIMIT</label>
+                            </div>
+                            <div class="col-md-8"> <input type="text" value="50,000,000" class="form-control" id="UName"></div>
+                        </div><br />
+
+                        <div class="col-md-1 form-group"></div>
+
+                        <fieldset class="scheduler-border form-group">
+                            <legend class="scheduler-border"> Bulk Payment Charges</legend>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="amount" class="text-right col-form-label">Own Bank</label>
+                                </div>
+                                <div class="col-md-9"> <input type="text" class="form-control" id="UName"></div><br />
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label><input style="margin: 5px;" type="radio" checked name="rdoPercent" id="rdo1" value="Percentage">Percentage</label>
+                                    <label><input style="margin: 5px;" type="radio" name="rdoPercent" id="rdo2" value="Fixed Amount">Fixed Amount</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="amount" class="text-right col-form-label">Other Bank</label>
+                                </div>
+                                <div class="col-md-9"> <input type="text" class="form-control" id="UName"></div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <label><input style="margin: 5px;" type="radio" checked name="rdoAmount" id="rdo3" value="Percentage">Percentage</label>
+                                    <label><input style="margin: 5px;" type="radio" name="rdoAmount" id="rdo4" value="Fixed Amount">Fixed Amount</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="button" id="btnSubmit" value="Save" class="btn btn-success" />
+                                <a class="btn btn-secondary" href="UserList.html">Cancel</a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="Login.html" class="btn btn-primary">OK</a>
+                <div class="modal modal-danger" id="divError">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 class="modal-title">Register Corporate</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p id="pMessage"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
             </div>
         </div>
-    </div>
-    <script type="text/javascript" src="../../assets/scripts/main.js"></script>
-    <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
-    <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="../../assets/scripts/main.js"></script>
+        <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
+        <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>
+
+<script>
+    $(document).ready(function () {
+        //show or hide at initially and after validation error
+        if ($("#ISVIP")[0].checked) {
+            $(".OnlyVIP").show();
+        } else {
+            $(".OnlyVIP").hide();
+        }
+        $("#ISVIP").change(function () {
+            if ($("#ISVIP")[0].checked) {
+                $(".OnlyVIP").show();
+            } else {
+                $(".OnlyVIP").hide();
+
+            }
+        });
+    });
+</script>
