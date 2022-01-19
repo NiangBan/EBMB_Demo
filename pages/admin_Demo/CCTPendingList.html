@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> Myanma Foreign Trade Bank</title>
+    <title>CCT  Pending List</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -28,13 +28,20 @@
     <link rel="stylesheet" href="../../css/materialicons.css">
     <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../css/TabStyle.css">
+    <style>
+        #btnSuc:hover {
+            background-color: #0e7c1c;
+        }
+    </style>
 </head>
 
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow">
+        <div class="app-header header-shadow" style="background-color: #2d459d">
             <div class="app-header__logo">
                 <div class="logo-src">
+                    <img src="AceLogoWhite.png" style="width:250px;height:50px;object-fit:contain" />
                     <a href="Dashboard.html" class="logo-src"></a>
                 </div>
                 <div class="header__pane ml-auto">
@@ -62,47 +69,21 @@
                         <span class="btn-icon-wrapper">
                             <i class="fa fa-ellipsis-v fa-w-6"></i>
                         </span>
-                </button>
+                    </button>
                 </span>
             </div>
             <div class="app-header__content">
                 <div class="app-header-right">
-                    <!-- <div class="search-wrapper">
-                        <div class="input-holder">
-                            <input type="text" class="search-input" placeholder="Type to search">
-                            <button class="search-icon"><span></span></button>
-                        </div>
-                        <button class="close"></button>
-                    </div> -->
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                             Welcome maker!<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
+                                Welcome !<!-- <i class="nav-link-icon fa fa-user-circle"> </i> -->
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black;"></i><span class="num">2</span>
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li class="header">Inbox</li>
-                                <li>
-                                   
-                                    <ul class="menu">
-                                        <li>
-                                            <a href="inbox-transaction.html">
-                                                <i class="fa fa-exchange text-red"></i> You have 2 notifications in transaction.
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="inbox-information.html">
-                                                <i class="fa fa-info text-green"></i> You have 2 notifications in information.
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="inbox-transaction.html">View all</a></li>
-                            </ul> -->
                         </li>
                         <li class="nav-item">
                             <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal" data-toggle="tooltip" data-placement="bottom" title="logout">
@@ -120,244 +101,583 @@
                     <div class="header__pane ml-auto">
                         <div>
                             <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                                    <span class="hamburger-box">
-                                        <span class="hamburger-inner"></span>
-                                    </span>
-                                </button>
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="app-header__mobile-menu">
                     <div>
                         <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
                     </div>
                 </div>
                 <div class="app-header__menu">
                     <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                    </button>
+                        <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
                     </span>
                 </div>
                 <div class="scrollbar-sidebar">
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
                             <li>
-                                <a href="Dashboard.html">
+                                <a href="Dashboard.html" class="mm-active">
                                     <i class="material-icons">dashboard</i> Dashboard
                                 </a>
                             </li>
                             <li>
-                                <a href="Profile.html">
-                                    <i class="material-icons">account_box</i> Profile
-                                </a>
-                            </li>
-                            <li>
-                                <a href="AccountInformation.html">
-                                    <i class="material-icons">account_balance_wallet</i> Account Information
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="mm-active">
-                                    <i class="material-icons">people_alt</i></i> Manage Beneficiary
+                                <a href="#">
+                                    <i class="material-icons">people_alt</i></i>User
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="OwnBankBeneficiary.html" class="mm-active">
+                                        <a href="RegisterRetailUser.html">
                                             <i class="metismenu-icon">
-                                                </i>Own Bank
+                                            </i>Register Retail User
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="OtherBankBeneficiary.html">
+                                        <a href="UserList.html">
                                             <i class="metismenu-icon">
-                                                </i>Other Bank
+                                            </i>User List
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="material-icons">transform</i></i> Transaction
+                                    <i class="material-icons">people_alt</i></i>Admin
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="TransferOwn.html">
+                                        <a href="CreateAdminUser.html">
                                             <i class="metismenu-icon">
-                                                </i>Transfer
+                                            </i>Create Admin User
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="ScheduleTransferOwn.html">
+                                        <a href="AdminList.html">
                                             <i class="metismenu-icon">
-                                                </i>Schedule Transfer
+                                            </i>Admin List
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="RemittanceOwn.html">
+                                        <a href="Permission.html">
                                             <i class="metismenu-icon">
-                                                </i>Remittance
+                                            </i>Permission
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="BillPayment.html">
-                                            <i class="metismenu-icon">
-                                                </i>Bill Payment
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="TopUp.html">
-                                            <i class="metismenu-icon">
-                                                </i>Topup
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="BulkPayment.html">
-                                            <i class="metismenu-icon">
-                                        </i> Bulk Payment</a>
-                                    </li>
-                                    <li>
-                                        <a href="ScheduleBulkPayment.html">
-                                            <i class="metismenu-icon">
-                                        </i>Schedule Bulk Payment</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="material-icons">description</i></i> Transaction Status
+                                    <i class="material-icons">tune</i></i>General Setup
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="TransferList.html">
+                                        <a href="CurrencyList.html">
                                             <i class="metismenu-icon">
-                                                </i>Transfer
+                                            </i>Currency
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="ScheduleTransferList.html">
+                                        <a href="Branch.html">
                                             <i class="metismenu-icon">
-                                                </i>Schedule Transfer
+                                            </i>Branch
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="RemittanceList.html">
+                                        <a href="City.html">
                                             <i class="metismenu-icon">
-                                                </i>Remittance
+                                            </i>City
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="BillPaymentList.html">
+                                        <a href="Township.html">
                                             <i class="metismenu-icon">
-                                                </i>Bill Payment
+                                            </i>Township
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="TopUpList.html">
+                                        <a href="Version.html">
                                             <i class="metismenu-icon">
-                                                </i>Topup
+                                            </i>Version
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="BulkPaymentList.html">
+                                        <a href="Rule.html">
+                                            <i class="metismenu-icon">
+                                            </i>Rule
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ADSPhoto.html">
+                                            <i class="metismenu-icon">
+                                            </i>ADS Photo
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="OfficeAccount.html">
+                                            <i class="metismenu-icon">
+                                            </i>Office Account
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Utility.html">
+                                            <i class="metismenu-icon">
+                                            </i>Utility
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="UtilityDetail.html">
+                                            <i class="metismenu-icon">
+                                            </i>Utility Detail
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="OtherBank.html">
+                                            <i class="metismenu-icon">
+                                            </i>Other Bank
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="OtherBranch.html">
+                                            <i class="metismenu-icon">
+                                            </i>Other Branch
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ScheduleSetup.html">
+                                            <i class="metismenu-icon">
+                                            </i>Schedule Setup
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="material-icons">record_voice_over</i></i>Products and Services
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="AccountService.html">
+                                            <i class="metismenu-icon">
+                                            </i>Account Service
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="AccountServiceDesc.html">
+                                            <i class="metismenu-icon">
+                                            </i>Account Service Desc
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="material-icons">people_alt</i></i>Request
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="RegisterRetailUser.html">
+                                            <i class="metismenu-icon">
+                                            </i>New Retail User
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="RequestedUsers.html">
+                                            <i class="metismenu-icon">
+                                            </i>Requested Users
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="UserList.html">
+                                            <i class="metismenu-icon">
+                                            </i>User List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="RequestedChanges.html">
+                                            <i class="metismenu-icon">
+                                            </i>Requested Changes
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="material-icons">people_alt</i></i>Approve
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="RequestedUsersForApprove.html">
+                                            <i class="metismenu-icon">
+                                            </i>Requested User
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="RequestedChangesForApprove.html">
+                                            <i class="metismenu-icon">
+                                            </i>Requested Changes
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="material-icons">people_alt</i></i>Information
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Feedback
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Notification
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>SMS Allow
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>SMS Body
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Email Template
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>How To Use
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="material-icons">people_alt</i></i>Reports
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>User
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Transfer Detail
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Remittance
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>TopUp
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Bill Payment
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Feedback Data
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Transaction Summary
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Utility Summary
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Admin Log
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>User Activity Log
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Schedule Transfer Status
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Schedule Transfer Log
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Cron Log
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Domestic Interbank Transfer
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Schedule Payment
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Corporate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Corporate User
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
                                             <i class="metismenu-icon">
                                             </i>Bulk Payment
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="ScheduleBulkPaymentList.html">
+                                        <a href="#">
                                             <i class="metismenu-icon">
-                                            </i>Schedule Bulk Payment
+                                            </i>Bulk Payment Detail
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="TransactionHistory.html">
-                                    <i class="material-icons">history</i>Transaction History
-                                </a>
-                            </li>
-                            <li>
-                                <a href="OtherBankInfo.html">
-                                    <i class="material-icons">info</i>Other Bank Info
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Feedback.html">
-                                    <i class="material-icons">feedback</i>Feedback
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Calculator.html">
-                                    <i class="material-icons">calculate</i>Calculator
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ExchangeRate.html">
-                                    <i class="material-icons">monetization_on</i>Exchange Rate
-                                </a>
-                            </li>
-                            <li>
-                                <a href="Branch.html">
-                                    <i class="material-icons">account_tree</i>Branch Info
-                                </a>
-                            </li>
-                            <li>
                                 <a href="#">
-                                    <i class="material-icons">tune</i></i>Setting
+                                    <i class="material-icons">people_alt</i></i>Other Bank
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="ChangeLoginPassword.html">
+                                        <a href="OtherBankTransactionCCTExport.html">
                                             <i class="metismenu-icon">
-                                                </i>Change Login Password
+                                            </i>Other Bank Transaction(CCT)
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="ChangeTransactionPassword.html">
+                                        <a href="CCTPendingList.html">
                                             <i class="metismenu-icon">
-                                                </i>Change Transaction Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ChangeLanguage.html">
-                                            <i class="metismenu-icon">
-                                                </i>Change Language
+                                            </i>CCT Pending List
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="Services.html">
-                                    <i class="material-icons">record_voice_over</i>Services
+                                <a href="#">
+                                    <i class="material-icons">record_voice_over</i></i>Corporate Request
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Request Corporate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CorporateRequestList.html">
+                                            <i class="metismenu-icon">
+                                            </i>Request List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CorporateList.html">
+                                            <i class="metismenu-icon">
+                                            </i>Corporate List
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="ContactUs.html">
-                                    <i class="material-icons">perm_phone_msg</i>Contact Us
+                                <a href="#">
+                                    <i class="material-icons">record_voice_over</i></i>Corporate User Request
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Request Corporate User
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Request User List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Request Changes List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Corporate User List
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="HowToUse.html">
-                                    <i class="material-icons">help</i>How To Use
+                                <a href="#">
+                                    <i class="material-icons">record_voice_over</i></i>Corporate Approve
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Pending Corporates
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Pending Users
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Pending User Changes
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="../../Retail_Login.html" data-toggle="modal" data-target="#transactionPasswordModal">
-                                    <i class="material-icons">exit_to_app</i>Logout
+                                <a href="#">
+                                    <i class="material-icons">tune</i></i>Corporate General Setup
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Country
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>State
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Bulk File
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Position
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Department
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
-                        </ul>
+                            <li>
+                                <a href="#">
+                                    <i class="material-icons">description</i></i>Corporate Approve Rule
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Register Approve Rule
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Requested Approve Rule List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Pending Approve Rule
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="metismenu-icon">
+                                            </i>Approve Rule List
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -367,167 +687,358 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div class="page-title-icon"><i class="material-icons">people_alt</i>
-                                </div>
-                                <div>Beneficiary (Own Bank)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left mr-5">
-                        <input type="button" class="btn btn-beneficiary" value="+  New Beneficiary" onclick="makeRemittance()" />
-                    </div>
-                    </p>
-                    <hr/>
-
-                    <div class="row">
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Beneficiary Type</div>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="fromAccount">
-                                        <option selected>Select One</option>
-                                        <option>Account No.</option>
-                                        <option >NRC</option>
-                                        <option>Passport</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Beneficiary Name</div>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="approveStatus">
-                                        <option selected>Select One</option>
-                                        <option>Kyaw Kyaw</option>
-                                        <option >Mya Mya</option>
-                                        <option>Ko Ko</option>
-                                    </select>
-                                </div>
+                                <div>Domestic Interbank Transfer</div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <!-- <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Bank </div>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="bank">
-                                        <option>Select One</option>
-                                        <option>MFTB (Hlaing)</option>
-                                        <option selected >MFTB (Insein)</option>
-                                    </select>
+                        <div class="col-md-12">
+                            <nav>
+                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Normal Transaction</a>
+                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Bulk Transaction</a>
                                 </div>
-                            </div>
-                        </div> -->
-                        <div class="col-md-6 mb-2">
-                            <div class="row">
-                                <div class="col-sm-4 text-right col-form-label">Branch </div>
-                                <div class="col-sm-8">
-                                    <select class="form-control" id="transactionType">
-                                        <option selected>Select One</option>
-                                        <option>Branch I</option>
-                                        <option>Branch II</option>
-                                        <option>Branch III</option>
-                                    </select>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <br />
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <h4>Normal Transaction</h4><br />
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label for="inputName">User Name:</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="inputName">From Account No:</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="inputName">To Account No:</label>
+                                            <input type="date" class="form-control" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="inputName">Bank:</label>
+                                            <select class="form-control" id="transactionType">
+                                                <option selected>Select Bank</option>
+                                                <option>AYEYARWADDY BANK LIMITED</option>
+                                                <option>KANBAWZA BANK</option>
+                                                <option>GLOBAL TREASURE BANK</option>
+                                            </select>
+                                        </div>
+                                    </div><br />
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label for="inputName">From Date:</label>
+                                            <input type="date" class="form-control" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="inputName">To Date:</label>
+                                            <input type="date" class="form-control" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="inputName">CBM Tran Type:</label>
+                                            <select class="form-control" id="transactionType">
+                                                <option selected>Select CBM Type</option>
+                                                <option>ACH</option>
+                                                <option>RTGs</option>
+                                            </select>
+                                        </div>
+                                    </div><br />
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <button type="button" class="btn btn-secondary">Search</button>
+                                            <button type="button" class="btn btn-warning" style="background-color:#28A745;color:white;" id="btnSuc" onclick="deleteConfirm()">ExportToExcel</button>
+                                        </div>
+
+                                    </div><br />
+                                    <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
+                                        <thead>
+                                            <tr class="text-white">
+                                                <th class="text-center"><input type="checkbox" id="chkAll" /></th>
+                                                <th class="text-center">Transaction Date</th>
+                                                <th class="text-center">Tran ID</th>
+                                                <th class="text-center">CBM Tran Type</th>
+                                                <th class="text-center">User Name</th>
+                                                <th class="text-center">From Account</th>
+                                                <th class="text-center">Payee Name</th>
+                                                <th class="text-center">To Acc No/NRC</th>
+                                                <th class="text-center">Amount</th>
+                                                <th class="text-center">To Bank</th>
+                                                <th class="text-center">To Branch</th>
+                                                <th class="text-center">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-center"><input type="checkbox" id="chkdefault" /></th>
+                                                <td class="text-left">20-08-2020</td>
+                                                <td class="text-left">AB673</td>
+                                                <td class="text-left">ACH</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200036820</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200038765</td>
+                                                <td class="text-center">560.00</td>
+                                                <td class="text-center">AYEYARWADDY BANK LIMITED</td>
+                                                <td class="text-center">001.AYA BANK-NAYPYITAW</td>
+                                                <td class="text-center">
+                                                    <a href="CCTPendingListDetail.html">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center"><input type="checkbox" id="chkdefault" /></th>
+                                                <td class="text-left">20-08-2020</td>
+                                                <td class="text-left">AB673</td>
+                                                <td class="text-left">ACH</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200036820</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200038765</td>
+                                                <td class="text-center">560.00</td>
+                                                <td class="text-center">AYEYARWADDY BANK LIMITED</td>
+                                                <td class="text-center">001.AYA BANK-NAYPYITAW</td>
+                                                <td class="text-center">
+                                                    <a href="CCTPendingListDetail.html">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center"><input type="checkbox" id="chkdefault" /></th>
+                                                <td class="text-left">20-08-2020</td>
+                                                <td class="text-left">AB673</td>
+                                                <td class="text-left">ACH</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200036820</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200038765</td>
+                                                <td class="text-center">560.00</td>
+                                                <td class="text-center">AYEYARWADDY BANK LIMITED</td>
+                                                <td class="text-center">001.AYA BANK-NAYPYITAW</td>
+                                                <td class="text-center">
+                                                    <a href="CCTPendingListDetail.html">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center"><input type="checkbox" id="chkdefault" /></th>
+                                                <td class="text-left">20-08-2020</td>
+                                                <td class="text-left">AB673</td>
+                                                <td class="text-left">ACH</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200036820</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200038765</td>
+                                                <td class="text-center">560.00</td>
+                                                <td class="text-center">AYEYARWADDY BANK LIMITED</td>
+                                                <td class="text-center">001.AYA BANK-NAYPYITAW</td>
+                                                <td class="text-center">
+                                                    <a href="CCTPendingListDetail.html">View</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center"><input type="checkbox" id="chkdefault" /></th>
+                                                <td class="text-left">20-08-2020</td>
+                                                <td class="text-left">AB673</td>
+                                                <td class="text-left">ACH</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200036820</td>
+                                                <td class="text-center">Approveuser01</td>
+                                                <td class="text-center">0006010200038765</td>
+                                                <td class="text-center">560.00</td>
+                                                <td class="text-center">AYEYARWADDY BANK LIMITED</td>
+                                                <td class="text-center">001.AYA BANK-NAYPYITAW</td>
+                                                <td class="text-center">
+                                                    <a href="CCTPendingListDetail.html">View</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button type="button" class="btn btn-success" onclick="SuccessConfirm()">Success</button>
+                                    <button type="button" class="btn btn-danger" onclick="FailConfirm()">Fail</button>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <h4>Bulk Transaction</h4><br />
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="inputName">From Account No:</label>
+                                            <input type="text" class="form-control" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputName">From Date:</label>
+                                            <input type="date" class="form-control" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputName">To Date:</label>
+                                            <input type="date" class="form-control" />
+                                        </div>
+                                    </div><br />
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <button type="button" class="btn btn-secondary">Search</button>
+                                            <button type="button" class="btn btn-warning" style="background-color:#28A745;color:white;" id="btnSuc" onclick="deleteConfirm()">ExportToExcel</button>
+                                        </div>
+                                    </div><br />
+                                    <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
+                                        <thead>
+                                            <tr class="text-white">
+                                                <th class="text-center"><input type="checkbox" id="chkAllBulk" /></th>
+                                                <th class="text-center">Maker Name</th>
+                                                <th class="text-center">Deposit Account No</th>
+                                                <th class="text-center">Date</th>
+                                                <th class="text-center">File Name</th>
+                                                <th class="text-center">Total Amount</th>
+                                                <th class="text-center">CBM Tran Type</th>
+                                                <th class="text-center">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" id="chkbulk" /></td>
+                                                <td class="text-left">Maker1</td>
+                                                <td class="text-left">0007010200006101</td>
+                                                <td class="text-left">04-06-2021</td>
+                                                <td class="text-center">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
+                                                <td class="text-center">2500000.00</td>
+                                                <td class="text-center">ACH</td>
+                                                <td class="text-center">
+                                                    <a href="BulkPaymentDetail.html">Details</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" id="chkbulk" /></td>
+                                                <td class="text-left">Maker1</td>
+                                                <td class="text-left">0007010200006101</td>
+                                                <td class="text-left">04-06-2021</td>
+                                                <td class="text-center">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
+                                                <td class="text-center">2500000.00</td>
+                                                <td class="text-center">ACH</td>
+                                                <td class="text-center">
+                                                    <a href="BulkPaymentDetail.html">Details</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" id="chkbulk" /></td>
+                                                <td class="text-left">Maker1</td>
+                                                <td class="text-left">0007010200006101</td>
+                                                <td class="text-left">04-06-2021</td>
+                                                <td class="text-center">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
+                                                <td class="text-center">2500000.00</td>
+                                                <td class="text-center">ACH</td>
+                                                <td class="text-center">
+                                                    <a href="BulkPaymentDetail.html">Details</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" id="chkbulk" /></td>
+                                                <td class="text-left">Maker1</td>
+                                                <td class="text-left">0007010200006101</td>
+                                                <td class="text-left">04-06-2021</td>
+                                                <td class="text-center">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
+                                                <td class="text-center">2500000.00</td>
+                                                <td class="text-center">ACH</td>
+                                                <td class="text-center">
+                                                    <a href="BulkPaymentDetail.html">Details</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center"><input type="checkbox" id="chkbulk" /></td>
+                                                <td class="text-left">Maker1</td>
+                                                <td class="text-left">0007010200006101</td>
+                                                <td class="text-left">04-06-2021</td>
+                                                <td class="text-center">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
+                                                <td class="text-center">2500000.00</td>
+                                                <td class="text-center">ACH</td>
+                                                <td class="text-center">
+                                                    <a href="BulkPaymentDetail.html">Details</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button type="button" class="btn btn-success" onclick="SuccessConfirm()">Success</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="text-right mr-5">
-                        <input type="button" class="btn btn-primary" value="Search" />
-                    </div>
-                    <hr/>
-                    <div class="mt-5">
-                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap" id="transferTable">
-                            <thead>
-                                <tr class="text-white">
-                                    <th width="6%" class="text-center"></th>
-                                    <th width="6%" class="text-center">No</th>
-                                    <th class="text-center">Beneficiary Name</th>
-                                    <th class="text-center">Branch</th>
-                                    <th class="text-center">Beneficiary Type</th>
-                                    <th class="text-center">Contact Phone</th>
-                                    <th class="text-center">Contact Address</th>
-                                    <th class="text-center">Created Date</th>
-                                    <th class="text-center">Updated Date</th>
-                                    <th width="7%" class="text-center">View Detail</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-center">
-                                        <input type="radio" name="Radios" id="Radios">
-                                    </td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-left">Kyaw Kyaw</td>
-                                    <td class="text-left">MFTB Branch I</td>
-                                    <td class="text-left">11/TAKANA(N)765432</td>
-                                    <td class="text-right">+959-256666666</td>
-                                    <td class="text-center">Yangon</td>
-                                    <td class="text-center">12-6-2020</td>
-                                    <td class="text-center">20-6-2020</td>
-                                    <td class="text-center primary-color">
-                                        <a href="OwnBankBeneficiaryNRCDetail.html">
-                                            <i class="far fa-eye" style="color: #0a6ebd"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <input type="radio" name="Radios" id="Radios">
-                                    </td>
-                                    <td class="text-center">2</td>
-                                    <td class="text-left">Mya Mya</td>
-                                    <td class="text-left">MFTB Branch II</td>
-                                    <td class="text-left">0010978765432123</td>
-                                    <td class="text-right">+959-256666777</td>
-                                    <td class="text-center">Yangon</td>
-                                    <td class="text-center">9-7-2020</td>
-                                    <td class="text-center">20-7-2020</td>
-                                    <td class="text-center primary-color">
-                                        <a href="OwnBankBeneficiaryAccDetail.html">
-                                            <i class="far fa-eye" style="color: #0a6ebd"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <input type="radio" name="Radios" id="Radios">
-                                    </td>
-                                    <td class="text-center">3</td>
-                                    <td class="text-left">Moe Moe</td>
-                                    <td class="text-left">MFTB Branch I</td>
-                                    <td class="text-left">264930236</td>
-                                    <td class="text-right">+959-205663892</td>
-                                    <td class="text-center">Yangon</td>
-                                    <td class="text-center">11-7-2020</td>
-                                    <td class="text-center">25-7-2020</td>
-                                    <td class="text-center primary-color">
-                                        <a href="OwnBankBeneficiaryPassportDetails.html">
-                                            <i class="far fa-eye" style="color: #0a6ebd"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br>
-                    <div class="text-right">
-                        <input type="button" value="Delete" class="btn btn-secondary" data-toggle="modal" data-target="#delete">
-                        <a href="OwnBankBeneficiaryEdit.html" class="btn btn-primary">Modify</a>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
+    <div id="modalConfirmYesNo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Success</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage" class="text-center">Bulk Transaction Report Exported Successfully</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="successStatus" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Set Status Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to set success status?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesSuccess" type="button" class="btn btn-primary">
+                        YES
+                    </button>
+                    <button id="btnNoSuccess" type="button" class="btn btn-secondary">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="FailStatus" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Set Status Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to set fail status?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesFail" type="button" class="btn btn-primary">
+                        YES
+                    </button>
+                    <button id="btnNoFail" type="button" class="btn btn-secondary">
+                        NO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background: rgb(45 69 157); ">
                     <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="col-md-12 mb-2">
@@ -544,30 +1055,6 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background: rgb(45 69 157); ">
-                    <h5 class="modal-title" id="transactionPasswordModalLongTitle" style="color: white;font-weight: 500;text-align: center;">Logout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-12 mb-2">
-                        <div class="form-group row">
-                            <label for="interestRate" class="col-sm-12 text-center col-form-label">Are you sure you want to delete?</label>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <a href="OwnBankBeneficiary.html" class="btn btn-primary">OK</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <script type="text/javascript" src="../../assets/scripts/main.js"></script>
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
@@ -575,12 +1062,30 @@
     <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
     <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#transferTable').DataTable({
                 "columnDefs": [{
                     "targets": [4, 5],
                     "orderable": false
                 }]
+            });
+            $("#btnYesConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $("#btnNoConfirmYesNo").click(function () {
+                $('#modalConfirmYesNo').modal('hide');
+            });
+            $('#btnYesSuccess').click(function () {
+                $('#successStatus').modal('hide');
+            });
+            $('#btnNoSuccess').click(function () {
+                $('#successStatus').modal('hide');
+            });
+            $('#btnYesFail').click(function () {
+                $('#FailStatus').modal('hide');
+            });
+            $('#btnNoFail').click(function () {
+                $('#FailStatus').modal('hide');
             });
         });
         $('#fromAccount').select2({
@@ -597,7 +1102,16 @@
         });
 
         function makeRemittance() {
-            location.replace("OwnBankBeneficiaryAcc.html");
+            location.replace("CreateOtherBranch.html");
+        }
+        function deleteConfirm() {
+            $('#modalConfirmYesNo').modal('show');
+        }
+        function SuccessConfirm() {
+            $('#successStatus').modal('show');
+        }
+        function FailConfirm() {
+            $('#FailStatus').modal('show');
         }
     </script>
 </body>
