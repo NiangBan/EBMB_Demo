@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Other Branch List</title>
+    <title>Retail User Registration</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -27,13 +27,6 @@
     <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/materialicons.css">
     <link rel="stylesheet" href="../../assets/bootstrap-4.5.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="../../css/TabStyle.css">
-    <style>
-        #btnSuc:hover {
-            background-color: #0e7c1c;
-        }
-    </style>
 </head>
 
 <body>
@@ -74,6 +67,13 @@
             </div>
             <div class="app-header__content">
                 <div class="app-header-right">
+                    <!-- <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div> -->
                     <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
@@ -82,7 +82,7 @@
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link" data-toggle="dropdown">
-                                <i class="nav-link-icon fa fa-bell" style="color:black;"></i><span class="num">2</span>
+                                <i class="nav-link-icon fa fa-bell" style="color:black"></i><span class="num">2</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -686,273 +686,189 @@
                 <div class="app-main__inner">
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
-                            <!--<div class="page-title-heading">
-                                <div>Other Branch List</div>
-                            </div>-->
+                            <div class="page-title-heading">
+                                <div>Details</div>
+                            </div>
                         </div>
+                        <div style="margin-left:1.5%;">Domestic Interbank Transfer</div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <nav>
-                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Other Bank Transaction (CCT)</a>
-                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Other Bank Bulk Transaction(CCT)</a>
+                        <div class="row" style="width: 100%; padding-left: 5%;">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">VALUE DATE:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">9/8/2020 6:54:42 PM</label>
+                                    </div>
                                 </div>
-                            </nav>
-                            <div class="tab-content" id="nav-tabContent">
-                                <br />
-                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                    <h4>Other Bank Transaction (CCT)</h4><br />
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <label for="inputName">CBM Tran Type:</label>
-                                            <select class="form-control" id="transactionType">
-                                                <option selected>Select CBM Type</option>
-                                                <option>ACH</option>
-                                                <option>RTGs</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputName">Download Type:</label>
-                                            <select class="form-control" id="transactionType">
-                                                <option selected>Select Download Type</option>
-                                                <option>New</option>
-                                                <option>Downloaded</option>
-                                                <option>Both</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputName">From Date:</label>
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputName">To Date:</label>
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <button type="button" class="btn btn-secondary">Search</button>
-                                            <button type="button" class="btn btn-warning" style="background-color:#28A745;color:white;" id="btnSuc" onclick="deleteConfirm()">ExportToExcel</button>
-                                        </div>
-
-                                    </div><br />
-                                    <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
-                                        <thead>
-                                            <tr class="text-white">
-                                                <th class="text-center">Reconciliation Number</th>
-                                                <th class="text-center">Fund Debtor FI Branch Code</th>
-                                                <th class="text-center">Fund Creditor FI Branch Code</th>
-                                                <th class="text-center">Total Fund Settlement Amount(MMK)</th>
-                                                <th class="text-center">Transfer Amount(MMK)</th>
-                                                <th class="text-center">Interbank Charge Amount (MMK) to Debtor FI</th>
-                                                <th class="text-center">Interbank Charge Amount (MMK) to Creditor FI</th>
-                                                <th class="text-center">Download Type</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-left">20200916AB211</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">New</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-left">20200916AB211</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">New</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-left">20200916AB211</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">New</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-left">20200916AB211</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">New</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-left">20200916AB211</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-left">AYFDMMMYYGN</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">10000.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">0.00</td>
-                                                <td class="text-center">New</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">
+                                            TRANSACTION ID:
+                                        </dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">AB722</label>
+                                    </div>
                                 </div>
-                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                    <h4>Other Bank Bulk Transaction (CCT)</h4><br />
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="inputName">Company Name:</label>
-                                            <input type="text" class="form-control"/>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="inputName">Bulk File Name:</label>
-                                            <input type="text" class="form-control"/>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="inputName">CBM  Tran Type:</label>
-                                            <select class="form-control" id="transactionType">
-                                                <option selected>Select CBM Type</option>
-                                                <option>ACH</option>
-                                                <option>RTGs</option>
-                                            </select>
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="inputName">Download Type:</label>
-                                            <select class="form-control" id="transactionType">
-                                                <option selected>Select Download Type</option>
-                                                <option>New</option>
-                                                <option>Downloaded</option>
-                                                <option>Both</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="inputName">From Date:</label>
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="inputName">To Date:</label>
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <button type="button" class="btn btn-secondary">Search</button>
-                                            <button type="button" class="btn btn-warning" style="background-color:#28A745;color:white;" id="btnSuc" onclick="deleteConfirm()">ExportToExcel</button>
-                                        </div>
-                                    </div><br />    
-                                          <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
-                                              <thead>
-                                                  <tr class="text-white">
-                                                      <th class="text-center">Company Name</th>
-                                                      <th class="text-center">Bulk File Name</th>
-                                                      <th class="text-center">Reconciliation Number</th>
-                                                      <th class="text-center">Fund Debtor FI Branch Code</th>
-                                                      <th class="text-center">Fund Creditor FI Branch Code</th>
-                                                      <th class="text-center">Total Fund Settlement Amount(MMK)</th>
-                                                      <th class="text-center">Transfer Amount(MMK)</th>
-                                                      <th class="text-center">Interbank Charge Amount(MMK)to Debtor FI</th>
-                                                      <th class="text-center">Interbank Charge Amount(MMK)to Creditor FI</th>
-                                                      <th class="text-center">Download Type</th>
-                                                  </tr>
-                                              </thead>
-                                              <tbody>
-                                                  <tr>
-                                                      <td class="text-left">ANAWAR HLWAM COMPANY LIMITED</td>
-                                                      <td class="text-left">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
-                                                      <td class="text-left">20200916AB211</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">New</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td class="text-left">ANAWAR HLWAM COMPANY LIMITED</td>
-                                                      <td class="text-left">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
-                                                      <td class="text-left">20200916AB211</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">New</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td class="text-left">ANAWAR HLWAM COMPANY LIMITED</td>
-                                                      <td class="text-left">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
-                                                      <td class="text-left">20200916AB211</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">New</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td class="text-left">ANAWAR HLWAM COMPANY LIMITED</td>
-                                                      <td class="text-left">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
-                                                      <td class="text-left">20200916AB211</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">New</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td class="text-left">ANAWAR HLWAM COMPANY LIMITED</td>
-                                                      <td class="text-left">BulkFileForOtherBank Beneficiay Data - Acc. UAT Mini.xlsx</td>
-                                                      <td class="text-left">20200916AB211</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">AYFDMMMYYGN</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">10000.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">0.00</td>
-                                                      <td class="text-center">New</td>
-                                                  </tr>
-                                              </tbody>
-                                          </table>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">FROM ACCOUNT:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">0001010100020816</label>
+                                    </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">EMAIL:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">zin@gmail.com</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">TO ACCOUNT:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">0001010100028765</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">OFFICE ACCOUNT:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">1020199990111001</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">FROM BRANCH:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">PATHEIN BRANCH</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">TO BANK:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">CO-OPERATIVE BANK LIMITED</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">TO BRANCH:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">003.CB BANK THINGANGYUN</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">TRANSACTION AMOUNT:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">10000.00</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">CHARGES CODE:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">CCTR02</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">CHARGES AMOUNT:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">250.00</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">TOTAL AMOUNT:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">3500.00</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">TRANSACTION DATE:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">8/31/2020 12:00:00 AM</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">USER NAME:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">NadiMaker1</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">TRANSACTION TYPE:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">OtherBankTransfer</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">
+                                            CBM TRANSACTION TYPE:
+                                        </dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">ACH</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">
+                                            PAYEE NAME:
+                                        </dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">NadiMaker1</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">PAYEE PHONE:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">09425353119</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">STATUS:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">Pending</label>
+                                    </div>
+                                </div>
+                                <br /><br />
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div id="modalConfirmYesNo" class="modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="hMessage">Success</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">x</span>
-                    </button>
-
-                </div>
-                <div class="modal-body">
-                    <pre id="iMessage" class="text-center">Bulk Transaction Report Exported Successfully</pre>
-                </div>
-                <div class="modal-footer">
-                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
-                        OK
-                    </button>
+                    <hr /><br />
+                    <button type="button" class="btn btn-default" onclick="window.location.href='CCTPendingList.html'">Back To List</button>
                 </div>
             </div>
         </div>
@@ -985,43 +901,6 @@
     <script type="text/javascript" src="../../fontawesome/js/all.min.js"></script>
     <script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/scripts/jquery.dataTables.min.js"></script>
-    <script src="../../assets/scripts/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#transferTable').DataTable({
-                "columnDefs": [{
-                    "targets": [4, 5],
-                    "orderable": false
-                }]
-            });
-            $("#btnYesConfirmYesNo").click(function () {
-                $('#modalConfirmYesNo').modal('hide');
-            });
-            $("#btnNoConfirmYesNo").click(function () {
-                $('#modalConfirmYesNo').modal('hide');
-            });
-        });
-        $('#fromAccount').select2({
-            theme: 'bootstrap4'
-        });
-        $('#transactionType').select2({
-            theme: 'bootstrap4'
-        });
-        $('#bank').select2({
-            theme: 'bootstrap4'
-        });
-        $('#approveStatus').select2({
-            theme: 'bootstrap4'
-        });
-
-        function makeRemittance() {
-            location.replace("CreateOtherBranch.html");
-        }
-        function deleteConfirm() {
-            $('#modalConfirmYesNo').modal('show');
-        }
-    </script>
 </body>
 
 </html>
