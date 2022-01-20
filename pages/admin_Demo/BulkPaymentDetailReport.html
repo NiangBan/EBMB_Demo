@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Other Branch List</title>
+    <title>Bulk Payment Detail Report</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -700,170 +700,191 @@
                 <div class="app-main__inner">
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
-                            <!--<div class="page-title-heading">
-                                <div>Other Branch List</div>
-                            </div>-->
+                            <div class="page-title-heading">
+                                <div>Bulk Payment Detail Report</div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <nav>
-                                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Retail</a>
-                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Corporate</a>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <input type="text" class="form-control" placeholder="Corporate ID" />
                                 </div>
-                            </nav>
-                            <div class="tab-content" id="nav-tabContent">
-                                <br />
-                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                    <h4>Retail content</h4><br />
-                                    <div class="row">
-                                        <div class="col-md-3">
-
-                                            <select class="form-control" id="transactionType">
-                                                <option selected>ALL</option>
-                                                <option>Head Office</option>
-                                                <option>Nay Pyi Taw</option>
-                                                <option>Mandalay</option>
-                                                <option>IBD Office</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <button type="button" id="btnView" class="btn btn-primary">View</button>
-                                        </div>
-                                    </div><br />
-                                    <div id="tdExport">
-                                        <h2>E-Banking Remittance Report</h2>
-                                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="11">
-                                                        <div style="background-image: url('header.png')" class="timage"></div>
-                                                    </th>
-                                                </tr>
-                                                <tr class="text-white">
-                                                    <th class="text-center">No.</th>
-                                                    <th class="text-center">Value Date</th>
-                                                    <th class="text-center">Transaction Date</th>
-                                                    <th class="text-center">Transaction ID</th>
-                                                    <th class="text-center">From Account</th>
-                                                    <th class="text-center">User Name</th>
-                                                    <th class="text-center">Payer Name</th>
-                                                    <th class="text-center">Payer NRC</th>
-                                                    <th class="text-center">Payee Name</th>
-                                                    <th class="text-center">Payee NRC</th>
-                                                    <th class="text-center">Payee Phone No</th>
-                                                    <th class="text-center">Transaction Amount</th>
-                                                    <th class="text-center">Charges Amount</th>
-                                                    <th class="text-center">Total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th class="text-center">1.</th>
-                                                    <td class="text-left">12/2/2022</td>
-                                                    <td class="text-left">14/4/2022</td>
-                                                    <td class="text-left">E009898</td>
-                                                    <td class="text-center">0001098765</td>
-                                                    <td class="text-center">Phyo Yee</td>
-                                                    <td class="text-center">Oo Han Tar</td>
-                                                    <td class="text-center">12/taga(N)345454</td>
-                                                    <td class="text-center">Yadanar Moe</td>
-                                                    <td class="text-center">12/taga(N)345454</td>
-                                                    <td class="text-center">0978675456</td>
-                                                    <td class="text-center">7000</td>
-                                                    <td class="text-center">8000</td>
-                                                    <td class="text-center">60000</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <input type="text" class="form-control" placeholder="From Account" />
                                 </div>
-                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                    <h4>Corporate content</h4><br />
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <select class="form-control" id="transactionType">
-                                                <option selected>ALL</option>
-                                                <option>Head Office</option>
-                                                <option>Nay Pyi Taw</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <input type="text" placeholder="Company Name" class="form-control" />
-                                        </div>
-                                        <div class="col-md-4">
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-
-                                        <div class="col-md-4">
-                                            <input type="date" class="form-control" />
-                                        </div>
-                                        <div class="col-md-4">
-                                            <button type="button" id="btnViewCorporate" class="btn btn-primary">View</button>
-
-                                        </div>
-                                    </div><br />
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                        </div>
-                                    </div><br />
-                                    <div id="tdExportCorporate">
-                                        <h2>E-Banking Remittance Report</h2>
-                                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="11">
-                                                        <div style="background-image: url('header.png')" class="timage"></div>
-                                                    </th>
-                                                </tr>
-                                                <tr class="text-white">
-                                                    <th class="text-center">No.</th>
-                                                    <th class="text-center">Value Date</th>
-                                                    <th class="text-center">Transaction Date</th>
-                                                    <th class="text-center">Transaction ID</th>
-                                                    <th class="text-center">From Account</th>
-                                                    <th class="text-center">User Name</th>
-                                                    <th class="text-center">Payer Name</th>
-                                                    <th class="text-center">Payer NRC</th>
-                                                    <th class="text-center">Payee Name</th>
-                                                    <th class="text-center">Payee NRC</th>
-                                                    <th class="text-center">Payee Phone No</th>
-                                                    <th class="text-center">Transaction Amount</th>
-                                                    <th class="text-center">Charges Amount</th>
-                                                    <th class="text-center">Total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th class="text-center">1.</th>
-                                                    <td class="text-left">12/2/2022</td>
-                                                    <td class="text-left">14/4/2022</td>
-                                                    <td class="text-left">E009898</td>
-                                                    <td class="text-center">0001098765</td>
-                                                    <td class="text-center">Phyo Yee</td>
-                                                    <td class="text-center">Oo Han Tar</td>
-                                                    <td class="text-center">12/taga(N)345454</td>
-                                                    <td class="text-center">Yadanar Moe</td>
-                                                    <td class="text-center">12/taga(N)345454</td>
-                                                    <td class="text-center">0978675456</td>
-                                                    <td class="text-center">7000</td>
-                                                    <td class="text-center">8000</td>
-                                                    <td class="text-center">60000</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <input type="text" class="form-control" placeholder="Bulk File Name" />
                                 </div>
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <select class="form-control" id="transactionType">
+                                        <option selected>Select CBM Status:</option>
+                                        <option>CMB Success</option>
+                                        <option>CBM Reject</option>
+                                        <option>Pending</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <input type="date" class="form-control" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <select class="form-control" id="transactionType">
+                                        <option selected>Select Status:</option>
+                                        <option>Success</option>
+                                        <option>Fail</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputName"></label>
+                                    <select class="form-control" id="transactionType">
+                                        <option selected>Select Tran Type:</option>
+                                        <option>TransferOwn</option>
+                                        <option>TransferOther</option>
+                                        <option>ScheduleOwn</option>
+                                        <option>ScheduleOther</option>
+                                    </select>
+                                </div>
+                            </div><br />
+                            <button class="btn btn-primary" id="btnView">View</button>
+                            <br /><br />
+                            <div id="tdExport">
+                                <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="16">
+                                                <div style="background-image: url('header.png')" class="timage"></div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="16" class="text-center">
+                                                <h4>Bulk Payment Details Report</h4>
+                                            </th>
+                                        </tr>
+                                        <tr class="text-white">
+                                            <th class="text-center">No.</th>
+                                            <th class="text-center">CORPORATE ID</th>
+                                            <th class="text-center">TRAN DATE</th>
+                                            <th class="text-center">VALUE DATE</th>
+                                            <th class="text-center">TRAN ID</th>
+                                            <th class="text-center">FROM ACCOUNT</th>
+                                            <th class="text-center">TO ACCOUNT</th>
+                                            <th class="text-center">TO BANK</th>
+                                            <th class="text-center">BRANCH</th>
+                                            <th class="text-center">TRAN TYPE</th>
+                                            <th class="text-center">TRAN AMOUNT</th>
+                                            <th class="text-center">CHARGES AMOUNT</th>
+                                            <th class="text-center">CBM TRAN ID</th>
+                                            <th class="text-center">CBM STATUS</th>
+                                            <th class="text-center">STATUS</th>
+                                            <th class="text-center">BULK FILE NAME</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1.</td>
+                                            <td class="text-left">CE00002</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-center">AB52</td>
+                                            <td class="text-center">0005010100004209</td>
+                                            <td class="text-center">20030199902044301</td>
+                                            <td class="text-center">KANBAWZA BANK</td>
+                                            <td class="text-center">200.KBZ BANK-BOGYOKE</td>
+                                            <td class="text-center">OtherBankTransfer</td>
+                                            <td class="text-center">5000.00</td>
+                                            <td class="text-center">200.00</td>
+                                            <td class="text-center">AYFDMMMYYGN210526R140090027</td>
+                                            <td class="text-center">CBM Success</td>
+                                            <td class="text-center">Pending</td>
+                                            <td class="text-center">Bulk Success.xlsx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2.</td>
+                                            <td class="text-left">CE00002</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-center">AB52</td>
+                                            <td class="text-center">0005010100004209</td>
+                                            <td class="text-center">20030199902044301</td>
+                                            <td class="text-center">KANBAWZA BANK</td>
+                                            <td class="text-center">200.KBZ BANK-BOGYOKE</td>
+                                            <td class="text-center">OtherBankTransfer</td>
+                                            <td class="text-center">5000.00</td>
+                                            <td class="text-center">200.00</td>
+                                            <td class="text-center">AYFDMMMYYGN210526R140090027</td>
+                                            <td class="text-center">CBM Success</td>
+                                            <td class="text-center">Pending</td>
+                                            <td class="text-center">Bulk Success.xlsx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">3.</td>
+                                            <td class="text-left">CE00002</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-center">AB52</td>
+                                            <td class="text-center">0005010100004209</td>
+                                            <td class="text-center">20030199902044301</td>
+                                            <td class="text-center">KANBAWZA BANK</td>
+                                            <td class="text-center">200.KBZ BANK-BOGYOKE</td>
+                                            <td class="text-center">OtherBankTransfer</td>
+                                            <td class="text-center">5000.00</td>
+                                            <td class="text-center">200.00</td>
+                                            <td class="text-center">AYFDMMMYYGN210526R140090027</td>
+                                            <td class="text-center">CBM Success</td>
+                                            <td class="text-center">Pending</td>
+                                            <td class="text-center">Bulk Success.xlsx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">4.</td>
+                                            <td class="text-left">CE00002</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-center">AB52</td>
+                                            <td class="text-center">0005010100004209</td>
+                                            <td class="text-center">20030199902044301</td>
+                                            <td class="text-center">KANBAWZA BANK</td>
+                                            <td class="text-center">200.KBZ BANK-BOGYOKE</td>
+                                            <td class="text-center">OtherBankTransfer</td>
+                                            <td class="text-center">5000.00</td>
+                                            <td class="text-center">200.00</td>
+                                            <td class="text-center">AYFDMMMYYGN210526R140090027</td>
+                                            <td class="text-center">CBM Success</td>
+                                            <td class="text-center">Pending</td>
+                                            <td class="text-center">Bulk Success.xlsx</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">5.</td>
+                                            <td class="text-left">CE00002</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-left">11-04-2021</td>
+                                            <td class="text-center">AB52</td>
+                                            <td class="text-center">0005010100004209</td>
+                                            <td class="text-center">20030199902044301</td>
+                                            <td class="text-center">KANBAWZA BANK</td>
+                                            <td class="text-center">200.KBZ BANK-BOGYOKE</td>
+                                            <td class="text-center">OtherBankTransfer</td>
+                                            <td class="text-center">5000.00</td>
+                                            <td class="text-center">200.00</td>
+                                            <td class="text-center">AYFDMMMYYGN210526R140090027</td>
+                                            <td class="text-center">CBM Success</td>
+                                            <td class="text-center">Pending</td>
+                                            <td class="text-center">Bulk Success.xlsx</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -888,6 +909,96 @@
                 <div class="modal-footer">
                     <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
                         OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="successStatus" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Set Status Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to set success status?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesSuccess" type="button" class="btn btn-primary">
+                        YES
+                    </button>
+                    <button id="btnNoSuccess" type="button" class="btn btn-secondary">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="FailStatus" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Set Status Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">Are you sure you want to set fail status?</pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesFail" type="button" class="btn btn-primary">
+                        YES
+                    </button>
+                    <button id="btnNoFail" type="button" class="btn btn-secondary">
+                        NO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="FailStatusWithTable" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="hMessage">Set Status Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <pre id="iMessage">
+                    <p class="text-left">Are you sure want to set fail status?</p>
+                    <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
+                    <thead>
+                    <tr class="text-white">
+                    <th class="text-center">No.</th>
+                    <th class="text-center">Account Name</th>
+                    <th class="text-center">Account No./NRC</th>
+                                </tr>
+                            </thead>
+                    <tbody>
+                    <tr>
+                    <th class="text-center">1.</th>
+                    <td class="text-left">M/S VEGETABLE DAILY GROWTHINTERNATIONALT</td>
+                    <td class="text-left">0201010000069</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </pre>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnYesFTable" type="button" class="btn btn-primary">
+                        YES
+                    </button>
+                    <button id="btnNoFTable" type="button" class="btn btn-secondary">
+                        NO
                     </button>
                 </div>
             </div>
@@ -937,6 +1048,24 @@
             $("#btnNoConfirmYesNo").click(function () {
                 $('#modalConfirmYesNo').modal('hide');
             });
+            $('#btnYesSuccess').click(function () {
+                $('#successStatus').modal('hide');
+            });
+            $('#btnNoSuccess').click(function () {
+                $('#successStatus').modal('hide');
+            });
+            $('#btnYesFail').click(function () {
+                $('#FailStatus').modal('hide');
+            });
+            $('#btnNoFail').click(function () {
+                $('#FailStatus').modal('hide');
+            });
+            $('#btnYesFTable').click(function () {
+                $('#FailStatusWithTable').modal('hide');
+            });
+            $('#btnNoFTable').click(function () {
+                $('#FailStatusWithTable').modal('hide');
+            });
         });
 
         function makeRemittance() {
@@ -945,17 +1074,20 @@
         function deleteConfirm() {
             $('#modalConfirmYesNo').modal('show');
         }
-
+        function SuccessConfirm() {
+            $('#successStatus').modal('show');
+        }
+        function FailConfirm() {
+            $('#FailStatus').modal('show');
+        }
+        function FailConfirmTable() {
+            $('#FailStatusWithTable').modal('show');
+        }
         $('document').ready(function () {
             $('#tdExport').hide();
-            $('#tdExportCorporate').hide();
-
         });
         $('#btnView').click(function () {
             $('#tdExport').show();
-        });
-        $('#btnViewCorporate').click(function () {
-            $('#tdExportCorporate').show();
         });
     </script>
 </body>
