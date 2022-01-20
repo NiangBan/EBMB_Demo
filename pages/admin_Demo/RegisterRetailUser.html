@@ -629,10 +629,10 @@
                         <div class="col-md-2">
                             <label for="amount" class="col-sm-4 text-right col-form-label">CIFID:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="CIFID"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="CUSID"></div>
                     </div><br />
                     <div class="row">
-                        <div class="offset-sm-2 col-md-4"><button type="button" class="btn btn-primary" data-dismiss="modal">Fetch</button></div>
+                        <div class="offset-sm-2 col-md-4"><button onclick="FillData()" type="button" class="btn btn-primary" data-dismiss="modal">Fetch</button></div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
@@ -644,13 +644,13 @@
                         <div class="col-md-2">
                             <label for="amount" class="col-sm-4 text-right col-form-label">MOBILENO:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="Phone"></div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
                             <label for="amount" class="col-sm-4 text-right col-form-label">EMAIL:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="Email"></div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
@@ -662,32 +662,54 @@
                         <div class="col-md-2">
                             <label for="amount" class="col-sm-4 text-right col-form-label">FULLNAME:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="FullName"></div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
                             <label for="amount" class="col-sm-4 text-right col-form-label">NRC:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="Nrc"></div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
                             <label for="amount" class="col-sm-4 text-right col-form-label">MINOR:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="Minor"></div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
                             <label for="amount" class="col-sm-4 text-right col-form-label">GENDER:</label>
                         </div>
-                        <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                        <div class="col-md-8"> <input type="text" class="form-control" id="Gender"></div>
                     </div><br />
                     <div class="row">
                         <div class="col-md-2">
-                            <label for="amount" class="col-sm-4 text-right col-form-label">ISVIP:</label>
+                            <label for="amount" class="col-sm-4 text-right col-form-label">VIP:</label>
                         </div>
-                        <div class="col-md-2"> <input type="checkbox" class="form-control" id="chkVIP" style="width:20px;"></div>
+                        <div class="col-md-8"> <input type="checkbox" class="form-control" id="ISVIP" style="width:20px;" /></div>
                     </div><br />
+                    <div class="row OnlyVIP">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-sm-4 text-right col-form-label">TRANSFER CHARGES CODE:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>---Select TRANSFER CHARGES CODE---</option>
+                            </select>
+                        </div>
+
+                    </div><br />
+                    <div class="row OnlyVIP">
+                        <div class="col-md-2">
+                            <label for="amount" class="col-sm-4 text-right col-form-label">REMITTANCE CHARGES CODE:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="transactionType">
+                                <option selected>---Select REMITTANCE CHARGES CODE---</option>
+                            </select>
+                        </div>
+
+                    </div><br /><br />
                     <h5>Accounts</h5>
                     <div class="mt-5">
                         <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap" id="transferTable">
@@ -779,3 +801,37 @@
 </body>
 
 </html>
+<script>
+    $(document).ready(function () {
+        //show or hide at initially and after validation error
+        if ($("#ISVIP")[0].checked) {
+            $(".OnlyVIP").show();
+        } else {
+            $(".OnlyVIP").hide();
+        }
+        $("#ISVIP").change(function () {
+            if ($("#ISVIP")[0].checked) {
+                $(".OnlyVIP").show();
+            } else {
+                $(".OnlyVIP").hide();
+
+            }
+        });
+    });
+    function FillData() {
+        var CIFID = $('#CUSID').val();
+        if (CIFID == null || CIFID == '') {
+            alert("CIF Required");
+        } else {
+            $('#UName').val("TestUser");
+            $('#Phone').val("09975643829");
+            $('#Email').val("testuser@gmail.com");
+            $('#Addr').val("No 25/B Landamadaw Township,Yangon");
+            $('#FullName').val("U Kyaw Kyaw");
+            $('#Nrc').val("12/AhSaNa(N)339228");
+            $('#Minor').val("Test");
+            $('#Gender').val("Male");
+        }
+
+    }
+</script>

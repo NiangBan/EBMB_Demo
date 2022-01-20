@@ -650,11 +650,11 @@
                             <div class="col-md-3">
                                 <label for="amount" class="text-right col-form-label">CIFID</label>
                             </div>
-                            <div class="col-md-8"> <input type="text" class="form-control" id="CIFID"></div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="CUSID"></div>
                         </div>
                         <br />
                         <div class="row">
-                            <div style="margin-left: 26.333333%;"><button type="button" class="btn btn-primary" data-dismiss="modal">Fetch</button></div>
+                            <div style="margin-left: 26.333333%;"><button type="button" onclick="FillData()" class="btn btn-primary" data-dismiss="modal">Fetch</button></div>
                         </div><br />
                         <div class="row">
                             <div class="col-md-3">
@@ -666,21 +666,21 @@
                             <div class="col-md-3">
                                 <label for="amount" class="text-right col-form-label">COMPANY EMAIL</label>
                             </div>
-                            <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="Email"></div>
                         </div><br />
 
                         <div class="row">
                             <div class="col-md-3">
                                 <label for="amount" class="text-right col-form-label">COMPANY PHONE</label>
                             </div>
-                            <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="Phone"></div>
                         </div><br />
 
                         <div class="row">
                             <div class="col-md-3">
                                 <label for="amount" class="text-right col-form-label">COMPANY ADDRESS</label>
                             </div>
-                            <div class="col-md-8"> <input type="text" class="form-control" id="UName"></div>
+                            <div class="col-md-8"> <input type="text" class="form-control" id="Addr"></div>
                         </div><br />
 
                         <div class="row">
@@ -703,7 +703,7 @@
                                 <label for="amount" class="text-right col-form-label">COUNTRY</label>
                             </div>
                             <div class="col-md-8">
-                                <select class="form-control" id="transactionType">
+                                <select class="form-control" id="countryType">
                                     <option selected>---Select Country---</option>
                                     <option>Myanmar</option>
                                     <option>Thailand</option>
@@ -718,7 +718,7 @@
                                 <label for="amount" class="text-right col-form-label">STATE</label>
                             </div>
                             <div class="col-md-8">
-                                <select class="form-control" id="transactionType">
+                                <select class="form-control" id="state">
                                     <option selected>---Select State---</option>
                                     <option>State01</option>
                                     <option>State02</option>
@@ -852,5 +852,25 @@
             }
         });
     });
+
+    function FillData() {
+        var CIFID = $('#CUSID').val();
+        if (CIFID == null || CIFID == '') {
+            alert("CIF Required");
+        } else {
+            $('#UName').val("Ace Data System");
+            $('#Phone').val("09975643829");
+            $('#Email').val("testuser@gmail.com");
+            $('#Addr').val("No 25/B Landamadaw Township,Yangon");
+            $('#FullName').val("U Kyaw Kyaw");
+            $('#Nrc').val("12/AhSaNa(N)339228");
+            $('#Minor').val("Test");
+            $('#Gender').val("Male");
+            $('#transactionType').val("HEAD OFFICE");
+            $('#countryType').val("Myanmar");
+            $('#state').val("State01");
+        }
+
+    }
    
 </script>
