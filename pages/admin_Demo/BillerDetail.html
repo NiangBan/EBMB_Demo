@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Corporate Request List</title>
+    <title>Pending Corporate Details</title>
     <link rel="icon" href="../../assets/images/MFTB logo small.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -641,165 +641,77 @@
                     <div class="app-page-title">
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
-                                <div>Request List</div>
+                                <div>Details</div>
                             </div>
                         </div>
+                        <div style="margin-left:1.5%;">Corporate</div>
                     </div>
-                    <div class="text-left mr-5">
-                        <input type="button" class="btn btn-beneficiary" value="+  Register Corporate" onclick="window.location.href='RequestCorporate.html'" />
-                    </div>
-                    </p>
-                    <hr />
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">CIFID</label>
-                                    <input type="text" id="inputcontainer inputName" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">Company Name</label>
-                                    <input type="text" id="inputcontainer inputName" class="form-control">
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">Company Phone</label>
-                                    <input type="text" id="inputcontainer inputName" class="form-control">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">Type</label>
-                                    <select class="form-control" id="transactionType">
-                                        <option selected>Select Type</option>
-                                        <option>Register</option>
-                                        <option>Update</option>
-                                        <option>Delete</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">From Date</label>
-                                    <input type="date" class="form-control" id="date">
+                        <div class="row" style="width: 100%; padding-left: 5%;">
+                            <div class="col-md-6">
+                                <h4>Biller Information</h4>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">Name:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">TestUser</label>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">To Date</label>
-                                    <input type="date" class="form-control" id="date">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">BilerCode:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">B000000748</label>
+                                    </div>
                                 </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">Status</label>
-                                    <select class="form-control" id="transactionType">
-                                        <option selected>Requested</option>
-                                        <option>Approved</option>
-                                        <option>Rejected</option>
-                                        <option>All</option>
-                                    </select>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">Credit Account No:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">0001012100000025</label>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    <input type="button" class="btn btn-primary" value="Search" style="margin-top:32%;"/>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">Biller Type:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">Gift Card</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">Currency:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">RUB</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <dt for="amount">Status:</dt>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label for="amount">Inactive</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <hr />
-                    <div class="mt-5">
-                        <table class="table table-bordered table-striped w-100 tb-scroll text-nowrap">
-                            <thead>
-                                <tr class="text-white">
-                                    <th width="6%" class="text-center"></th>
-                                    <th class="text-center">CorporateID</th>
-                                    <th class="text-center">CIFID</th>
-                                    <th class="text-center">Company Name</th>
-                                    <th class="text-center">Company Email</th>
-                                    <th class="text-center">Company Phone</th>
-                                    <th class="text-center">Requested Date</th>
-                                    <th class="text-center">TYPE</th>
-                                    <th class="text-center">STATUS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-right"><input type="radio" class="form-control" style="width:20px;" /></td>
-                                    <td class="text-left">CE00001</td>
-                                    <td class="text-left">C000000748</td>
-                                    <td class="text-left">NI NI (MYAWADI) TRADING CO ; LTD</td>
-                                    <td class="text-left">ace@gmail.com</td>
-                                    <td class="text-left">0987654323</td>
-                                    <td class="text-left">18-01-2021</td>
-                                    <td class="text-left">Update</td>
-                                    <td class="text-left">Requested</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right"><input type="radio" class="form-control" style="width:20px;" /></td>
-                                    <td class="text-left">CE00002</td>
-                                    <td class="text-left">C000000756</td>
-                                    <td class="text-left">AYEYAR HINTHAR HOLDINGS CO;LTD</td>
-                                    <td class="text-left">aa@gmail.com</td>
-                                    <td class="text-left">0987654323</td>
-                                    <td class="text-left">18-01-2021</td>
-                                    <td class="text-left">Update</td>
-                                    <td class="text-left">Requested</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-right"><input type="radio" class="form-control" style="width:20px;" /></td>
-                                    <td class="text-left">CE00007</td>
-                                    <td class="text-left">C000000980</td>
-                                    <td class="text-left">GOOD MORNING ENTERPRISE CO.,LTD</td>
-                                    <td class="text-left">techno@gmail.com</td>
-                                    <td class="text-left">0987654323</td>
-                                    <td class="text-left">18-01-2021</td>
-                                    <td class="text-left">Update</td>
-                                    <td class="text-left">Requested</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><br />
-                    <div class="form-group">
-                        <button class="btn btn-success" id="btnEdit" onclick="window.location.href='CorporatetListEdit.html'">Edit</button>
-                        <button class="btn btn-danger" id="btnDelete" onclick="deleteConfirm()">Delete</button>
-                        <button class="btn btn-secondary" onclick="window.location.href='CorporateListDetail.html'">Details</button>
-                    </div>
+                    <a href="BillerList.html">Back To List</a>
+                    <br />
+                    <br />
+                    <br />
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal -->
-    <div id="modalConfirmYesNo" class="modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="hMessage">Delete Confirmation</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">x</span>
-                    </button>
-
-                </div>
-                <div class="modal-body">
-                    <pre id="iMessage">Are you sure you want to delete?</pre>
-                </div>
-                <div class="modal-footer">
-                    <button id="btnYesConfirmYesNo" type="button" class="btn btn-primary">
-                        Yes
-                    </button>
-                    <button id="btnNoConfirmYesNo" type="button" class="btn btn-secondary">
-                        No
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="transactionPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -838,12 +750,6 @@
                     "orderable": false
                 }]
             });
-            $("#btnYesConfirmYesNo").click(function () {
-                $('#modalConfirmYesNo').modal('hide');
-            });
-            $("#btnNoConfirmYesNo").click(function () {
-                $('#modalConfirmYesNo').modal('hide');
-            });
         });
         $('#fromAccount').select2({
             theme: 'bootstrap4'
@@ -857,9 +763,7 @@
         $('#approveStatus').select2({
             theme: 'bootstrap4'
         });
-        function deleteConfirm() {
-            $('#modalConfirmYesNo').modal('show');
-        }
+
         function makeRemittance() {
             location.replace("CreateAdminUser.html");
         }
