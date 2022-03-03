@@ -46,7 +46,8 @@
         margin-bottom: 1px;
         padding: 5px;
         font-size: 1.2em;
-        background-color: rgba(84,0,127,1);
+        /*background-color: rgba(84,0,127,1);*/
+        background: rgb(45 69 157);
         color: white;
         border-radius: 15px;
         text-align: center;
@@ -93,7 +94,9 @@
 }
 
     #droppable li {
-        background: rgba(125,4,187,0.21);
+        /*background: rgba(125,4,187,0.21);*/
+        background: rgb(45 69 157);
+        color:#fff;
         /*margin: 5px;
         padding: 5px;*/
         font-size: 1.2em;

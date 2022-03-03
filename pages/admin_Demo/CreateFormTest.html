@@ -1,0 +1,186 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Form Builder Dynamic Biller</title>
+    <link rel="stylesheet" href="../../formbuilder/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../formbuilder/css/billerregistration.css">
+    <link rel="stylesheet" href="../../formbuilder/css/bootstrap.css">
+    <link rel="stylesheet" href="../../formbuilder/css/newstyle.css">
+    <link rel="stylesheet" href="../../formbuilder/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../../formbuilder/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../formbuilder/css/main.css">
+    <link rel="stylesheet" href="../../formbuilder/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../formbuilder/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="../../formbuilder/css/bootstrap-datetimepicker.min.css">
+    <link href="../../fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/materialicons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<body>
+    <div class="form-horizontal">
+        <!--<h4>Biller Registration</h4>
+        <hr />-->
+        <div class="wizard">
+            <!--<div class="wizard-inner">
+                <ul class="nav nav-tabs" role="tablist">
+
+                    <li role="presentation" class="active">
+                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Create Form">
+                            Create Form
+                        </a>
+                    </li>
+                </ul>
+            </div>-->
+
+            <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                    <div class="panel panel-default">
+                        <div class="panel-default">
+                            <div class="col-sm-4 remove-padding">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="tabbable-panel">
+                                            <div class="tabbable-line">
+                                                <ul class="nav nav-tabs nav-justified" role="tablist">
+                                                    <li class="active">
+                                                        <a href="#AddField" role="tab" data-toggle="tab">
+                                                            <span class="fa fa-plus-square-o"></span> Add Field
+                                                        </a>
+                                                    </li>
+                                                    <li class="disabled">
+                                                        <a href="#EditField" role="tab" data-toggle="tab">
+                                                            <span class="fa fa-pencil-square-o"></span> Edit Field
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade in active" id="AddField">
+                                                        <div class="row">
+                                                            <ul class="list-group text-center col-md-12" id="draggable">
+                                                                <li class="list-group-item col-md-6" title="" data-value="Textbox"><span class="fa fa-font"></span>&nbsp;Textbox</li>
+                                                                <li class="list-group-item col-md-6" title="" data-value="Number"><span class="fa fa-number">123</span>&nbsp;Number</li>
+                                                                <li class="list-group-item col-md-6" title="" data-value="Selectbox"><span class="fa fa-caret-down"></span>&nbsp;Selectbox</li>
+                                                                <li class="list-group-item col-md-6" title="" data-value="List"><span class="fa fa-list"></span>&nbsp;List</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="EditField">
+                                                        <form id="dynamic_form" class="editable-form">
+                                                            <div class="form-group FieldType">
+                                                                <label for="FieldType">Field Type</label>
+                                                                <select name="FieldType" class="form-control">
+                                                                    <option value="">---Select---</option>
+                                                                    <option value="Textbox">Textbox</option>
+                                                                    <option value="Selectbox">Selectbox</option>
+                                                                    <option value="Number">Number</option>
+                                                                    <option value="List">List</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group FieldTypeList">
+                                                                <label for="FieldTypeList">Field Type</label>
+                                                                <select name="FieldTypeList" class="form-control">
+                                                                    <option value="">---Select---</option>
+                                                                    <option value="Textbox">Text</option>
+                                                                    <option value="Number">Number</option>
+                                                                    <option value="Image">Image</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group FieldName">
+                                                                <label for="FieldName">Field Name</label>
+                                                                <input type="text" class="form-control" name="FieldName" placeholder="Field Name">
+                                                            </div>
+                                                            <div class="form-group LableName">
+                                                                <label for="LableName">Label</label>
+                                                                <input type="text" class="form-control" name="LableName" placeholder="Label">
+                                                            </div>
+                                                            <div class="form-group LableNameMM">
+                                                                <label for="LableNameMM">Label (MM)</label>
+                                                                <input type="text" class="form-control" name="LableNameMM" placeholder="Label (MM)">
+                                                            </div>
+                                                            <div class="form-group DefaultValue">
+                                                                <label for="DefaultValue">Default Value</label>
+                                                                <input type="text" class="form-control" name="DefaultValue" placeholder="Default Value">
+                                                            </div>
+                                                            <div class="form-group Placeholder">
+                                                                <label for="Placeholder">Placeholder</label>
+                                                                <input type="text" class="form-control" name="Placeholder" placeholder="Placeholder">
+                                                            </div>
+                                                            <div class="form-group MaxLength">
+                                                                <label for="MaxLength">Max Length</label>
+                                                                <input type="number" class="form-control" name="MaxLength" placeholder="Max Length">
+                                                            </div>
+                                                            <div class="form-group MinLength">
+                                                                <label for="MinLength">Min Length</label>
+                                                                <input type="number" class="form-control" name="MinLength" placeholder="Min Length">
+                                                            </div>
+                                                            <div class="checkbox Required">
+                                                                <label>
+                                                                    <input type="checkbox" name="Required"> Required
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox IsInput">
+                                                                <label>
+                                                                    <input type="checkbox" name="IsInput"> Input
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox IsOutput">
+                                                                <label>
+                                                                    <input type="checkbox" name="IsOutput"> Output
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox IsHidden">
+                                                                <label>
+                                                                    <input type="checkbox" name="IsHidden"> Hidden
+                                                                </label>
+                                                            </div>
+                                                            <div class="text-right">
+                                                                <button class="btn-default btn" name="dynamic_form_cancel">Cancel</button>
+                                                                <button class="btn-primary btn" name="dynamic_form_submit">Save</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 remove-padding">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"><span class="fa fa-list"></span>&nbsp;Form</div>
+                                    <div class="panel-body scrollable-panel">
+                                        <ul class="list-group" id="droppable">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../assets/scripts/jquery-3.5.1.min.js"></script>
+<!--<script type="text/javascript" src="../../assets/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="../../formbuilder/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/datatables.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/moment.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/main.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/main.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/JqueryUI/jquery-ui.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/JqueryUI/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/jquery.validate.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/bootbox.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/jquery.number.min.js"></script>
+<script type="text/javascript" src="../../formbuilder/js/billerregistration.js"></script>
