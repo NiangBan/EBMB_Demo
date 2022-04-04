@@ -7,8 +7,14 @@ const ListFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'Re
 const ListItemFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
 const tableTitle = ['Type', 'Name', 'Label', 'Label(MM)', 'Required', 'Input', 'Output', 'Hidden', 'Action'];
 const fieldTypeList = 'FieldTypeList';
-const defaultField = [{ FieldType: 'Number', FieldName: 'Transactionamount' },
-{ FieldType: 'Textbox', FieldName: 'Remark' }];
+const defaultField = [{ FieldType: 'Number', FieldName: 'Transactionamount' },{ FieldType: 'Textbox', FieldName: 'Remark' }];
+const TextAreaFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
+const UnderLineFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
+const LabelFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
+const SelectboxButtonGroupFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
+const ClassFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
+
+
 
 //initialize
 function initialize() {
@@ -237,6 +243,92 @@ $(document).ready(function () {
                         $(this).find('li.ui-draggable-dragging')
                             .replaceWith(createLiElement(list_data));
                         break;
+                    case 'TextArea':
+                        var textarea_data = {
+                            "FieldName": "New",
+                            "FieldType": "TextArea",
+                            "LableNameMM": "",
+                            "LableName": "New",
+                            "IsOutput": true,
+                            "IsInput": false,
+                            "IsHidden": false,
+                            "SortOrder": "",
+                            "Attributes": {
+                                "Required": true,
+                                "Colspan":'3'
+                            }
+                        };
+                        $(this).find('li.ui-draggable-dragging')
+                            .replaceWith(createLiElement(textarea_data));
+                        break;
+                    case 'Label':
+                        var label_data = {
+                            "FieldName": "New",
+                            "FieldType": "Label",
+                            "LableNameMM": "",
+                            "LableName": "New",
+                            "IsOutput": true,
+                            "IsInput": false,
+                            "IsHidden": false,
+                            "SortOrder": "",
+                            "Attributes": {
+                                "Required": true
+                            }
+                        };
+                        $(this).find('li.ui-draggable-dragging')
+                            .replaceWith(createLiElement(label_data));
+                        break;
+                        case 'UnderLine':
+                            var underline_data = {
+                                "FieldName": "New",
+                                "FieldType": "UnderLine",
+                                "LableNameMM": "",
+                                "LableName": "New",
+                                "IsOutput": true,
+                                "IsInput": false,
+                                "IsHidden": false,
+                                "SortOrder": "",
+                                "Attributes": {
+                                    "Required": true
+                                }
+                            };
+                            $(this).find('li.ui-draggable-dragging')
+                                .replaceWith(createLiElement(underline_data));
+                            break;
+                            case 'Selectbox(buttongroup)':
+                                var selectboxbuttongroup_data = {
+                                    "FieldName": "New",
+                                    "FieldType": "Selectbox(buttongroup)",
+                                    "LableNameMM": "",
+                                    "LableName": "New",
+                                    "IsOutput": true,
+                                    "IsInput": false,
+                                    "IsHidden": false,
+                                    "SortOrder": "",
+                                    "Attributes": {
+                                        "Required": true
+                                    }
+                                };
+                                $(this).find('li.ui-draggable-dragging')
+                                    .replaceWith(createLiElement(selectboxbuttongroup_data));
+                                break;
+                                case 'Class':
+                                    var class_data = {
+                                        "FieldName": "New",
+                                        "FieldType": "Class",
+                                        "LableNameMM": "",
+                                        "LableName": "New",
+                                        "IsOutput": true,
+                                        "IsInput": false,
+                                        "IsHidden": false,
+                                        "SortOrder": "",
+                                        "Attributes": {
+                                            "Required": true
+                                        }
+                                    };
+                                    $(this).find('li.ui-draggable-dragging')
+                                        .replaceWith(createLiElement(class_data));
+                                    break;
                 }
             },
             start: function (event, ui) {
@@ -295,6 +387,26 @@ $(document).ready(function () {
                     case 'List':
                         $input_dynamic_form = $li.find('table > thead > tr > input[type="hidden"]').first();
                         $input_dynamic_form_field = ListFormField;
+                        break;
+                    case 'TextArea':
+                        $input_dynamic_form = $li.find('textarea').first();
+                        $input_dynamic_form_field = TextAreaFormField;
+                        break;
+                    case 'Label':
+                        $input_dynamic_form = $li.find('label').first();
+                        $input_dynamic_form_field = LabelTextFormField;
+                        break;
+                    case 'UnderLine':
+                        $input_dynamic_form = $li.find('hr').first();
+                        $input_dynamic_form_field = UnderLineFormField;
+                        break;
+                    case 'Selectbox(buttongroup)':
+                        $input_dynamic_form = $li.find('select').first();
+                        $input_dynamic_form_field = SelectboxButtonGroupFormField;
+                        break;
+                    case 'Class':
+                        $input_dynamic_form = $li.find('input[type="text"]').first();
+                        $input_dynamic_form_field = ClassFormField;
                         break;
                 }
 
@@ -1198,6 +1310,26 @@ var dynamic_form = $("#dynamic_form").validate({
                         $rowid = $edit.attr("data-rowid");
                         $input_dynamic_form_field = ListItemFormField;
                         break;
+                    case 'TextArea':
+                        $input_dynamic_form = $li.find('textarea').first();
+                        $input_dynamic_form_field = TextAreaFormField;
+                        break;
+                    case 'Label':
+                        $input_dynamic_form = $li.find('label').first();
+                        $input_dynamic_form_field = TextFormField;
+                        break;
+                    case 'UnderLine':
+                        $input_dynamic_form = $li.find('hr').first();
+                        $input_dynamic_form_field = TextFormField;
+                        break;
+                    case 'Selectbox(buttongroup)':
+                        $input_dynamic_form = $li.find('hr').first();
+                        $input_dynamic_form_field = TextFormField;
+                        break;
+                    case 'Class':
+                        $input_dynamic_form = $li.find('input[type="text"]').first();
+                        $input_dynamic_form_field = TextFormField;
+                        break;
                 }
 
                 switch (inputType) {
@@ -1356,6 +1488,21 @@ function checkDuplicateFieldName() {
             case 'List':
                 $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
                 break;
+                case 'TextArea':
+                    $input_dynamic_form = $li.find('textarea').first();
+                    break;
+                case 'Label':
+                    $input_dynamic_form = $li.find('label').first();
+                    break;
+                case 'UnderLine':
+                    $input_dynamic_form = $li.find('hr').first();
+                    break;
+                case 'Selectbox(buttongroup)':
+                    $input_dynamic_form = $li.find('select').first();
+                    break;
+                case 'Class':
+                    $input_dynamic_form = $li.find('input[type="text"]').first();
+                    break;
         }
         var currElement = $input_dynamic_form.attr('data-FieldName');
         if ($.inArray(currElement, inputElements) != -1) {
@@ -1570,6 +1717,26 @@ function createFormElement(inputData, inputType) {
         case 'ListItem':
             $input_dynamic_form = $("<input>").attr("type", "hidden");
             $input_dynamic_form_field = ListItemFormField;
+            break;
+        case 'TextArea':
+            $input_dynamic_form = $("<textarea>").addClass("form-control");
+            $input_dynamic_form_field = TextAreaFormField;
+            break;
+        case 'Label':
+            $input_dynamic_form = $("<label>");
+            $input_dynamic_form_field = labelFormField;
+            break;
+        case 'UnderLine':
+            $input_dynamic_form = $("<hr>");
+            $input_dynamic_form_field = UnderLineFormField;
+            break;
+        case 'Selectbox(buttongroup)':
+            $input_dynamic_form = $("<select>").addClass("form-control");
+            $input_dynamic_form_field = SelectboxButtonGroupFormField;
+            break;
+        case 'Class':
+            $input_dynamic_form = $("<input>").attr("type", "text").addClass("form-control");
+            $input_dynamic_form_field = ClassFormField;
             break;
     }
 
@@ -1943,6 +2110,7 @@ function GetBillerFields() {
             case 'List':
                 $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
                 jsonElementData = GetBillerField($input_dynamic_form, ListFormField, idx, inputType);
+            
 
                 var jsonChildren = [];
                 var listRows = $element.find('table > tbody > tr');
@@ -1953,6 +2121,26 @@ function GetBillerFields() {
                 });
                 jsonElementData["Children"] = jsonChildren;
                 break;
+            case 'TextArea':
+                $input_dynamic_form = $element.find('textarea').first();
+                jsonElementData = GetBillerField($input_dynamic_form, TextAreaFormField, idx, inputType);
+                break;
+            case 'UnderLine':
+                $input_dynamic_form = $element.find('hr').first();
+                jsonElementData = GetBillerField($input_dynamic_form, UnderLineFormField, idx, inputType);
+                break;
+            case 'Label':
+                $input_dynamic_form = $element.find('label').first();
+                jsonElementData = GetBillerField($input_dynamic_form, UnderLineFormField, idx, inputType);
+                break; 
+            case 'Selectbox(ButtonGroup)':
+                $input_dynamic_form = $element.find('select').first();
+                jsonElementData = GetBillerField($input_dynamic_form, SelectboxButtonGroupFormField, idx, inputType);
+                break;    
+            case 'Class':
+                $input_dynamic_form = $element.find('input[type="text"]').first();
+                jsonElementData = GetBillerField($input_dynamic_form, ClassFormField, idx, inputType);
+                break; 
         }
         jsonElementsData.push(jsonElementData);
     });
