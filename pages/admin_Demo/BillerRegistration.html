@@ -805,16 +805,18 @@
                                 <a class="nav-link active" href="#step1" data-toggle="tab" aria-controls="step1"
                                    role="tab" title="User Info">Biller Info</a>
                             </li>
+
+                            <li class="nav-item disabled">
+                                <a class="nav-link" style="color:black"
+                                   onclick="CreateFormTwoEvent()" data-toggle="tab"
+                                   aria-controls="step3" role="tab" title="Menu Info">Create Form</a>
+                            </li>
                             <li class="nav-item disabled">
                                 <a class="nav-link" style="color:black"
                                    onclick="APIIntegrationEvent()" data-toggle="tab"
                                    aria-controls="step3" role="tab" title="Menu Info">API Registration</a>
                             </li>
-                            <li class="nav-item disabled">
-                                <a class="nav-link" style="color:black"
-                                   onclick="window.location.href='CreateFormTwo.html'" data-toggle="tab"
-                                   aria-controls="step3" role="tab" title="Menu Info">Create Form</a>
-                            </li>
+
                         </ul><br />
                         <div class="tab-pane active" role="tabpanel" id="step1">
                             <div class="container-fluid">
@@ -946,8 +948,20 @@
                                         <div class="col-md-8">
                                             <select class="form-control" id="transactionType">
                                                 <option selected>---Select One---</option>
-                                                <option>Gift Card</option>
                                                 <option>Mobile Topup</option>
+                                                <option>Bill Payment</option>
+                                            </select>
+                                        </div>
+                                    </div><br />
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label for="amount" class="text-right col-form-label">Biller Category</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select class="form-control" id="transactionType">
+                                                <option selected>---Select One---</option>
+                                                <option>Anada</option>
+                                                <option>Myanmar Net</option>
                                             </select>
                                         </div>
                                     </div><br />
@@ -981,7 +995,7 @@
 
                         <div class="row">
                             <div class="col-md-offset-2 col-md-10" style="margin-left:79%">
-                                <input type="button" onclick="APIIntegrationEvent()" id="btnSubmit"
+                                <input type="button" onclick="CreateFormTwoEvent()" id="btnSubmit"
                                        value="Next" class="btn btn-success" />
                             </div>
                         </div>
@@ -1083,6 +1097,16 @@
         }
         else {
             window.location.href = 'APIRegistration.html';
+        }
+    }
+
+    function CreateFormTwoEvent() {
+        var standardapiischecked = $('#chkstandardAPI').is(':checked');
+        if (standardapiischecked) {
+            window.location.href = 'CreateFormTwo.html?standardapiid=' + standardapiischecked;
+        }
+        else {
+            window.location.href = 'CreateFormTwo.html';
         }
     }
 

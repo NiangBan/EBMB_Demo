@@ -66,8 +66,7 @@
                                                                 <li class="list-group-item col-md-6" title="" data-value="TextArea"><span class="fa fa-list"></span>&nbsp;TextArea</li>
                                                                 <li class="list-group-item col-md-6" title="" data-value="Label"><span class="fa fa-list"></span>&nbsp;Label</li>
                                                                 <li class="list-group-item col-md-6" title="" data-value="UnderLine"><span class="fa fa-list"></span>&nbsp;UnderLine</li>
-                                                                <li class="list-group-item col-md-6" title="" data-value="Selectbox(Button Group)"><span class="fa fa-list"></span>&nbsp;Selectbox(Button Group)</li>
-                                                                <li class="list-group-item col-md-6" title="" data-value="Class"><span class="fa fa-list"></span>&nbsp;Class</li>
+                                                                <li class="list-group-item col-md-6" title="" data-value="Selectbox(buttongroup)"><span class="fa fa-list"></span>&nbsp;Selectbox(Button Group)</li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -84,8 +83,7 @@
                                                                     <option value="TextArea">TextArea</option>
                                                                     <option value="Label">Label</option>
                                                                     <option value="UnderLine">UnderLine</option>
-                                                                    <option value="Selectbox(Button Group)">Selectbox(Button Group)</option>
-                                                                    <option value="Class">Class</option>
+                                                                    <option value="Selectbox(buttongroup)">Selectbox(Button Group)</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group FieldTypeList">
@@ -95,6 +93,17 @@
                                                                     <option value="Textbox">Text</option>
                                                                     <option value="Number">Number</option>
                                                                     <option value="Image">Image</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="form-group ClassList">
+                                                                <label for="ClassList">Class List</label>
+                                                                <select name="ClassList" class="form-control">
+                                                                    <option value="">---Select---</option>
+                                                                    <option value="Textbox">PhoneBook</option>
+                                                                    <option value="Number">DateTimePicker</option>
+                                                                    <option value="Image">Currency</option>
+                                                                    <option value="Image">TextBox</option>
                                                                 </select>
                                                             </div>
                                                             <div class="form-group FieldName">
@@ -132,17 +141,23 @@
                                                             </div>
                                                             <div class="checkbox IsInput">
                                                                 <label>
-                                                                    <input type="checkbox" name="IsInput"> Input
+                                                                    <input type="checkbox" name="IsInput" id="IsInput"> Show In Entry
+                                                                </label><br />
+                                                                <label id="IsInputHidden">
+                                                                    <input type="checkbox" name="IsInputHidden">hidden
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox IsOutput">
                                                                 <label>
-                                                                    <input type="checkbox" name="IsOutput"> Output
+                                                                    <input type="checkbox" name="IsOutput" id="IsOutput"> Show In Inquiry
+                                                                </label><br />
+                                                                <label id="IsOutputHidden">
+                                                                    <input type="checkbox" name="IsOutputHidden">hidden
                                                                 </label>
                                                             </div>
                                                             <div class="checkbox IsHidden">
                                                                 <label>
-                                                                    <input type="checkbox" name="IsHidden"> Hidden
+                                                                    <input type="checkbox" name="IsHidden"> Show In Success
                                                                 </label>
                                                             </div>
                                                             <div class="text-right">

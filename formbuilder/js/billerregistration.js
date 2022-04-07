@@ -1,18 +1,21 @@
 ﻿const billerListUrl = '/Biller/BillerList';
 const getBillerUrl = '/Biller/GetBiller';
-const TextFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const NumberFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const DropdownFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const ListFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const ListItemFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
+const TextFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const NumberFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const DropdownFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const ListFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const ListItemFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const SelectboxbuttonListFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const SelectboxbuttonListItemFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
 const tableTitle = ['Type', 'Name', 'Label', 'Label(MM)', 'Required', 'Input', 'Output', 'Hidden', 'Action'];
 const fieldTypeList = 'FieldTypeList';
-const defaultField = [{ FieldType: 'Number', FieldName: 'Transactionamount' },{ FieldType: 'Textbox', FieldName: 'Remark' }];
-const TextAreaFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const UnderLineFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const LabelFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const SelectboxButtonGroupFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
-const ClassFormField = ['FieldType', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsOutput', 'IsHidden'];
+const classList = 'ClassList';
+const defaultField = [{ FieldType: 'Number', ClassList: 'Textbox', FieldName: 'Transactionamount' }, { FieldType: 'Textbox', FieldName: 'Remark' }];
+const TextAreaFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const UnderLineFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const LabelFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const SelectboxButtonGroupFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
+const ClassFormField = ['FieldType', 'ClassList', 'FieldName', 'LableName', 'LableNameMM', 'DefaultValue', 'Placeholder', 'MaxLength', 'MinLength', 'Required', 'IsInput', 'IsInputHidden', 'IsOutput', 'IsOutputHidden', 'IsHidden'];
 
 
 
@@ -84,7 +87,9 @@ function CreateDefaultField(isApi = false) {
         "DefaultValue": "0",
         "Placeholder": "",
         "IsOutput": false,
+        "IsOutputHidden": false,
         "IsInput": true,
+        "IsInputHidden": true,
         "IsHidden": false,
         "Attributes": {
             "MaxLength": 20,
@@ -100,7 +105,9 @@ function CreateDefaultField(isApi = false) {
         "DefaultValue": "",
         "Placeholder": "",
         "IsOutput": false,
+        "IsOutputHidden": false,
         "IsInput": true,
+        "IsInputHidden": true,
         "IsHidden": false,
         "Attributes": {
             "Required": false
@@ -155,6 +162,16 @@ $(document).ready(function () {
         disableEditableForm();
     });
 
+    InputHiddenChecked();
+    OutputHiddenChecked();
+    $('#IsInput').on('change', function () {
+        InputHiddenChecked();
+    });
+
+    $('#IsOutput').on('change', function () {
+        OutputHiddenChecked();
+    });
+
     //droppable
     $("#droppable")
         .sortable({
@@ -173,7 +190,9 @@ $(document).ready(function () {
                             "DefaultValue": "",
                             "Placeholder": "",
                             "IsOutput": false,
+                            "IsOutputHidden": false,
                             "IsInput": true,
+                            "IsInputHidden": true,
                             "IsHidden": false,
                             "SortOrder": "",
                             "Attributes": {
@@ -194,7 +213,9 @@ $(document).ready(function () {
                             "DefaultValue": "",
                             "Placeholder": "",
                             "IsOutput": false,
+                            "IsOutputHidden": false,
                             "IsInput": true,
+                            "IsInputHidden": true,
                             "IsHidden": false,
                             "SortOrder": "",
                             "Attributes": {
@@ -213,7 +234,9 @@ $(document).ready(function () {
                             "LableNameMM": "",
                             "LableName": "New",
                             "IsOutput": true,
+                            "IsOutputHidden": true,
                             "IsInput": false,
+                            "IsInputHidden": false,
                             "IsHidden": false,
                             "SortOrder": "",
                             "Attributes": {
@@ -232,7 +255,9 @@ $(document).ready(function () {
                             "DefaultValue": "",
                             "Placeholder": "",
                             "IsOutput": true,
+                            "IsOutputHidden": true,
                             "IsInput": false,
+                            "IsInputHidden": false,
                             "IsHidden": false,
                             "SortOrder": "",
                             "Attributes": {
@@ -250,12 +275,14 @@ $(document).ready(function () {
                             "LableNameMM": "",
                             "LableName": "New",
                             "IsOutput": true,
+                            "IsOutputHidden": true,
                             "IsInput": false,
+                            "IsInputHidden": false,
                             "IsHidden": false,
                             "SortOrder": "",
                             "Attributes": {
                                 "Required": true,
-                                "Colspan":'3'
+                                "Colspan": '3'
                             }
                         };
                         $(this).find('li.ui-draggable-dragging')
@@ -268,7 +295,9 @@ $(document).ready(function () {
                             "LableNameMM": "",
                             "LableName": "New",
                             "IsOutput": true,
+                            "IsOutputHidden": true,
                             "IsInput": false,
+                            "IsInputHidden": false,
                             "IsHidden": false,
                             "SortOrder": "",
                             "Attributes": {
@@ -278,57 +307,66 @@ $(document).ready(function () {
                         $(this).find('li.ui-draggable-dragging')
                             .replaceWith(createLiElement(label_data));
                         break;
-                        case 'UnderLine':
-                            var underline_data = {
-                                "FieldName": "New",
-                                "FieldType": "UnderLine",
-                                "LableNameMM": "",
-                                "LableName": "New",
-                                "IsOutput": true,
-                                "IsInput": false,
-                                "IsHidden": false,
-                                "SortOrder": "",
-                                "Attributes": {
-                                    "Required": true
-                                }
-                            };
-                            $(this).find('li.ui-draggable-dragging')
-                                .replaceWith(createLiElement(underline_data));
-                            break;
-                            case 'Selectbox(buttongroup)':
-                                var selectboxbuttongroup_data = {
-                                    "FieldName": "New",
-                                    "FieldType": "Selectbox(buttongroup)",
-                                    "LableNameMM": "",
-                                    "LableName": "New",
-                                    "IsOutput": true,
-                                    "IsInput": false,
-                                    "IsHidden": false,
-                                    "SortOrder": "",
-                                    "Attributes": {
-                                        "Required": true
-                                    }
-                                };
-                                $(this).find('li.ui-draggable-dragging')
-                                    .replaceWith(createLiElement(selectboxbuttongroup_data));
-                                break;
-                                case 'Class':
-                                    var class_data = {
-                                        "FieldName": "New",
-                                        "FieldType": "Class",
-                                        "LableNameMM": "",
-                                        "LableName": "New",
-                                        "IsOutput": true,
-                                        "IsInput": false,
-                                        "IsHidden": false,
-                                        "SortOrder": "",
-                                        "Attributes": {
-                                            "Required": true
-                                        }
-                                    };
-                                    $(this).find('li.ui-draggable-dragging')
-                                        .replaceWith(createLiElement(class_data));
-                                    break;
+                    case 'UnderLine':
+                        var underline_data = {
+                            "FieldName": "New",
+                            "FieldType": "UnderLine",
+                            "LableNameMM": "",
+                            "LableName": "New",
+                            "IsOutput": true,
+                            "IsOutputHidden": true,
+                            "IsInput": false,
+                            "IsInputHidden": false,
+                            "IsHidden": false,
+                            "SortOrder": "",
+                            "Attributes": {
+                                "Required": true
+                            }
+                        };
+                        $(this).find('li.ui-draggable-dragging')
+                            .replaceWith(createLiElement(underline_data));
+                        break;
+                    case 'Selectbox(buttongroup)':
+                        var selectboxbuttongroup_data = {
+                            "FieldName": "New",
+                            "FieldType": "Selectbox(buttongroup)",
+                            "LableNameMM": "",
+                            "LableName": "New",
+                            "DefaultValue": "",
+                            "Placeholder": "",
+                            "IsOutput": true,
+                            "IsOutputHidden": true,
+                            "IsInput": false,
+                            "IsInputHidden": false,
+                            "IsHidden": false,
+                            "SortOrder": "",
+                            "Attributes": {
+                                "Required": true
+                            },
+                            "Children": []
+                        };
+                        $(this).find('li.ui-draggable-dragging')
+                            .replaceWith(createLiElement(selectboxbuttongroup_data));
+                        break;
+                    case 'Class':
+                        var class_data = {
+                            "FieldName": "New",
+                            "FieldType": "Class",
+                            "LableNameMM": "",
+                            "LableName": "New",
+                            "IsOutput": true,
+                            "IsOutputHidden": true,
+                            "IsInput": false,
+                            "IsInputHidden": false,
+                            "IsHidden": false,
+                            "SortOrder": "",
+                            "Attributes": {
+                                "Required": true
+                            }
+                        };
+                        $(this).find('li.ui-draggable-dragging')
+                            .replaceWith(createLiElement(class_data));
+                        break;
                 }
             },
             start: function (event, ui) {
@@ -394,19 +432,15 @@ $(document).ready(function () {
                         break;
                     case 'Label':
                         $input_dynamic_form = $li.find('label').first();
-                        $input_dynamic_form_field = LabelTextFormField;
+                        $input_dynamic_form_field = LabelFormField;
                         break;
                     case 'UnderLine':
                         $input_dynamic_form = $li.find('hr').first();
                         $input_dynamic_form_field = UnderLineFormField;
                         break;
                     case 'Selectbox(buttongroup)':
-                        $input_dynamic_form = $li.find('select').first();
-                        $input_dynamic_form_field = SelectboxButtonGroupFormField;
-                        break;
-                    case 'Class':
-                        $input_dynamic_form = $li.find('input[type="text"]').first();
-                        $input_dynamic_form_field = ClassFormField;
+                        $input_dynamic_form = $li.find('table > thead > tr > input[type="hidden"]').first();
+                        $input_dynamic_form_field = SelectboxbuttonListFormField;
                         break;
                 }
 
@@ -577,6 +611,19 @@ $(document).ready(function () {
                     }
                 });
 
+                //show relevent form input and load data
+                $.each(SelectboxbuttonListFormField, function (index, val) {
+                    if (val == 'FieldType') {
+                        $(`.${fieldTypeList}`).show();
+                        $dynamic_form.attr(`data-${fieldTypeList}`, true);
+                        $(`#dynamic_form select[name=${fieldTypeList}]`).prop('disabled', false);
+                    } else {
+                        $(`.${val}`).show();
+                        $dynamic_form.attr(`data-${val}`, true);
+                        $(`#dynamic_form input[name=${val}]`).prop('disabled', false);
+                    }
+                });
+
                 //dynamic_form_submit
                 $('#dynamic_form button[name="dynamic_form_submit"]').text("Save");
                 $dynamic_form.css("display", "block");
@@ -626,6 +673,28 @@ $(document).ready(function () {
                 //show relevent form input and load data
                 var $input_dynamic_form = $curRow.children('input[type="hidden"]').first();
                 $.each(ListItemFormField, function (index, val) {
+                    if (val == 'FieldType') {
+                        $(`.${fieldTypeList}`).show();
+                        $dynamic_form.attr(`data-${fieldTypeList}`, true);
+                        $(`#dynamic_form select[name=${fieldTypeList}]`).val($input_dynamic_form.attr(`data-${val}`)).prop('disabled', false);
+                    } else if (val == 'Required' || val == 'IsInput' || val == 'IsOutput' || val == 'IsHidden') {
+                        $(`.${val}`).show();
+                        $dynamic_form.attr(`data-${val}`, true);
+                        if ($input_dynamic_form.attr(`data-${val}`) == 'true') {
+                            $(`#dynamic_form input[name=${val}]`).prop("checked", true).prop('disabled', false);
+                        } else {
+                            $(`#dynamic_form input[name=${val}]`).prop("checked", false).prop('disabled', false);
+                        }
+                    } else {
+                        $(`.${val}`).show();
+                        $dynamic_form.attr(`data-${val}`, true);
+                        $(`#dynamic_form input[name=${val}]`).val($input_dynamic_form.attr(`data-${val}`)).prop('disabled', false);
+                    }
+                });
+
+                //show relevent form input and load data
+                var $input_dynamic_form = $curRow.children('input[type="hidden"]').first();
+                $.each(SelectboxbuttonListFormField, function (index, val) {
                     if (val == 'FieldType') {
                         $(`.${fieldTypeList}`).show();
                         $dynamic_form.attr(`data-${fieldTypeList}`, true);
@@ -1161,6 +1230,11 @@ var dynamic_form = $("#dynamic_form").validate({
                 return $("#dynamic_form").attr('data-FieldTypeList') == 'true';
             }
         },
+        ClassList: {
+            required: function () {
+                return $("#dynamic_form").attr('data-ClassList') == 'true';
+            }
+        },
         FieldName: {
             required: function () {
                 return $("#dynamic_form").attr('data-FieldName') == 'true';
@@ -1284,6 +1358,7 @@ var dynamic_form = $("#dynamic_form").validate({
                 var $edit = $('#EditField');
                 var id = $edit.attr("data-id");
                 var inputType = $edit.attr("data-type");
+                console.log("input", inputType);
                 var $element = $(`#${id}`);
 
                 var $input_dynamic_form, $input_dynamic_form_field, $newrow, $rowid;
@@ -1316,24 +1391,74 @@ var dynamic_form = $("#dynamic_form").validate({
                         break;
                     case 'Label':
                         $input_dynamic_form = $li.find('label').first();
-                        $input_dynamic_form_field = TextFormField;
+                        $input_dynamic_form_field = LabelFormField;
                         break;
                     case 'UnderLine':
                         $input_dynamic_form = $li.find('hr').first();
                         $input_dynamic_form_field = TextFormField;
                         break;
                     case 'Selectbox(buttongroup)':
-                        $input_dynamic_form = $li.find('hr').first();
-                        $input_dynamic_form_field = TextFormField;
+                        $input_dynamic_form = $element.find('table > thead > tr > input[type="hidden"]').first();
+                        $input_dynamic_form_field = SelectboxbuttonListFormField;
                         break;
-                    case 'Class':
-                        $input_dynamic_form = $li.find('input[type="text"]').first();
-                        $input_dynamic_form_field = TextFormField;
+                    case 'Selectbox(buttongroup)ListItem':
+                        $newrow = $edit.attr("data-newrow");
+                        $rowid = $edit.attr("data-rowid");
+                        $input_dynamic_form_field = SelectboxbuttonListItemFormField;
                         break;
                 }
 
                 switch (inputType) {
                     case 'ListItem':
+                        switch ($newrow) {
+                            case 'true':
+                                var $listitem_data = [];
+                                $.each($input_dynamic_form_field, function (index, val) {
+                                    if (val == 'Required' || val == 'MaxLength' || val == 'MinLength') {
+                                        var $attributes = $listitem_data["Attributes"];
+                                        if (!$attributes) {
+                                            $attributes = [];
+                                        }
+                                        if (val == 'Required') {
+                                            $attributes[`${val}`] = $(`#dynamic_form input[name=${val}]`).prop("checked");
+                                        } else {
+                                            $attributes[`${val}`] = $.trim($(`#dynamic_form input[name=${val}]`).val());
+                                        }
+                                        $listitem_data["Attributes"] = $attributes;
+                                    } else if (val == 'IsInput' || val == 'IsOutput' || val == 'IsHidden') {
+                                        $listitem_data[`${val}`] = $(`#dynamic_form input[name=${val}]`).prop("checked");
+                                    } else if (val == 'FieldType') {
+                                        $listitem_data[`${val}`] = $(`#dynamic_form select[name=${fieldTypeList}]`).val();
+                                    } else {
+                                        $listitem_data[`${val}`] = $.trim($(`#dynamic_form input[name=${val}]`).val());
+                                    }
+                                });
+
+                                var $tbody = $element.find('table > tbody').first();
+                                createListItemElement($listitem_data).appendTo($tbody);
+                                break;
+                            default:
+                                var $row = $(`#${$rowid}`);
+                                $input_dynamic_form = $row.find('input[type="hidden"]').first();
+
+                                $.each($input_dynamic_form_field, function (index, val) {
+                                    if (val == 'Required' || val == 'IsInput' || val == 'IsOutput' || val == 'IsHidden') {
+                                        var tempVal1 = $(`#dynamic_form input[name=${val}]`).prop("checked");
+                                        $input_dynamic_form.attr(`data-${val}`, tempVal1);
+                                        $row.find(`td.${val}`).text(tempVal1 == true ? 'Yes' : 'No');
+                                    } else if (val == 'FieldType') {
+                                        var tempVal2 = $(`#dynamic_form select[name=${fieldTypeList}]`).val();
+                                        $input_dynamic_form.attr(`data-${val}`, tempVal2);
+                                        $row.find(`td.${val}`).text(tempVal2);
+                                    } else {
+                                        var tempVal3 = $.trim($(`#dynamic_form input[name=${val}]`).val());
+                                        $input_dynamic_form.attr(`data-${val}`, tempVal3);
+                                        $row.find(`td.${val}`).text(tempVal3);
+                                    }
+                                });
+                        }
+                        break;
+                    case 'Selectbox(buttongroup)ListItem':
                         switch ($newrow) {
                             case 'true':
                                 var $listitem_data = [];
@@ -1448,6 +1573,18 @@ jQuery.validator.addMethod("CheckFieldName",
                     case 'List':
                         $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
                         break;
+                    case 'UnderLine':
+                        $input_dynamic_form = $element.find('hr').first();
+                        break;
+                    case 'Label':
+                        $input_dynamic_form = $element.find('label').first();
+                        break;
+                    case 'TextArea':
+                        $input_dynamic_form = $element.find('textarea').first();
+                        break;
+                    case 'Selectbox(buttongroup)':
+                        $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
+                        break;
                 }
                 if (fieldName == $input_dynamic_form.attr('data-FieldName')) {
                     isDuplicate = true;
@@ -1488,21 +1625,21 @@ function checkDuplicateFieldName() {
             case 'List':
                 $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
                 break;
-                case 'TextArea':
-                    $input_dynamic_form = $li.find('textarea').first();
-                    break;
-                case 'Label':
-                    $input_dynamic_form = $li.find('label').first();
-                    break;
-                case 'UnderLine':
-                    $input_dynamic_form = $li.find('hr').first();
-                    break;
-                case 'Selectbox(buttongroup)':
-                    $input_dynamic_form = $li.find('select').first();
-                    break;
-                case 'Class':
-                    $input_dynamic_form = $li.find('input[type="text"]').first();
-                    break;
+            case 'TextArea':
+                $input_dynamic_form = $li.find('textarea').first();
+                break;
+            case 'Label':
+                $input_dynamic_form = $li.find('label').first();
+                break;
+            case 'UnderLine':
+                $input_dynamic_form = $li.find('hr').first();
+                break;
+            case 'Selectbox(buttongroup)':
+                $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
+                break;
+            case 'Class':
+                $input_dynamic_form = $li.find('input[type="text"]').first();
+                break;
         }
         var currElement = $input_dynamic_form.attr('data-FieldName');
         if ($.inArray(currElement, inputElements) != -1) {
@@ -1598,6 +1735,10 @@ function createFormField(inputData) {
             var $table = createListElement(inputData);
             $table.appendTo($wrapper);
             break;
+        case 'Selectbox(buttongroup)':
+            var $table = createListElement(inputData);
+            $table.appendTo($wrapper);
+            break;
         default:
             var $input = createFormElement(inputData, inputData.FieldType);
             $input.appendTo($wrapper);
@@ -1677,6 +1818,26 @@ function createListItemElement(val) {
         }
     });
 
+    $.each(SelectboxbuttonListFormField, function (index, Listval) {
+        if (Listval == 'IsInput' || Listval == 'IsOutput' || Listval == 'IsHidden') {
+            var tempVal = val[`${Listval}`];
+            $("<td>").addClass(Listval).text(tempVal == true ? 'Yes' : 'No').appendTo($data_row);
+        } else if (Listval == 'Required') {
+            if (val.Attributes) {
+                var tempArrr = val.Attributes;
+                var tempVal1 = tempArrr[`${Listval}`];
+                $("<td>").addClass(Listval).text(tempVal1 == true ? 'Yes' : 'No').appendTo($data_row);
+            }
+        } else if (Listval == 'MaxLength' || Listval == 'MinLength') {
+            if (val.Attributes) {
+                var tempArrr1 = val.Attributes;
+                $("<td>").addClass(Listval).text(tempArrr1[`${Listval}`]).appendTo($data_row);
+            }
+        } else {
+            $("<td>").addClass(Listval).text(val[`${Listval}`]).appendTo($data_row);
+        }
+    });
+
     var $action = $("<td>").appendTo($data_row);
     $("<span>")
         .addClass("fa fa-pencil-square-o")
@@ -1724,15 +1885,19 @@ function createFormElement(inputData, inputType) {
             break;
         case 'Label':
             $input_dynamic_form = $("<label>");
-            $input_dynamic_form_field = labelFormField;
+            $input_dynamic_form_field = LabelFormField;
             break;
         case 'UnderLine':
             $input_dynamic_form = $("<hr>");
             $input_dynamic_form_field = UnderLineFormField;
             break;
         case 'Selectbox(buttongroup)':
-            $input_dynamic_form = $("<select>").addClass("form-control");
-            $input_dynamic_form_field = SelectboxButtonGroupFormField;
+            $input_dynamic_form = $("<input>").attr("type", "hidden");
+            $input_dynamic_form_field = ListFormField;
+            break;
+        case 'Selectbox(buttongroup)ListItem':
+            $input_dynamic_form = $("<input>").attr("type", "hidden");
+            $input_dynamic_form_field = ListItemFormField;
             break;
         case 'Class':
             $input_dynamic_form = $("<input>").attr("type", "text").addClass("form-control");
@@ -2110,7 +2275,7 @@ function GetBillerFields() {
             case 'List':
                 $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
                 jsonElementData = GetBillerField($input_dynamic_form, ListFormField, idx, inputType);
-            
+
 
                 var jsonChildren = [];
                 var listRows = $element.find('table > tbody > tr');
@@ -2131,16 +2296,26 @@ function GetBillerFields() {
                 break;
             case 'Label':
                 $input_dynamic_form = $element.find('label').first();
-                jsonElementData = GetBillerField($input_dynamic_form, UnderLineFormField, idx, inputType);
-                break; 
-            case 'Selectbox(ButtonGroup)':
-                $input_dynamic_form = $element.find('select').first();
-                jsonElementData = GetBillerField($input_dynamic_form, SelectboxButtonGroupFormField, idx, inputType);
-                break;    
+                jsonElementData = GetBillerField($input_dynamic_form, LabelFormField, idx, inputType);
+                break;
+            case 'Selectbox(buttongroup)':
+                $input_dynamic_form = $element.find('table > thead > tr:first > input[type="hidden"]').first();
+                jsonElementData = GetBillerField($input_dynamic_form, ListFormField, idx, inputType);
+
+
+                var jsonChildren = [];
+                var listRows = $element.find('table > tbody > tr');
+                listRows.each(function (index, row) {
+                    var $table_row = $(row).find('input[type="hidden"]').first();
+                    var jsonListItemData = GetBillerField($table_row, ListItemFormField, index);
+                    jsonChildren.push(jsonListItemData);
+                });
+                jsonElementData["Children"] = jsonChildren;
+                break;
             case 'Class':
                 $input_dynamic_form = $element.find('input[type="text"]').first();
                 jsonElementData = GetBillerField($input_dynamic_form, ClassFormField, idx, inputType);
-                break; 
+                break;
         }
         jsonElementsData.push(jsonElementData);
     });
@@ -2171,4 +2346,24 @@ function showAlertWithReload(title, message) {
             location.reload();
         }
     })
+}
+
+function InputHiddenChecked() {
+    console.log("Test", $('#IsInput').is(':checked'));
+    if ($('#IsInput').is(':checked')) {
+        $('#IsInputHidden').show();
+    }
+    else {
+        $('#IsInputHidden').hide();
+    }
+}
+
+function OutputHiddenChecked() {
+    console.log("Test", $('#IsOutput').is(':checked'));
+    if ($('#IsOutput').is(':checked')) {
+        $('#IsOutputHidden').show();
+    }
+    else {
+        $('#IsOutputHidden').hide();
+    }
 }
